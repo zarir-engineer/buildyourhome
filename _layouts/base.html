@@ -48,16 +48,17 @@ common-js:
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
 {% include head.html %}
 
-<body>
-  {% include gtm_body.html %}
+<body class="home light-skin">
+	<div class="container-page">
+        {% include gtm_body.html %}
 
-  {% include header.html %}
+        {% include header.html %}
 
-  {{ content }}
+        {{ content }}
 
-  {% include footer.html %}
+        {% include footer.html %}
+    </div>
 
-  {% include footer-scripts.html %}
-
+    {% include footer-scripts.html %}
 </body>
 </html>

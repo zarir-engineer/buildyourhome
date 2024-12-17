@@ -11,3 +11,9 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
+
+.idea/*
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/woh-haina.iml
