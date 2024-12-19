@@ -14,7 +14,7 @@
 <script src="{{ 'https://code.jquery.com/jquery-3.5.1.slim.min.js' }}" integrity="{{ 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' }}" crossorigin="anonymous"></script>
 <script src="{{ 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' }}" integrity="{{ 'sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' }}" crossorigin="anonymous"></script>
 <script src="{{ 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }}" integrity="{{ 'sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' }}" crossorigin="anonymous"></script>
-<script src="{{ '/assets/js/beautifuljekyll.js' | relative_url }}"></script>
+
 
 
 <!--{% if layout.common-ext-js %}-->
@@ -41,22 +41,22 @@
 <!--  {% endfor %}-->
 <!--{% endif %}-->
 
-{% if site.site-js %}
-      console.info("+++ site-js yes ", {{ site.site-js | jsonify }});
-  {% for js in site.site-js %}
-    <script src="{{ js | relative_url }}"></script>
-  {% endfor %}
-{% endif %}
+<!--{% if site.site-js %}-->
+<!--      console.info("+++ site-js yes ", {{ site.site-js | jsonify }});-->
+<!--  {% for js in site.site-js %}-->
+<!--    <script src="{{ js | relative_url }}"></script>-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
 
-{% if page.ext-js %}
-  console.info("+++ ext-js yes ", {{ page.ext-js | jsonify }});
-  {% for js in page.ext-js %}
-    {% include ext-js.html js=js %}
-  {% endfor %}
-{% endif %}
+<!--{% if page.ext-js %}-->
+<!--  console.info("+++ ext-js yes ", {{ page.ext-js | jsonify }});-->
+<!--  {% for js in page.ext-js %}-->
+<!--    {% include ext-js.html js=js %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
 
-{% if page.js %}
-  {% for js in page.js %}
-    <script src="{{ js | relative_url }}"></script>
-  {% endfor %}
-{% endif %}
+<!--{% if page.js %}-->
+<!--  {% for js in page.js %}-->
+<!--    <script src="{{ js | relative_url }}"></script>-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
