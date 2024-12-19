@@ -11,27 +11,29 @@
   {% for js in layout.common-js %}
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     {% if js contains 'jquery' %}
-      console.info("+++ contains jquery ", {{ js | jsonify }});
-
+<!--      console.info("+++ contains jquery ", {{ js | jsonify }});-->
       <script>
         if (typeof jQuery == 'undefined') {
+          console.info("+++ contains jquery typeof ", {{ typeof jQuery | jsonify }}, {{ js | jsonify }});
           document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
         }
       </script>
     {% else %}
-      console.info("+++ does not contain jquery ", {{ js | jsonify }});
+<!--      console.info("+++ does not contain jquery ", {{ js | jsonify }});-->
       <script src="{{ js | relative_url }}"></script>
     {% endif %}
   {% endfor %}
 {% endif %}
 
 {% if site.site-js %}
+      console.info("+++ site-js yes ", {{ site.site-js | jsonify }});
   {% for js in site.site-js %}
     <script src="{{ js | relative_url }}"></script>
   {% endfor %}
 {% endif %}
 
 {% if page.ext-js %}
+  console.info("+++ ext-js yes ", {{ page.ext-js | jsonify }});
   {% for js in page.ext-js %}
     {% include ext-js.html js=js %}
   {% endfor %}
