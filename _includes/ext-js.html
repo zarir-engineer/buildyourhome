@@ -1,6 +1,6 @@
 console.info("+++ inside ext-js  ", {{ include.js | jsonify }});
 {% if include.js.sri %}
-  console.info("+++ inside ext-js include js sri ", {{ include.js.sri | jsonify }});
+  console.info("+++ inside ext-js include js sri ", {{ include.js.sri | jsonify }}, {{ include.js.href | jsonify }});
   <script src="{{ include.js.href }}" integrity="{{ include.js.sri }}" crossorigin="anonymous"></script>
 {% elsif include.js.href %}
   console.info("+++ inside ext-js include js href ", {{ include.js.href | jsonify }});

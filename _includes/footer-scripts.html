@@ -1,29 +1,45 @@
 <!-- cursor -->
 <div class="cursor"></div>
 
-{% if layout.common-ext-js %}
-  {% for js in layout.common-ext-js %}
-    console.info("+++ inside footer scripts js common ext js ", {{ js | jsonify }});
-    {% include ext-js.html js=js %}
-  {% endfor %}
-{% endif %}
+<!--common-ext-js:-->
+<!--  - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"-->
+<!--    sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="-->
+<!--  - href: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
+<!--    sri: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
+<!--  - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
+<!--    sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"-->
+<!--common-js:-->
+<!--  - "/assets/js/beautifuljekyll.js"-->
 
-{% if layout.common-js %}
-  {% for js in layout.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    {% if js contains 'jquery' %}
-      <script>
-        if (typeof jQuery == 'undefined') {
-          console.info("+++ contains jquery typeof ", {{ typeof jQuery | jsonify }}, {{ js | jsonify }});
-          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
-        }
-      </script>
-    {% else %}
-<!--      console.info("+++ does not contain jquery ", {{ js | jsonify }});-->
-      <script src="{{ js | relative_url }}"></script>
-    {% endif %}
-  {% endfor %}
-{% endif %}
+<script src="{{ 'https://code.jquery.com/jquery-3.5.1.slim.min.js' }}" integrity="{{ 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' }}" crossorigin="anonymous"></script>
+<script src="{{ 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' }}" integrity="{{ 'sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' }}" crossorigin="anonymous"></script>
+<script src="{{ 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }}" integrity="{{ 'sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' }}" crossorigin="anonymous"></script>
+<script src="{{ '/assets/js/beautifuljekyll.js' | relative_url }}"></script>
+
+
+<!--{% if layout.common-ext-js %}-->
+<!--  {% for js in layout.common-ext-js %}-->
+<!--    console.info("+++ inside footer scripts js common ext js ", {{ js | jsonify }});-->
+<!--    {% include ext-js.html js=js %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
+
+<!--{% if layout.common-js %}-->
+<!--  {% for js in layout.common-js %}-->
+<!--    &lt;!&ndash; doing something a bit funky here because I want to be careful not to include JQuery twice! &ndash;&gt;-->
+<!--    {% if js contains 'jquery' %}-->
+<!--      <script>-->
+<!--        if (typeof jQuery == 'undefined') {-->
+<!--          console.info("+++ contains jquery typeof ", {{ typeof jQuery | jsonify }}, {{ js | jsonify }});-->
+<!--          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');-->
+<!--        }-->
+<!--      </script>-->
+<!--    {% else %}-->
+<!--&lt;!&ndash;      console.info("+++ does not contain jquery ", {{ js | jsonify }});&ndash;&gt;-->
+<!--      <script src="{{ js | relative_url }}"></script>-->
+<!--    {% endif %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
 
 {% if site.site-js %}
       console.info("+++ site-js yes ", {{ site.site-js | jsonify }});
