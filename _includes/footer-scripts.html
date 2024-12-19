@@ -12,7 +12,6 @@
   {% for js in layout.common-js %}
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     {% if js contains 'jquery' %}
-<!--      console.info("+++ contains jquery ", {{ js | jsonify }});-->
       <script>
         if (typeof jQuery == 'undefined') {
           console.info("+++ contains jquery typeof ", {{ typeof jQuery | jsonify }}, {{ js | jsonify }});
