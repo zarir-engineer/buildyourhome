@@ -3,6 +3,7 @@
 
 {% if layout.common-ext-js %}
   {% for js in layout.common-ext-js %}
+    console.info("+++ inside footer scripts js common ext js ", {{ js | jsonify }});
     {% include ext-js.html js=js %}
   {% endfor %}
 {% endif %}
