@@ -11,7 +11,7 @@
   {% for js in layout.common-js %}
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     {% if js contains 'jquery' %}
-      console.log("+++ contains jquery ", js);
+      console.log("+++ contains jquery ", {% js %});
 
       <script>
         if (typeof jQuery == 'undefined') {
@@ -19,7 +19,7 @@
         }
       </script>
     {% else %}
-      console.log("+++ does not contain jquery ", js);
+      console.log("+++ does not contain jquery ", {% js %});
       <script src="{{ js | relative_url }}"></script>
     {% endif %}
   {% endfor %}
