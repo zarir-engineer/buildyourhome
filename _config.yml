@@ -10,7 +10,7 @@
 ############################
 
 # Your name to show in the footer
-author: Zarir Engineer
+author: Zarir Engineer Maha Rera Number A51900002346
 # name of the website
 title: Aawo Maari Saathe
 #url: "https://zarirengineer.github.io"
@@ -53,19 +53,17 @@ profile-img: /assets/images/zarir-profile-01.png
 social-network-links:
   email: "zarirengineer@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: zarirengineer
-  github: zarirengineer
-  twitter: zarirengineer
-  patreon: DeanAttali
-  youtube: "@zarirengineer"
-  whatsapp: 9820151236
+  facebook: zarir_engineer
+  youtube: "@zarir_engineer"
+  whatsapp: 7400015550
+  instagram: zarir_engineer
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
 #  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-#  instagram: deanat78
+
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
@@ -94,9 +92,10 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
+  twitter: false
   facebook: true
-  linkedin: true
+  linkedin: false
+  instagram: true
   vk: false
 
 # How to display the link to your website in the footer
