@@ -504,10 +504,10 @@ function initCursor() {
 				dataType: 'json',
 				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&subject='+ $("#cform").find('input[name="subject"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
 				beforeSend: function() {
-
+					$('.alert-success').delay(1000).fadeIn();
 				},
 				complete: function() {
-
+					$('.alert-success').delay(1000).fadeIn();
 				},
 				success: function(data) {
 					$('#cform').fadeOut();
