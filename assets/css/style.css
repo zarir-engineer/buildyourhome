@@ -2909,13 +2909,13 @@ hr {
 .services-item .icon {
 	margin-top: 15px;
 	font-size: 41px;
-	min-height: 50px;
+	min-height: 500px;
 	line-height: 1;
 	color: #29a587;
 }
 
 .services-item .lui-text {
-	min-height: 350px;
+	min-height: 175px;
 }
 
 .services-item .image,
