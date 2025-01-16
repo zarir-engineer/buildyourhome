@@ -2900,6 +2900,7 @@ hr {
 	padding: 30px 35px;
 	background: #fff;
 	border-radius: 18px;
+	min-height: 300px;
 }
 
 .services-item:first-child {
@@ -2909,7 +2910,7 @@ hr {
 .services-item .icon {
 	margin-top: 15px;
 	font-size: 41px;
-	min-height: 500px;
+	min-height: 50px;
 	line-height: 1;
 	color: #29a587;
 }
