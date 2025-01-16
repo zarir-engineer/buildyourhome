@@ -2900,7 +2900,6 @@ hr {
 	padding: 30px 35px;
 	background: #fff;
 	border-radius: 18px;
-	min-height: 300px;
 }
 
 .services-item:first-child {
@@ -2916,7 +2915,7 @@ hr {
 }
 
 .services-item .lui-text {
-	min-height: 175px;
+	min-height: 17500px;
 }
 
 .services-item .image,
