@@ -9,3 +9,5 @@
 ### ffmpeg -i input.mov -c:v h264_videotoolbox -b:v 1000k -c:a aac output.mp4
 
 ### https://getbootstrap.com/docs/4.0/components/modal/
+
+### https://stackoverflow.com/questions/6799533/how-to-submit-a-form-with-javascript-by-clicking-a-link
