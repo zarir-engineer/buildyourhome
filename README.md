@@ -11,3 +11,6 @@
 ### https://getbootstrap.com/docs/4.0/components/modal/
 
 ### https://stackoverflow.com/questions/6799533/how-to-submit-a-form-with-javascript-by-clicking-a-link
+
+### https://github.com/jeromelachaud/freelancer-theme
+
