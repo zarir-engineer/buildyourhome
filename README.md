@@ -15,3 +15,5 @@
 ### https://github.com/jeromelachaud/freelancer-theme
 
 ### https://stackoverflow.com/questions/50540461/why-is-modal-popup-with-jekyll-and-bootsratp-only-showing-content-of-last-child
+
+### https://alshedivat.github.io/al-folio/blog/
