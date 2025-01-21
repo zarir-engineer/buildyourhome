@@ -1,4 +1,4 @@
-# woh-haina
+# buildyourhome
 
 ### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
@@ -14,3 +14,4 @@
 
 ### https://github.com/jeromelachaud/freelancer-theme
 
+### https://stackoverflow.com/questions/50540461/why-is-modal-popup-with-jekyll-and-bootsratp-only-showing-content-of-last-child
