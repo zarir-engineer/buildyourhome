@@ -2,7 +2,9 @@
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("openModalLink");
+var btn = document.getElementById("rahulModalLink");
+
+var btn_buy = document.getElementById("buyingModalLink");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -11,6 +13,7 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
 }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -23,3 +26,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+// button buy
+
+btn_buy.onclick = function() {
+    modal.style.display = "block";
+}
+
