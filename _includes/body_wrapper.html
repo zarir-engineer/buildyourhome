@@ -98,7 +98,8 @@
             <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a data-target="_blank" data-toggle="modal" id="buyingModalLink">
+<!--                        <a data-target="_blank" data-modal="buyModal" data-toggle="modal" href="#buyModal">-->
+                        <a href="#buyModal" class="open-modal" data-modal="buyModal">
                         <div class="services-item">
                             <div class="lui-subtitle">
                                 <span> Buying </span>
@@ -113,7 +114,7 @@ Once we have narrowed down areas where you'd like to live, I can assist you in i
                             <div id="buyModal" class="modal">
                               <!-- Modal content -->
                               <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span class="close" data-modal="buyModal">&times;</span>
                                 <h2>Modal Header</h2>
                                 <p>This is a simple modal popup example in Jekyll!</p>
                               </div>
@@ -230,7 +231,8 @@ Once we have narrowed down areas where you'd like to live, I can assist you in i
         <div class="swiper-slide">
           <div class="testimonials-item">
             <div class="modal-body">
-            <a data-target="_blank" data-toggle="modal" id="rahulModalLink">
+<!--            <a data-target="_blank" data-toggle="modal" id="rahulModalLink">-->
+                <a href="#rahulModal" class="open-modal" data-modal="rahulModal">
               <img decoding="async" src="assets/images/rahul.png" alt="Rahul Muthiah" >
             </a>
               <div class="icon">
@@ -252,7 +254,7 @@ Once we have narrowed down areas where you'd like to live, I can assist you in i
             <div id="rahulModal" class="modal">
               <!-- Modal content -->
               <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" data-modal="rahulModal">&times;</span>
                 <h2>Modal Header</h2>
                 <p>This is a simple modal popup example in Jekyll!</p>
               </div>
