@@ -12,6 +12,10 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 /*
 .modal-content {
 
