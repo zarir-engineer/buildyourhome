@@ -11,7 +11,9 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
 }
 
+/*
 .modal-content {
+
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -19,6 +21,7 @@
   width: 80%;
   max-width: 600px;
 }
+*/
 
 .close {
   color: #aaa;
@@ -34,4 +37,18 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-content {
+  background-color: #f8f9fa; /* Light background */
+  color: #212529; /* Dark text */
+}
+
+.modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-footer {
+  justify-content: center;
 }
