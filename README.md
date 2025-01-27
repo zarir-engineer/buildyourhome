@@ -1,4 +1,4 @@
-# woh-haina
+# buildyourhome
 
 ### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
@@ -13,4 +13,107 @@
 ### https://stackoverflow.com/questions/6799533/how-to-submit-a-form-with-javascript-by-clicking-a-link
 
 ### https://github.com/jeromelachaud/freelancer-theme
+
+### https://stackoverflow.com/questions/50540461/why-is-modal-popup-with-jekyll-and-bootsratp-only-showing-content-of-last-child
+
+### https://alshedivat.github.io/al-folio/blog/
+
+
+### multiple modals
+```html
+<!-- Trigger Links -->
+<a href="#modal1" class="open-modal" data-modal="modal1">Open Modal 1</a>
+<a href="#modal2" class="open-modal" data-modal="modal2">Open Modal 2</a>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal1">&times;</span>
+    <h2>Modal 1 Title</h2>
+    <p>This is the content of Modal 1.</p>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal2">&times;</span>
+    <h2>Modal 2 Title</h2>
+    <p>This is the content of Modal 2.</p>
+  </div>
+</div>
+```
+
+
+```css
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1000; 
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+```
+
+```javascript
+// Open modal functionality
+document.querySelectorAll('.open-modal').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+  });
+});
+
+// Close modal functionality
+document.querySelectorAll('.close').forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+  });
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (event) => {
+  document.querySelectorAll('.modal').forEach((modal) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+```
 
