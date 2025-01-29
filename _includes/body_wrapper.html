@@ -95,36 +95,46 @@
                 <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-<!--                        <a href="#buyModal" class="open-modal" data-modal="buyModal">-->
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#fullScreenModal">
+                        <a href="#buyModal" class="open-modal" data-modal="buyModal">
+<!--                        <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#fullScreenModal">-->
                             <div class="services-item">
                             <div class="lui-subtitle">
                                 <span> Buying </span>
                             </div>
-                            <div class="lui-text no-underline">
+                            <div class="lui-text">
                                 <div> First, I will help you obtain a pre-approval document from a reliable, responsive lender who will be with you throughout  </div>
                             </div>
                             <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+                            <!-- The Modal -->
+                            <div id="buyModal" class="modal">
+                              <!-- Modal content -->
+                              <div class="modal-content">
+                                <span class="close" data-modal="buyModal">&times;</span>
+                                <h2>Modal Header</h2>
+                                <p>This is a simple modal popup example in Jekyll!</p>
+                              </div>
+                            </div>
+
                         </div>
                         </a>
                         <!-- Modal -->
-                        <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="modalLabel">Fullscreen Modal</h5>
-                                <button type="button" class="close" data-modal="fullScreenModal" data-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>This is a fullscreen modal. It spans the entire window.</p>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save Changes</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+<!--                        <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">-->
+<!--                          <div class="modal-dialog modal-dialog-scrollable">-->
+<!--                            <div class="modal-content">-->
+<!--                              <div class="modal-header">-->
+<!--                                <h5 class="modal-title" id="modalLabel">Fullscreen Modal</h5>-->
+<!--                                <button type="button" class="close" data-modal="fullScreenModal" data-dismiss="modal" aria-label="Close"></button>-->
+<!--                              </div>-->
+<!--                              <div class="modal-body">-->
+<!--                                <p>This is a fullscreen modal. It spans the entire window.</p>-->
+<!--                              </div>-->
+<!--                              <div class="modal-footer">-->
+<!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                                <button type="button" class="btn btn-primary">Save Changes</button>-->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </div>-->
                     </div>
                     <div class="swiper-slide">
                         <div class="services-item">
@@ -225,10 +235,9 @@
             <div class="swiper-slide">
               <div class="testimonials-item">
                 <div class="modal-body">
-        <!--            <a data-target="_blank" data-toggle="modal" id="rahulModalLink">-->
                     <a href="#rahulModal" class="open-modal" data-modal="rahulModal">
-                  <img decoding="async" src="assets/images/rahul.png" alt="Rahul Muthiah" >
-                </a>
+                        <img decoding="async" src="assets/images/rahul.png" alt="Rahul Muthiah" >
+                    </a>
                   <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
                       <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
@@ -253,23 +262,6 @@
                     <p>This is a simple modal popup example in Jekyll!</p>
                   </div>
                 </div>
-        <!--            <div id="Geeks2" class="modal fade">-->
-        <!--                <div class="modal-dialog">-->
-        <!--                    <div class="modal-content">-->
-        <!--                        <div class="modal-header">-->
-        <!--                            <button type="button" class="close"-->
-        <!--                                    data-dismiss="modal"-->
-        <!--                                    aria-hidden="true">-->
-        <!--                                &times;-->
-        <!--                            </button>-->
-        <!--                            <h4 class="modal-title">GeeksforGeeks</h4>-->
-        <!--                        </div>-->
-        <!--                        <div class="modal-body">-->
-        <!--                          <iframe id="Geeks3" width="560" height="315" src="https://www.youtube.com/embed/7ic6oOHobWw?si=yJRAAKPEhAQJLBGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
               </div>
             </div>
             <div class="swiper-slide">
