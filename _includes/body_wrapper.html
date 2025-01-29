@@ -95,7 +95,7 @@
                 <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#buyModal" style="text-decoration: none;"  class="open-modal" data-modal="buyModal">
+                        <a href="#buyModal" style="text-decoration: none;" class="open-modal" data-modal="buyModal">
 <!--                        <a href="#" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#fullScreenModal">-->
                             <div class="services-item">
                             <div class="lui-subtitle">
@@ -108,13 +108,18 @@
                         </div>
                         </a>
                         <!-- The Modal -->
-                        <div id="buyModal" class="modal">
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <span class="close" data-modal="buyModal">&times;</span>
-                            <h2>Modal Header</h2>
-                            <p>This is a simple modal popup example in Jekyll!</p>
-                          </div>
+                        <div id="buyModal" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                              <!-- Modal content -->
+                              <div class="modal-content">
+                                <span class="close" data-modal="buyModal">&times;</span>
+                                <h2>Modal Header</h2>
+                                <p>This is a simple modal popup example in Jekyll!</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
