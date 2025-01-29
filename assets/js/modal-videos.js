@@ -26,3 +26,16 @@ window.addEventListener('click', (event) => {
   });
 });
 
+//        function openModal() {
+//            let modal = document.getElementById('myModal');
+//            modal.classList.add('custom-modal', 'show'); // Apply custom styles
+//            modal.style.display = "block"; // Ensure it's visible
+//            document.body.classList.add('modal-open'); // Prevent scrolling
+//        }
+//
+//        function closeModal() {
+//            let modal = document.getElementById('myModal');
+//            modal.classList.remove('custom-modal', 'show');
+//            modal.style.display = "none"; // Hide modal
+//            document.body.classList.remove('modal-open'); // Restore scrolling
+//        }
