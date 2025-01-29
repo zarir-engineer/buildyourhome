@@ -39,26 +39,6 @@
   cursor: pointer;
 }
 
-  /* Custom animation for modal fade-in */
-  .modal.fade .modal-dialog {
-    transform: translate(0, -50px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  .modal.fade.show .modal-dialog {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-
-  .modal-dialog-scrollable {
-    max-height: 80vh;  /* Control modal height */
-  }
-
-  .modal-body {
-    overflow-y: auto; /* Make content scrollable */
-  }
-
 /*
 .modal-content {
   background-color: #f8f9fa;
