@@ -95,7 +95,7 @@
                 <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#buyModal" class="open-modal" data-modal="buyModal">
+                        <a href="#buyModal" class="open-modal" data-modal="buyModal" data-toggle="modal" data-target="#buyModal">
                             <div class="services-item">
                             <div class="lui-subtitle">
                                 <span> Buying </span>
@@ -107,13 +107,15 @@
                         </div>
                         </a>
                         <!-- The Modal -->
-                        <div id="buyModal" class="modal">
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <span class="close" data-modal="buyModal">&times;</span>
-                            <h2>Modal Header</h2>
-                            <p>This is a simple modal popup example in Jekyll!</p>
+                        <div id="buyModal" class="modal fade">
+                            <div class="modal-dialog">
+                              <!-- Modal content -->
+                              <div class="modal-content">
+                                <span class="close" data-modal="buyModal">&times;</span>
+                                <h2>Modal Header</h2>
+                                <p>This is a simple modal popup example in Jekyll!</p>
                           </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
