@@ -95,7 +95,9 @@
                 <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#buyModal" class="open-modal" data-modal="buyModal" data-bs-toggle="modal" data-bs-target="#buyModal">
+<!--                        <a href="#buyModal" data-toggle="modal" data-target="#buyModal">-->
+                        <a href="#buyModal" data-toggle="modal" data-target="#buyModal">
+<!--                        <a href="#" class="open-modal" data-modal="buyModal">Open Modal</a>-->
                             <div class="services-item">
                             <div class="lui-subtitle">
                                 <span> Buying </span>
@@ -107,18 +109,18 @@
                         </div>
                         </a>
                         <!-- Modal -->
-                        <div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
-                          <div class="modal-dialog">
+                        <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="modalTitle">Modal Title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                <button type="button" class="btn-close" data-dismiss="modal"></button>
                               </div>
                               <div class="modal-body">
                                 This is the modal content.
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
