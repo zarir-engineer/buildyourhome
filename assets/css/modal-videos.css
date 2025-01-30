@@ -3,7 +3,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
-  z-index: 9999 !important; /* Sit on top */
+  z-index: 9990 !important; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
@@ -15,6 +15,7 @@
 
 .modal-content {
   background: white !important; /* Ensures modal is white */
+  z-index: 9999 !important; /* Sit on top */
   border-radius: 8px;
   margin: 15% auto;
   padding: 20px;
