@@ -1,5 +1,13 @@
 # buildyourhome
 
+| TODO                      |                                        |
+|---------------------------|----------------------------------------|
+| form from jami gibbs site | http://jamigibbs.github.io/phantom/    |
+| send mail                 | formspree                              |
+| update blogs              | ref: chatgpt                           |
+| modal window on each      | http://jamigibbs.github.io/phantom/    |
+|                           |                                        |
+
 ### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
 ### ffmpeg -i "C:\Users\Asus\Downloads\alka.png" -vf scale=660:380 "C:\Users\Asus\Downloads\output_660x380.png"
