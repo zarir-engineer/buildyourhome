@@ -16,14 +16,15 @@
                         </div>
                         <h1 class="title splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
                             <span>
-                                <b>Zarir</b> Engineer </span>
+                                <b>{{ site.data.global.title_name }}</b> {{ site.data.global.title_surname }} </span>
                         </h1>
                         <div class="label lui-subtitle"> I am a <strong>Realtor</strong>
                         </div>
                     </div>
                     <div class="description">
                         <div>
-                            <p>From India, Mumbai. I have rich experience in giving you a dream home, also I am good at negotiations. I love to talk with you about a few unique proposals.</p>
+                            <p>{{ site.data.global.description }}</p>
+<!--                            <p>From India, Mumbai. I have rich experience in giving you a dream home, also I am good at negotiations. I love to talk with you about a few unique proposals.</p>-->
                         </div>
                         <div class="social-links">
                             <a target="_blank" rel="nofollow" href="#">
@@ -97,7 +98,7 @@
                     <div class="swiper-slide">
                           {% include buy.html %}
                     </div>
-                    {% include buy_modal.html %}
+
                     <div class="swiper-slide">
                         <div class="services-item">
                             <div class="lui-subtitle">
@@ -159,6 +160,7 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                {% include buy_modal.html %}
             </div>
                 <div class="lui-bgtitle">
                     <span> Services </span>
@@ -416,7 +418,7 @@
     </div>
 
     <div class="load-more">
-      <a href="blog.html" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+      <a href="{% include "blog.html" %}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
         <span>View Blog</span>
       </a>
     </div>
