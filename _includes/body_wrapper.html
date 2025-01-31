@@ -18,7 +18,7 @@
                             <span>
                                 <b>{{ site.data.global.title_name }}</b> {{ site.data.global.title_surname }} </span>
                         </h1>
-                        <div class="label lui-subtitle"> I am a <strong>Realtor</strong>
+                        <div class="label lui-subtitle"> {{ site.data.global.intro }} <strong>{{ site.data.global.job_title }}</strong>
                         </div>
                     </div>
                     <div class="description">
@@ -418,7 +418,7 @@
     </div>
 
     <div class="load-more">
-      <a href="{% include "blog.html" %}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
         <span>View Blog</span>
       </a>
     </div>
