@@ -42,7 +42,6 @@
 
 <!--{% if layout.common-ext-js %}-->
 <!--  {% for js in layout.common-ext-js %}-->
-<!--    console.info("+++ inside footer scripts js common ext js ", {{ js | jsonify }});-->
 <!--    {% include ext-js.html js=js %}-->
 <!--  {% endfor %}-->
 <!--{% endif %}-->
@@ -65,14 +64,12 @@
 <!--{% endif %}-->
 
 <!--{% if site.site-js %}-->
-<!--      console.info("+++ site-js yes ", {{ site.site-js | jsonify }});-->
 <!--  {% for js in site.site-js %}-->
 <!--    <script src="{{ js | relative_url }}"></script>-->
 <!--  {% endfor %}-->
 <!--{% endif %}-->
 
 <!--{% if page.ext-js %}-->
-<!--  console.info("+++ ext-js yes ", {{ page.ext-js | jsonify }});-->
 <!--  {% for js in page.ext-js %}-->
 <!--    {% include ext-js.html js=js %}-->
 <!--  {% endfor %}-->
