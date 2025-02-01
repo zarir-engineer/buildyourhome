@@ -1,5 +1,6 @@
 # Site Settings
-title_header: "Hello, I'm"
+salutation: "Hello"
+title_header: "I'm"
 title_name: "Zarir"
 title_surname: "Engineer"
 intro: "I am a "
