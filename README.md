@@ -1,7 +1,7 @@
 # buildyourhome
 
 <span style="color:red">
-|---------------------------|-------------------------------------|
+
 | TODO                      |                                     |
 |---------------------------|-------------------------------------|
 | form from jami gibbs site | http://jamigibbs.github.io/phantom/ |
@@ -11,7 +11,7 @@
 | blog.html, ....           |                                     |
 | google_analytics          |                                     |
 |                           |                                     |
-|---------------------------|-------------------------------------|
+
 </span>
 ### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
