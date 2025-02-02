@@ -89,21 +89,11 @@
                 <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                          {% include buy.html %}
+                        {% include buying.html %}
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="services-item">
-                            <div class="lui-subtitle">
-                                <span>Selling</span>
-                            </div>
-                            <div class="lui-text">
-                                <div>
-                                    <p>Many factors determine a home’s value including its location, condition, age, recent updates, features and comparable sales in the neighborhood. I am an expert in finding the true value of your property. I am a connoisseur of the art of maximizing the equity of your home</p>
-                                </div>
-                            </div>
-                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                        </div>
+                        {% include selling.html %}
                     </div>
                     <div class="swiper-slide">
                         <div class="services-item">
@@ -501,69 +491,14 @@
 
       </div>
       <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-
-        <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
-          <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
-          <div class="contacts-form">
-            <form id="cform" method="post">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <div class="group">
-                    <label>
-                      Your Full Name <b>*</b>
-                      <input type="text" name="name" >
-                    </label>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <div class="group">
-                    <label>
-                      Your Email Address <b>*</b>
-                      <input type="email" name="email" >
-                    </label>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class="group">
-                    <label>
-                      Your Subject <b>*</b>
-                      <input type="text" name="subject" >
-                    </label>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class="group">
-                    <label>
-                      Your Message <b>*</b>
-                      <textarea name="message"></textarea>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
-                  <div class="terms-label">* Accept the terms and conditions.</div>
-                  <a href="javascript:void(0);" class="btn" onclick="$('#cform').submit(); return false;">
-<!--                  <a href="javascript:void(0);" class="btn" onclick="$(this).closest('cform').submit();">-->
-                    <span>Send Message</span>
-                  </a>
-                </div>
-              </div>
-            </form>
-            <div class="alert-success" style="display: none;">
-              <p>Thanks, your message is sent successfully.</p>
-            </div>
-          </div>
-
+            {% include send-message.html %}
         </div>
-
       </div>
     </div>
 
     <div class="lui-bgtitle">
       <span> Contact Me </span>
-    </div>
-
-            </div>
-        </div>
+    </div></div>
 
 </section>
 
