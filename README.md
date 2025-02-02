@@ -1,10 +1,26 @@
 # buildyourhome
 
+| style                   | markdown                                     |
+|-------------------------|----------------------------------------------|
+| 🔴 🟠 ⚫ ⚪ 🟣 🟢 🟡 🔵 	 | same                                         |
+| ✅ true and ❌false       |                                              |
+| underline 	             | <u>underline</u>                             |
+| ~~ stroke ~~ 	          | ~~stroke~~ ( no spaces)                      |
+| italic                  | 	         *italic*                           |
+| ==highlight== 	         | ==highlight==                                |
+| bold 	                  | **bold **                                    |
+| red color 	             | `red color`                                  |
+| blue color 	           | <a>blue color</a>                            |
+| other color 	          | <font color=#0fb503>other color</font>       |
+
+
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
+
 
 
 | TODO                      |                                     |
 |---------------------------|-------------------------------------|
-| <font color='red'>form from jami gibbs site</font> | http://jamigibbs.github.io/phantom/ |
+| form from jami gibbs site | http://jamigibbs.github.io/phantom/ |
 | send mail                 | formspree                           |
 | update blogs              | ref: chatgpt                        |
 | modal window on each      | http://jamigibbs.github.io/phantom/ |
