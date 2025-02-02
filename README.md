@@ -1,18 +1,19 @@
 # buildyourhome
 
-| style                   | markdown                                     |
-|-------------------------|----------------------------------------------|
-| 🔴 🟠 ⚫ ⚪ 🟣 🟢 🟡 🔵 	 | same                                         |
-| ✅ true and ❌false       |                                              |
-| underline 	             | <u>underline</u>                             |
-| ~~ stroke ~~ 	          | ~~stroke~~ ( no spaces)                      |
-| italic                  | 	         *italic*                           |
-| ==highlight== 	         | ==highlight==                                |
-| bold 	                  | **bold **                                    |
-| red color 	             | `red color`                                  |
-| blue color 	           | <a>blue color</a>                            |
-| other color 	          | <font color=#0fb503>other color</font>       |
-
+| style                   | markdown                               |
+|-------------------------|----------------------------------------|
+| 🔴 🟠 ⚫ ⚪ 🟣 🟢 🟡 🔵 	 | same                                   |
+| ✅ true and ❌false       |                                        |
+| underline 	             | <ins>underlined</ins>                  |
+| ~~ stroke ~~ 	          | ~~stroke~~ ( no spaces)                |
+| italic                  | 	         *italic*                     |
+| ==highlight== 	         | ==highlight==                          |
+| bold 	                  | **bold **                              |
+| red color 	             | `red color`                            |
+| blue color 	            | <a>blue color</a>                      |
+| other color 	           | <font color=#0fb503>other color</font> |
+| <sub></sub>             | <sub>subscript</sub>                   |
+| <sup></sup>             | <sup>supscript</sup>                   |
 
 $${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
 
