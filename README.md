@@ -1,5 +1,34 @@
 # buildyourhome
 
+| style                   | markdown                               |
+|-------------------------|----------------------------------------|
+| 🔴 🟠 ⚫ ⚪ 🟣 🟢 🟡 🔵 	 | same                                   |
+| ✅ true and ❌false       |                                        |
+| underline 	             | <ins>underlined</ins>                  |
+| ~~ stroke ~~ 	          | ~~stroke~~ ( no spaces)                |
+| italic                  | 	         *italic*                     |
+| ==highlight== 	         | ==highlight==                          |
+| bold 	                  | **bold **                              |
+| red color 	             | `red color`                            |
+| blue color 	            | <a>blue color</a>                      |
+| other color 	           | <font color=#0fb503>other color</font> |
+| <sub></sub>             | <sub>subscript</sub>                   |
+| <sup></sup>             | <sup>supscript</sup>                   |
+
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
+
+![Zarir Engineer](https://zarirengineer.github.io/buildyourhome/assets/images/zarir.png)
+
+| TODO                      |                                     |
+|---------------------------|-------------------------------------|
+| form from jami gibbs site | http://jamigibbs.github.io/phantom/ |
+| send mail                 | formspree                           |
+| update blogs              | ref: chatgpt                        |
+| modal window on each      | http://jamigibbs.github.io/phantom/ |
+| blog.html, ....           |                                     |
+| google_analytics          |                                     |
+|                           |                                     |
+
 ### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
 ### ffmpeg -i "C:\Users\Asus\Downloads\alka.png" -vf scale=660:380 "C:\Users\Asus\Downloads\output_660x380.png"

@@ -8,6 +8,14 @@ document.querySelectorAll('.open-modal').forEach((button) => {
   });
 });
 
+//document.querySelectorAll(".open-modal").forEach(item => {
+//    item.addEventListener("click", function(event) {
+//        event.preventDefault();
+//        let modalId = this.getAttribute("data-modal");
+//        document.getElementById(modalId).style.display = "block";
+//    });
+//});
+
 // Close modal functionality
 document.querySelectorAll('.close').forEach((button) => {
   button.addEventListener('click', () => {
@@ -25,3 +33,4 @@ window.addEventListener('click', (event) => {
     }
   });
 });
+
