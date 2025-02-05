@@ -89,7 +89,8 @@ body.no-scroll {
 }
 
 a {
-	color: #29a587;
+	/*color: #29a587;*/
+	color: black;
 	text-decoration: none;
 	cursor: pointer;
 	outline: none;
@@ -110,7 +111,8 @@ a:visited {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	/*color: #ff6600;*/
 }
 
 a img {

@@ -1,9 +1,16 @@
-<div class="services-item">
-    <div class="lui-subtitle">
-        <span>Leasing</span>
-    </div>
-    <div class="lui-text">
-        <div> Creating games &amp; describes the design, development and release of a game. Developing unique mobile android and ios games. </div>
-    </div>
-    <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+<div class="modal-body">
+    <a href="#leaseModal" class="open-modal" data-modal="leaseModal">
+        <div class="services-item">
+            <div class="lui-subtitle">
+                <span>Leasing</span>
+            </div>
+            <div class="lui-text">
+                <div>
+                    <p>Creating games &amp; describes the design, development and release of a game. Developing unique mobile android and ios games.</p>
+                </div>
+            </div>
+            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+        </div>
+    </a>
 </div>
+{% include modal.html modal-name='leaseModal' modal-data='This is a simple modal popup example in Jekyll' %}

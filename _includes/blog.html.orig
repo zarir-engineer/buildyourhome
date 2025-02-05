@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="portfolio-template light-skin">
+<body class="light-skin">
 	<div class="container-page">
 
 		<!-- Preloader -->
@@ -131,7 +131,7 @@
 																<a class="splitting-text-anim-1" data-splitting="chars" href="work-single.html">Work Single Page</a>
 															</li>
 															<li class="menu-item">
-																<a class=" splitting-text-anim-1" data-splitting="chars" href="blog.html.orig">Blog</a>
+																<a class=" splitting-text-anim-1" data-splitting="chars" href="blog.html">Blog</a>
 															</li>
 															<li class="menu-item">
 																<a class="splitting-text-anim-1" data-splitting="chars" href="blog-single.html">Single Post</a>
@@ -173,197 +173,189 @@
 
       <!-- Section Started Heading -->
       <section class="section section-inner started-heading">
-
-        <!-- Heading -->
       	<div class="container">
-          <div class="m-titles align-left">
+
+  				<!-- Heading -->
+          <div class="m-titles align-center">
             <h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-              <span>Zorro</span>
+              <span> Our Blogs </span>
             </h1>
             <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-              <span>Branding, Photography</span>
+              <span> Recent Articles </span>
             </div>
           </div>
+
       	</div>
+      </section>
 
-        <!-- Details -->
-        <div class="v-line v-line-right v-line-top">
-          <div class="container">
+      <!-- Section - Blog -->
+			<div class="section section-inner m-archive">
+        <div class="container">
 
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
-                <div class="m-details">
-                  <div class="details-label">
-                    <span>Year:</span>
-                    <strong><span>2018</span></strong>
+              <!-- Blog Items -->
+              <div class="articles-container">
+
+                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div class="image">
+                    <a href="blog-single.html">
+                      <img src="assets/images/single7.jpg" alt="The Main Thing For The Designer" loading="lazy">
+                    </a>
                   </div>
-                  <div class="details-label">
-                    <span>Technology:</span>
-                    <strong><span>Photoshop, XD</span></strong>
+                  <div class="desc">
+                    <div class="category lui-subtitle">
+                      <span>October 31, 2022</span>
+                    </div>
+                    <h5 class="lui-title">
+                      <a href="blog-single.html">The Main Thing For The Designer</a>
+                    </h5>
+                    <div class="lui-text">
+                      <p>Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem vel velit efficitur malesuada. Donec arcu lacus, ornare eget&hellip; </p>
+                      <div class="readmore">
+                        <a href="blog-single.html" class="lnk">Read more</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="details-label">
-                    <span>Categories:</span>
-                    <strong><span>Photography, Branding</span></strong>
+                </div>
+
+                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div class="image">
+                    <a href="blog-single.html">
+                      <img src="assets/images/blog-4-scaled-1.jpg" alt="Follow Your Own Design Process" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <div class="category lui-subtitle">
+                      <span>October 31, 2022</span>
+                    </div>
+                    <h5 class="lui-title">
+                      <a href="blog-single.html">Follow Your Own Design Process</a>
+                    </h5>
+                    <div class="lui-text">
+                      <p>Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem vel velit efficitur malesuada. Donec arcu lacus, ornare eget&hellip; </p>
+                      <div class="readmore">
+                        <a href="blog-single.html" class="lnk">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                  <div class="image">
+                    <a href="blog-single.html">
+                      <img src="assets/images/blog-2.jpg" alt="Usability Secrets to Create Better Interfaces" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <div class="category lui-subtitle">
+                      <span>November 28, 2021</span>
+                    </div>
+                    <h5 class="lui-title">
+                      <a href="blog-single.html">Usability Secrets to Create Better Interfaces</a>
+                    </h5>
+                    <div class="lui-text">
+                      <p>Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem vel velit efficitur malesuada. Donec arcu lacus, ornare eget&hellip; </p>
+                      <div class="readmore">
+                        <a href="blog-single.html" class="lnk">Read more</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 align-right">
 
-                <a target="_blank" href="https://bslthemes.com" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
-                  <span>Live Preview</span>
-                </a>
-
+              <div class="pager">
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers" href="#">2</a>
+                <a class="next page-numbers" href="#">Next</a>
               </div>
-            </div>
 
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+              <!-- sidebar -->
+              <div class="col__sedebar scrolla-element-anim-1 scroll-animate" data-animate="active">
+                <div class="content-sidebar">
+                  <aside class="widget-area">
+
+                    <div class="widget widget_block widget_search">
+                      <form class="wp-block-search">
+                        <div class="wp-block-search__inside-wrapper">
+                          <input type="search" class="wp-block-search__input wp-block-search__input" value="">
+                          <button type="submit" class="wp-block-search__button wp-element-button">Search</button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <section class="widget widget_block">
+                      <div class="wp-block-group">
+                        <div class="wp-block-group__inner-container">
+                          <h2>Recent Posts</h2>
+                          <ul class="wp-block-latest-posts__list wp-block-latest-posts">
+                            <li><a class="wp-block-latest-posts__post-title" href="blog-single.html">The Main Thing For The Designer</a></li>
+                            <li><a class="wp-block-latest-posts__post-title" href="blog-single.html">Follow Your Own Design Process</a></li>
+                            <li><a class="wp-block-latest-posts__post-title" href="blog-single.html">Usability Secrets to Create Better Interfaces</a></li>
+                            <li><a class="wp-block-latest-posts__post-title" href="blog-single.html">Three Ways To Level Up Your Photography</a></li>
+                            <li><a class="wp-block-latest-posts__post-title" href="blog-single.html">10 Useful Tips to Improve Your Skills</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="widget widget_block">
+                      <div class="wp-block-group">
+                        <div class="wp-block-group__inner-container">
+                          <h2>Recent Comments</h2>
+                          <ul class="wp-block-latest-comments">
+                            <li class="wp-block-latest-comments__comment">
+                              <span class="wp-block-latest-comments__comment-author">Ryan Berg</span> on <a class="wp-block-latest-comments__comment-link" href="blog-single.html">How to Become a Successful UI/UX Designer</a>
+                            </li>
+                            <li class="wp-block-latest-comments__comment">
+                              <span class="wp-block-latest-comments__comment-author">Robert Brown</span> on <a class="wp-block-latest-comments__comment-link" href="blog-single.html">How to Become a Successful UI/UX Designer</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="widget widget_block">
+                      <div class="wp-block-group">
+                        <div class="wp-block-group__inner-container">
+                          <h2>Archives</h2>
+                          <ul class="wp-block-archives-list wp-block-archives">
+                            <li><a href="blog-single.html">October 2022</a></li>
+                            <li><a href="blog-single.html">November 2021</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="widget widget_block">
+                      <div class="is-layout-flow wp-block-group">
+                        <div class="wp-block-group__inner-container">
+                          <h2>Categories</h2>
+                          <ul class="wp-block-categories-list wp-block-categories">
+                            <li class="cat-item cat-item-2"><a href="blog-single.html">Branding</a></li>
+                            <li class="cat-item cat-item-3"><a href="blog-single.html">Photography</a></li>
+                            <li class="cat-item cat-item-4"><a href="blog-single.html">UI Design</a></li>
+                            <li class="cat-item cat-item-5"><a href="blog-single.html">UX Design</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+
+                  </aside>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+          <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
         </div>
-
-      </section>
-
-      <!-- Section - Image -->
-			<div class="section section-inner">
-
-        <!-- Image -->
-        <div class="m-image-large">
-          <div class="image">
-            <div class="img js-parallax" style="background-image: url(https://luique.bslthemes.com/wp-content/uploads/2021/11/single4.jpg);"></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Section - Description -->
-			<section class="section section-inner">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-              <div class="post-content">
-                <h4>Description</h4>
-              </div>
-
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-              <div class="post-content">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English.</p>
-              </div>
-
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-              <div class="post-content">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English.</p>
-              </div>
-
-            </div>
-          </div>
-
-				</div>
-      </section>
-
-      <!-- Section - Gallery -->
-			<div class="section section-inner">
-        <div class="container">
-
-          <!-- Section Gallery -->
-      		<div class="m-gallery">
-      			<div class="row">
-
-      				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      					<div class="works-item">
-      						<div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
-      							<div class="img">
-      								<a href="assets/images/work5.jpeg" class="has-popup-image"><img decoding="async" src="assets/images/work5.jpeg" alt="Item 1" loading="lazy"></a>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-
-      				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      					<div class="works-item">
-      						<div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
-      							<div class="img">
-      								<a href="assets/images/blog8.jpg" class="has-popup-image"><img decoding="async" src="assets/images/blog8.jpg" alt="Item 2" loading="lazy"></a>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-
-      				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      					<div class="works-item">
-      						<div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
-      							<div class="img">
-      								<a href="assets/images/blog6.jpg" class="has-popup-image"><img decoding="async" src="assets/images/blog6.jpg" alt="Item 3" loading="lazy"></a>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-
-      			</div>
-      		</div>
-
-				</div>
-      </div>
-
-      <!-- Section - Description -->
-			<section class="section section-inner">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-              <div class="post-content">
-                <h4>Conclusion</h4>
-              </div>
-
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-              <div class="post-content">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English.</p>
-              </div>
-
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-              <div class="post-content">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English.</p>
-              </div>
-
-            </div>
-          </div>
-
-				</div>
-      </section>
-
-      <!-- Section - Video -->
-			<div class="section section-inner m-video-large">
-        <div class="video">
-          <div class="img js-parallax" style="background-image: url(assets/images/blog9.jpg);"></div>
-          <iframe class="js-video-iframe" data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&amp;rel=0&amp;autoplay=1"></iframe>
-          <div class="play"></div>
-        </div>
-      </div>
-
-      <!-- Section - Navigation -->
-			<div class="section section-inner m-page-navigation">
-    		<div class="container">
-					<div class="h-titles h-navs">
-						<a href="work-single.html">
-							<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-animate="active">
-								<span>Next Project</span>
-							</span>
-							<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-								<span>Gooir</span>
-							</span>
-						</a>
-					</div>
-    		</div>
       </div>
 
 		</div>
@@ -379,9 +371,9 @@
                 <a target="_blank" rel="nofollow" href="http://twitter.com">
                   <i aria-hidden="true" class="fab fa-twitter"></i>
                 </a>
-				<a target="_blank" rel="nofollow" href="#">
-					<i aria-hidden="true" class="fab fa-instagram"></i>
-				</a>
+                <a target="_blank" rel="nofollow" href="#">
+                    <i aria-hidden="true" class="fab fa-instagram"></i>
+                </a>
               </div>
 
             </div>
