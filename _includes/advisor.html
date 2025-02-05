@@ -1,10 +1,16 @@
-<div class="services-item">
-    <div class="lui-subtitle">
-        <span> Advisor </span>
-    </div>
-    <div class="lui-text">
-        <div> Real estate agents provide advisory services to assist clients in making informed decisions regarding property transactions ... </div>
-    </div>
-    <a href="#pricing-section" class="lnk"> See Pricing </a>
-    <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+<div class="modal-body">
+    <a href="#sellModal" class="open-modal" data-modal="sellModal">
+        <div class="services-item">
+            <div class="lui-subtitle">
+                <span>Advisor</span>
+            </div>
+            <div class="lui-text">
+                <div>
+                    <p>Real estate agents provide advisory services to assist clients in making informed decisions regarding property transactions ...</p>
+                </div>
+            </div>
+            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+        </div>
+    </a>
 </div>
+{% include modal.html modal-name='sellModal' modal-data='This is a simple modal popup example in Jekyll' %}
