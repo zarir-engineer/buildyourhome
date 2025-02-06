@@ -34,6 +34,7 @@
 
 .modal {
     background: white;
+    z-index: 9999 !important; /* Sit on top */
     padding: 20px;
     border-radius: 8px;
 }
