@@ -1,5 +1,5 @@
 ---
-layout: blog  # This tells Jekyll to use _layouts/blog.html
+layout: all-blogs  # This tells Jekyll to use _layouts/all-blogs.html
 title: Blog Page
 permalink: /all-blogs/
 ---
