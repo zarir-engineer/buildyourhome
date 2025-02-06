@@ -15,4 +15,12 @@
         </div>
     </a>
 </div>
-{% include modal.html modal-name='buyModal' modal-data='This is a simple modal popup example in Jekyll' %}
+<div id="buyModal" class="modal-overlay">
+    <div class="modal">
+        <button onclick="closeModal()">Close</button>
+        <h2>Buy Modal</h2>
+        <p>This is a modal window.</p>
+    </div>
+</div>
+
+<!--{% include modal.html modal-name='buyModal' modal-data='This is a simple modal popup example in Jekyll' %}-->
