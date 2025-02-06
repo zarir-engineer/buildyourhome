@@ -10,6 +10,7 @@
   height: 100%;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  margin: 20px; /* Space from the corner */
 }
 
 
