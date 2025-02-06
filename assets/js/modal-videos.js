@@ -1,36 +1,9 @@
-// Open modal functionality
-document.querySelectorAll('.open-modal').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-  });
-});
 
-//document.querySelectorAll(".open-modal").forEach(item => {
-//    item.addEventListener("click", function(event) {
-//        event.preventDefault();
-//        let modalId = this.getAttribute("data-modal");
-//        document.getElementById(modalId).style.display = "block";
-//    });
-//});
+function openModal(event, modalId) {
+    event.preventDefault(); // Prevents page jump
+    document.getElementById(modalId).classList.add("active");
+}
 
-// Close modal functionality
-document.querySelectorAll('.close').forEach((button) => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-  });
-});
-
-// Close modal when clicking outside of it
-window.addEventListener('click', (event) => {
-  document.querySelectorAll('.modal').forEach((modal) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-
+function closeModal() {
+    document.querySelector(".modal-overlay").classList.remove("active");
+}

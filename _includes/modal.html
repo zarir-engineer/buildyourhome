@@ -1,9 +1,16 @@
 <!-- The Modal -->
-<div id="{{ include.modal-name }}" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close" data-modal="{{ include.modal-name }}">&times;</span>
-    <h2>Modal Header</h2>
-    <p>{{ include.modal-data }}</p>
-  </div>
+<!--<div id="{{ include.modal-name }}" class="modal">-->
+<!--  &lt;!&ndash; Modal content &ndash;&gt;-->
+<!--  <div class="modal-content">-->
+<!--    <span class="close" data-modal="{{ include.modal-name }}">&times;</span>-->
+<!--    <h2>Modal Header</h2>-->
+<!--    <p>{{ include.modal-data }}</p>-->
+<!--  </div>-->
+<!--</div>-->
+<div id="buyModal" class="modal-overlay">
+    <div class="modal">
+        <button onclick="closeModal()">Close</button>
+        <h2>Buy Modal</h2>
+        <p>This is a modal window.</p>
+    </div>
 </div>
