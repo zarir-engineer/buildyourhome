@@ -1,6 +1,5 @@
 <div class="modal-body">
-<!--    <a href="#buyModal" class="open-modal" data-modal="buyModal">-->
-    <a href="#" onclick="openModal(event, 'buyModal')" class="open-modal" data-modal="buyModal">
+    <a href="#buyModal" class="open-modal" data-modal="buyModal">
         <div class="services-item">
             <div class="lui-subtitle">
                 <span>Buying</span>
@@ -15,12 +14,4 @@
         </div>
     </a>
 </div>
-<div id="buyModal" class="modal-overlay">
-    <div class="modal">
-        <button onclick="closeModal()">Close</button>
-        <h2>Buy Modal</h2>
-        <p>This is a modal window.</p>
-    </div>
-</div>
-
-<!--{% include modal.html modal-name='buyModal' modal-data='This is a simple modal popup example in Jekyll' %}-->
+{% include modal.html modal-name='buyModal' modal-data='This is a simple modal popup example in Jekyll' %}
