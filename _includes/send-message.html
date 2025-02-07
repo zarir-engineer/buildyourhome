@@ -37,15 +37,16 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
           <div class="terms-label">* Accept the terms and conditions.</div>
-          <a href="javascript:void(0);" class="btn" onclick="$('#cform').submit(); return false;">
-            <span>Send Message</span>
-          </a>
+<!--          <a href="javascript:void(0);" class="btn" onclick="$('#cform').submit(); return false;">-->
+<!--            <span>Send Message</span>-->
+<!--          </a>-->
+            <button type="submit">Send</button>
         </div>
       </div>
     </form>
     <div class="alert-success" style="display: none;">
-      <p>Thanks, your message is sent successfully.</p>
-<!--      <input type="hidden" name="_next" value="thank-you.html">-->
+<!--      <p>Thanks, your message is sent successfully.</p>-->
+      <input type="hidden" name="_next" value="{{ '/thank-you/' | relative_url }}">
     </div>
   </div>
 </div>
