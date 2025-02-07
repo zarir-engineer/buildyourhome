@@ -1,48 +1,66 @@
 <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
   <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
   <div class="contacts-form">
-    <form id="cform" action="https://formspree.io/f/mrbelkbz" method="post">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div class="group">
-            <label>
-              Your Full Name <b>*</b>
-              <input type="text" name="name" >
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div class="group">
-            <label>
-              Your Email Address <b>*</b>
-              <input type="email" name="email" >
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="group">
-            <label>
-              Your Subject <b>*</b>
-              <input type="text" name="subject" >
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="group">
-            <label>
-              Your Message <b>*</b>
-              <textarea name="message"></textarea>
-            </label>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
-          <div class="terms-label">* Accept the terms and conditions.</div>
-          <a href="javascript:void(0);" class="btn" onclick="$('#cform').submit(); return false;">
-            <span>Send Message</span>
-          </a>
-        </div>
-      </div>
+    <form action="https://formspree.io/f/mrbelkbz" method="POST">
+      <!-- Email field -->
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+
+      <!-- Message field -->
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+
+      <!-- Optional: Hidden field to customize subject -->
+      <input type="hidden" name="_subject" value="New submission from your site">
+
+      <!-- Optional: Redirect to a thank-you page after submission -->
+      <!-- <input type="hidden" name="_next" value="{{ '/thank-you.html' | relative_url }}"> -->
+
+      <!-- Submit button -->
+      <button type="submit">Send</button>
     </form>
+<!--    <form id="cform" action="https://formspree.io/f/mrbelkbz" method="post">-->
+<!--      <div class="row">-->
+<!--        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
+<!--          <div class="group">-->
+<!--            <label>-->
+<!--              Your Full Name <b>*</b>-->
+<!--              <input type="text" name="name" >-->
+<!--            </label>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">-->
+<!--          <div class="group">-->
+<!--            <label>-->
+<!--              Your Email Address <b>*</b>-->
+<!--              <input type="email" name="email" >-->
+<!--            </label>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--          <div class="group">-->
+<!--            <label>-->
+<!--              Your Subject <b>*</b>-->
+<!--              <input type="text" name="subject" >-->
+<!--            </label>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--          <div class="group">-->
+<!--            <label>-->
+<!--              Your Message <b>*</b>-->
+<!--              <textarea name="message"></textarea>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">-->
+<!--          <div class="terms-label">* Accept the terms and conditions.</div>-->
+<!--          <a href="javascript:void(0);" class="btn" onclick="$('#cform').submit(); return false;">-->
+<!--            <span>Send Message</span>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </form>-->
     <div class="alert-success" style="display: none;">
       <p>Thanks, your message is sent successfully.</p>
 <!--      <input type="hidden" name="_next" value="thank-you.html">-->
