@@ -2,6 +2,7 @@
   <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
   <div class="contacts-form">
     <form action="https://formspree.io/f/mrbelkbz" method="POST">
+      <div class="row">
         <input type="hidden" name="_next" value="{{ '/thank-you/' | relative_url }}">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <div class="group">
@@ -43,10 +44,7 @@
 <!--        <textarea id="message" name="message" required></textarea>-->
 
         <button type="submit">Send</button>
+      </div>
     </form>
-    <div class="alert-success" style="display: none;">
-<!--      <p>Thanks, your message is sent successfully.</p>-->
-      <input type="hidden" name="_next" value="{{ '/thank-you/' | relative_url }}">
-    </div>
   </div>
 </div>
