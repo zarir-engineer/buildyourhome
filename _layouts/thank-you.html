@@ -4,5 +4,12 @@ title: Sample Page
 permalink: /thank-you/
 ---
 
-<h1>Thank You!</h1>
-<p>Show image here Your message has been sent successfully.</p>
+<div class="thank-you-container">
+    <h1>Thank You for Your Message!</h1>
+    <p>We appreciate your time and will get back to you soon.</p>
+
+    <!-- Pet Image -->
+    <img src="{{ '/assets/images/cute-pet.jpg' | relative_url }}" alt="A cute pet saying thank you" class="thank-you-image">
+
+    <a href="{{ '/' | relative_url }}" class="btn">Go Back Home</a>
+</div>
