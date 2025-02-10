@@ -1,5 +1,6 @@
 /* Modal styles */
 
+/* Modal background */
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
@@ -8,12 +9,12 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
-  margin: 20px; /* Space from the corner */
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s;
 }
 
 
+/* Modal Content */
 .modal-content {
   background: white !important; /* Ensures modal is white */
   z-index: 9999 !important; /* Sit on top */
@@ -23,38 +24,42 @@
   border: 1px solid #888;
   width: 80%;
   max-width: 600px;
+  animation: slideIn 0.5s;
 }
 
-
+/* Close button */
 .close {
   color: #aaa;
+  float: right;
   font-size: 28px;
   font-weight: bold;
-  position: absolute;
-  right: 15px;
-  top: 0;
 }
 
 .close:hover,
-.close:focus {
+close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-/*
-.modal-content {
-  background-color: #f8f9fa;
-  color: #212529;
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
-.modal-body {
-  padding: 20px;
-  text-align: center;
+/* Slide in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
-.modal-footer {
-  justify-content: center;
-}
-*/

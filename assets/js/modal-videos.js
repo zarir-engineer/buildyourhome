@@ -1,35 +1,58 @@
-// Open modal functionality
-document.querySelectorAll('.open-modal').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-  });
-});
 
-//document.querySelectorAll(".open-modal").forEach(item => {
-//    item.addEventListener("click", function(event) {
-//        event.preventDefault();
-//        let modalId = this.getAttribute("data-modal");
-//        document.getElementById(modalId).style.display = "block";
-//    });
-//});
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("buyModal");
+  var closeBtn = document.querySelector(".close");
 
-// Close modal functionality
-document.querySelectorAll('.close').forEach((button) => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-  });
-});
+  // Function to open the modal
+  function openModal() {
+    modal.style.display = "block";
+  }
 
-// Close modal when clicking outside of it
-window.addEventListener('click', (event) => {
-  document.querySelectorAll('.modal').forEach((modal) => {
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Event listener for close button
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close modal if user clicks outside the content
+  window.addEventListener("click", function (event) {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      closeModal();
     }
   });
+
+  // Open modal after 1 second for demo purposes
+  setTimeout(openModal, 1000);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("sellModal");
+  var closeBtn = document.querySelector(".close");
+
+  // Function to open the modal
+  function openModal() {
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Event listener for close button
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close modal if user clicks outside the content
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Open modal after 1 second for demo purposes
+  setTimeout(openModal, 1000);
 });
