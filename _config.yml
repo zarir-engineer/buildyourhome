@@ -261,8 +261,7 @@ date_format: "%B %-d, %Y"
 timezone: "India/Kolkata"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
-paginate: 5
+
 
 kramdown:
   input: GFM
@@ -294,15 +293,22 @@ exclude:
   - screenshot.png
   - docs/
 
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
+#plugins:
+#  - jekyll-paginate
+#  - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-gems:
-  - jekyll-inline-svg
+gems: [jekyll-inline-svg, jekyll-paginate, jekyll-sitemap]
+
+# Outputting
+permalink:     date
+paginate:       2
+paginate_path: /page:num
+
+quiet:    false
+defaults: []
 
 svg:
   optimize: true
