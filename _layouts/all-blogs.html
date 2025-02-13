@@ -33,28 +33,32 @@ title: All Blogs
 
       <!-- Blog Items -->
       <div class="articles-container">
-        {% for post in paginator.posts %}
-          <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-            <div class="image">
-            <a href="{{ post.url }}">
-              <img src="{{ post.featured_image | site.base_url }}" alt="{{ post.title }}" loading="lazy">
-            </a>
-            </div>
-            <div class="desc">
-            <div class="category lui-subtitle">
-              <span>post.date</span>
-            </div>
-            <h5 class="lui-title">
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </h5>
-            <div class="lui-text">
-              <p>Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem vel velit efficitur malesuada. Donec arcu lacus, ornare eget&hellip; </p>
-              <div class="readmore">
-                <a href="{{ post.url }}" class="lnk">Read more</a>
+        {% if paginator.posts %}
+          {% for post in paginator.posts %}
+            <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <div class="image">
+              <a href="{{ post.url }}">
+                <img src="{{ post.featured_image | site.base_url }}" alt="{{ post.title }}" loading="lazy">
+              </a>
+              </div>
+              <div class="desc">
+              <div class="category lui-subtitle">
+                <span>post.date</span>
+              </div>
+              <h5 class="lui-title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h5>
+              <div class="lui-text">
+                <p>Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem vel velit efficitur malesuada. Donec arcu lacus, ornare eget&hellip; </p>
+                <div class="readmore">
+                  <a href="{{ post.url }}" class="lnk">Read more</a>
+                </div>
               </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        {% else %}
+              <p>No Posts Found</p>
+        {% endif %}
       </div>
 
 <!--      <div class="pager">-->

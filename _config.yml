@@ -293,14 +293,14 @@ exclude:
   - screenshot.png
   - docs/
 
-#plugins:
-#  - jekyll-paginate
-#  - jekyll-sitemap
+# _config.yml
+plugins:
+  - jekyll-paginate
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-gems: [jekyll-inline-svg, jekyll-paginate, jekyll-sitemap]
+gems: [jekyll-inline-svg, jekyll-sitemap]
 
 # Outputting
 permalink:     date
