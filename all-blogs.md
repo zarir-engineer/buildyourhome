@@ -1,7 +1,7 @@
 ---
 layout: all-blogs  # This tells Jekyll to use _layouts/all-blogs.html
 title: Blog Page
-# permalink: /all-blogs/
+permalink: /all-blogs/
 ---
 
 # Blog Page
