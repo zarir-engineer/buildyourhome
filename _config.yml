@@ -265,7 +265,6 @@ kramdown:
 highlighter: rouge
 
 
-
 # Default YAML values (more information on Jekyll's site)
 #defaults:
 #  -
@@ -304,8 +303,8 @@ plugins:
 
 # Outputting
 permalink:     date
-paginate:       2
-paginate_path: /page:num
+paginate:       5
+paginate_path: "/page:num/"
 
 quiet:    false
 defaults: []
