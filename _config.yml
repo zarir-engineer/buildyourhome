@@ -259,12 +259,12 @@ date_format: "%B %-d, %Y"
 
 # Output options (more information on Jekyll's site)
 timezone: "India/Kolkata"
-#markdown: kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: rouge
 
 
-kramdown:
-  input: GFM
 
 # Default YAML values (more information on Jekyll's site)
 #defaults:
