@@ -2,5 +2,9 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-inline-svg", "~>0.0.1"
-gem "jekyll-paginate", "~>1.1.0"
+
+group :jekyll_plugins do
+  gem "jekyll-inline-svg", "~> 0.0.1"
+  gem "jekyll-paginate", "~> 1.1.0"
+  gem "kramdown-parser-gfm"
+end
