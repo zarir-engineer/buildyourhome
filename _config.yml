@@ -296,11 +296,11 @@ exclude:
 # _config.yml
 plugins:
   - jekyll-paginate
+  - jekyll-inline-svg
+  - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-
-gems: [jekyll-inline-svg, jekyll-sitemap]
 
 # Outputting
 permalink:     date
