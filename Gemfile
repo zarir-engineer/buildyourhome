@@ -6,4 +6,4 @@ gemspec
 
 
 gem "jekyll-inline-svg", "~>0.0.1"
-gem "jekyll-paginate"
+gem "jekyll-paginate", "~>1.1.0"
