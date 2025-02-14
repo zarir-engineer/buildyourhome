@@ -303,7 +303,7 @@ plugins:
 
 # Outputting
 permalink:     date
-paginate:       5
+paginate:       2
 paginate_path: "/all-blogs/page:num/"
 
 quiet:    false
