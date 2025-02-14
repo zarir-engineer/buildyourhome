@@ -7,6 +7,7 @@ categories: jekyll, tutorial
 tags: [jekyll, markdown, blog]
 featured_image: /assets/images/posts/south-mumbai.jpg
 lead_text: "A World of Luxury, Heritage, and Opportunity."
+hidden: false
 ---
 
 ## Welcome to My Jekyll Blog!
@@ -21,4 +22,4 @@ This is my **first blog post** in Jekyll. 🚀
 ### Adding an Image
 You can add an image like this:
 ```html
-<img src="/assets/images/my-image.jpg" alt="An example image">
+<img src="/assets/images/posts/south-mumbai.jpg" alt="An example image">

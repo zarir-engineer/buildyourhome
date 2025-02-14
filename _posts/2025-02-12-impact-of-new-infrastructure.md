@@ -7,6 +7,7 @@ categories: Branding, Ui-design
 tags: [south, mumbai, realty]
 featured_image: /assets/images/posts/south-mumbai.jpg
 lead_text: "Key Infrastructure Developments in Mumbai."
+hidden: false
 ---
 
 The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market
