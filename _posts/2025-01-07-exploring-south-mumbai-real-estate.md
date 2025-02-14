@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: inner
 position: left
 title: 'Exploring South Mumbai Real Estate'
 date: 2025-01-20 15:56:00

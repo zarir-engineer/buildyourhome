@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: inner
 position: left
 title: 'Impact of new Infrastructure Developments on Mumbai's Real Estate Market'
 date: 2025-02-12 15:23:33
