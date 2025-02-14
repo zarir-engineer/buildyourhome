@@ -294,7 +294,7 @@ exclude:
 
 # _config.yml
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-inline-svg
 
 
