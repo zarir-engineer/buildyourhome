@@ -40,7 +40,9 @@ pagination:
                 <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <div class="image">
                     <a href="{{ post.url }}">
-                      <img src="{{ post.featured_image | site.base_url }}" alt="{{ post.title }}" loading="lazy">
+                      {% if page.featured_image %}
+                        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}" loading="lazy">
+                      {% endif %}
                     </a>
                   </div>
                   <div class="desc">
