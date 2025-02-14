@@ -308,6 +308,7 @@ pagination:
   title: ':title - page :num'
   sort_field: 'date'
   sort_reverse: true
+  debug: true
 
 quiet:    false
 defaults: []
