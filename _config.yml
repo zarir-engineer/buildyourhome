@@ -301,10 +301,13 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-# Outputting
-permalink:     date
-paginate:       2
-paginate_path: "/all-blogs/page:num/"
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/all-blogs/page/:num/'
+  title_suffix: ' - page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
 quiet:    false
 defaults: []

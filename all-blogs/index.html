@@ -2,6 +2,8 @@
 layout: base
 title: All Blogs
 permalink: /all-blogs/
+pagination:
+  enabled: true
 ---
 
 <!-- Wrapper -->
@@ -67,15 +69,25 @@ permalink: /all-blogs/
             <!--        <a class="next page-numbers" href="#">Next</a>-->
             <!--      </div>-->
             <!-- Pagination Navigation -->
-            <div class="pagination">
-              {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}">← Previous</a>
-              {% endif %}
-
-              <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-              {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path }}">Next →</a>
+<!--            <div class="pagination">-->
+            <div class="pager">
+              <!-- Pagination Links -->
+              {% if paginator.total_pages > 1 %}
+                {% if paginator.previous_page %}
+                  <a href="{{ paginator.previous_page_path }}" class="previous">
+                    Previous
+                  </a>
+                {% else %}
+                  <span class="previous">Previous</span>
+                {% endif %}
+                <span class="page-numbers current">
+                  Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                </span>
+                {% if paginator.next_page %}
+                  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+                {% else %}
+                  <span class="next ">Next</span>
+                {% endif %}
               {% endif %}
             </div>
           </div>
