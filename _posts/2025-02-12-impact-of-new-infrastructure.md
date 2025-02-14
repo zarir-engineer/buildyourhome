@@ -1,12 +1,12 @@
 ---
 layout: inner
 position: left
-title: 'Impact of new Infrastructure Developments on Mumbai's Real Estate Market'
+title: "Impact of new Infrastructure Developments on Mumbais Real Estate Market"
 date: 2025-02-12 15:23:33
 categories: Branding, Ui-design
 tags: [south, mumbai, realty]
-featured_image: '/assets/images/posts/south-mumbai.jpg'
-lead_text: 'Key Infrastructure Developments in Mumbai.'
+featured_image: /assets/images/posts/south-mumbai.jpg
+lead_text: "Key Infrastructure Developments in Mumbai."
 ---
 
 The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market
