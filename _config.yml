@@ -303,9 +303,9 @@ plugins:
 
 pagination:
   enabled: true
-  per_page: 2
-  permalink: '/all-blogs/page/:num/'
-  title_suffix: ' - page :num'
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num'
   sort_field: 'date'
   sort_reverse: true
 
