@@ -8,7 +8,7 @@ _site
 Thumbs.db
 ehthumbs.db
 
-Gemfile.lock
+#Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
 
@@ -17,3 +17,6 @@ beautiful-jekyll-theme-*.gem
 .idea/modules.xml
 .idea/vcs.xml
 .idea/buildyourhome.iml
+
+*-cache/
+*.DS_Store
