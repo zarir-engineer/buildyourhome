@@ -1,13 +1,12 @@
 ---
 layout: inner
 position: left
-title: "Exploring South Mumbai Real Estate"
-date: 2025-01-20 15:56:00
+title: Exploring South Mumbai Real Estate
+date:   2016-11-20 19:16:49 +0100
 categories: Branding, Ui-design
 tags: [south, mumbai, realty]
 featured_image: /assets/images/posts/south-mumbai.jpg
-lead_text: "A World of Luxury, Heritage, and Opportunity."
-hidden: false
+lead_text: A World of Luxury, Heritage, and Opportunity.
 ---
 
 
