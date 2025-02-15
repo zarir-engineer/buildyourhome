@@ -301,14 +301,25 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
+# Pagination Settings
 pagination:
   enabled: true
-  per_page: 5
-  permalink: '/all-blogs/page/:num/'
-  title: ':title - page :num'
+  per_page: 3
+  offset: 2
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
   sort_field: 'date'
   sort_reverse: true
-  debug: true
+
+#pagination:
+#  enabled: true
+#  per_page: 5
+#  permalink: '/all-blogs/page/:num/'
+#  title: ':title - page :num'
+#  sort_field: 'date'
+#  sort_reverse: true
+#  debug: true
 
 quiet:    false
 defaults: []
