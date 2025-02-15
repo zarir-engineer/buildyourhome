@@ -301,8 +301,8 @@ plugins:
 # 2fc73a3a967e97599c9763d05e564189
 
 # Explicitly turn off the old code
-paginate:off
-paginate_path:off
+paginate: off
+paginate_path: off
 
 # Pagination Settings
 pagination:
