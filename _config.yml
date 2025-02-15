@@ -312,9 +312,6 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-# Explicitly turn off the old code
-paginate: off
-paginate_path: off
 
 quiet:    false
 defaults: []
