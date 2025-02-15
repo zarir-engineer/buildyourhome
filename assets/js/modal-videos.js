@@ -5,6 +5,7 @@ document.querySelectorAll('.open-modal').forEach((button) => {
     const modalId = button.getAttribute('data-modal');
     const modal = document.getElementById(modalId);
     modal.style.display = 'block';
+    document.body.classList.add('no-scroll');  // Disable scrolling
   });
 });
 
@@ -22,6 +23,8 @@ document.querySelectorAll('.close').forEach((button) => {
     const modalId = button.getAttribute('data-modal');
     const modal = document.getElementById(modalId);
     modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');  // Enable scrolling
+
   });
 });
 
@@ -31,5 +34,7 @@ window.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.style.display = 'none';
     }
+  document.body.classList.remove('no-scroll');  // Enable scrolling
+
   });
 });
