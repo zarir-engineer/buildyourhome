@@ -68,6 +68,7 @@ Version: 1.0
 
 html,
 body {
+    overflow: hidden;
 	margin: 0;
 	padding: 0;
 	height: auto !important;
