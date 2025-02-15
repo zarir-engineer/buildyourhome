@@ -297,9 +297,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-inline-svg
 
-# Build settings
-theme: minima
-
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
