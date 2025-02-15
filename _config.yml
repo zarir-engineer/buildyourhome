@@ -297,9 +297,18 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-inline-svg
 
+# Build settings
+theme: minima
+gems:
+  - jekyll-paginate-v2
+
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
+
+# Explicitly turn off the old code
+paginate: nil
+paginate_path: nil
 
 # Pagination Settings
 pagination:
@@ -307,19 +316,11 @@ pagination:
   per_page: 3
   offset: 2
   permalink: '/page/:num/'
+#  permalink: '/all-blogs/page/:num/'
   title: ':title - page :num of :max'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-
-#pagination:
-#  enabled: true
-#  per_page: 5
-#  permalink: '/all-blogs/page/:num/'
-#  title: ':title - page :num'
-#  sort_field: 'date'
-#  sort_reverse: true
-#  debug: true
 
 quiet:    false
 defaults: []
