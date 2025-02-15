@@ -80,27 +80,40 @@ pagination:
             <!--        <a class="next page-numbers" href="#">Next</a>-->
             <!--      </div>-->
             <!-- Pagination Navigation -->
+                {% if paginator.total_pages > 1 %}
+                <ul class="pager">
+                    {% if paginator.previous_page %}
+                    <li class="previous">
+                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+                    </li>
+                    {% endif %}
+                    {% if paginator.next_page %}
+                    <li class="next">
+                        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                {% endif %}
 <!--            <div class="pagination">-->
-            <div class="pagination">
-              <!-- Pagination Links -->
-              {% if paginator.total_pages > 1 %}
-                {% if paginator.previous_page %}
-                  <a href="{{ paginator.previous_page_path }}" class="previous">
-                    Previous
-                  </a>
-                {% else %}
-                  <span class="previous">Previous</span>
-                {% endif %}
-                <span class="page-numbers current">
-                  Page: {{ paginator.page }} of {{ paginator.total_pages }}
-                </span>
-                {% if paginator.next_page %}
-                  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-                {% else %}
-                  <span class="next ">Next</span>
-                {% endif %}
-              {% endif %}
-            </div>
+<!--              &lt;!&ndash; Pagination Links &ndash;&gt;-->
+<!--              {% if paginator.total_pages > 1 %}-->
+<!--                {% if paginator.previous_page %}-->
+<!--                  <a href="{{ paginator.previous_page_path }}" class="previous">-->
+<!--                    Previous-->
+<!--                  </a>-->
+<!--                {% else %}-->
+<!--                  <span class="previous">Previous</span>-->
+<!--                {% endif %}-->
+<!--                <span class="page-numbers current">-->
+<!--                  Page: {{ paginator.page }} of {{ paginator.total_pages }}-->
+<!--                </span>-->
+<!--                {% if paginator.next_page %}-->
+<!--                  <a href="{{ paginator.next_page_path }}" class="next">Next</a>-->
+<!--                {% else %}-->
+<!--                  <span class="next ">Next</span>-->
+<!--                {% endif %}-->
+<!--              {% endif %}-->
+<!--            </div>-->
           </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
