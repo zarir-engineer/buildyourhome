@@ -311,6 +311,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
+  debug: true
 
 
 quiet:    false
