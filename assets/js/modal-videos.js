@@ -5,9 +5,11 @@ function togglePopup() {
     if (popup.style.display === "none" || popup.style.display === "") {
         popup.style.display = "block";
         overlay.style.display = "block";
+        body.style.overflow = "hidden";
     } else {
         popup.style.display = "none";
         overlay.style.display = "none";
+        body.style.overflow = "auto"; 
     }
 }
 
