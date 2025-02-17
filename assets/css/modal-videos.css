@@ -11,7 +11,9 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    /*width: 300px;*/
+    width: 100vw; /* Full viewport width */
+    height: 100vh;  Full viewport height
     text-align: center;
     z-index: 1000;
 }
