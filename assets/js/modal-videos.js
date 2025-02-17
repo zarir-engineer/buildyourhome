@@ -1,3 +1,8 @@
+function togglePopup() {
+var popup = document.getElementById("popup-content");
+popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+
 // Open modal functionality
 document.querySelectorAll('.open-modal').forEach((button) => {
   button.addEventListener('click', (event) => {
