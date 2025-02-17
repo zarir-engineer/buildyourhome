@@ -1,9 +1,9 @@
-<!-- The Modal-->
-<div id="{{ include.modal-name }}" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close" data-modal="{{ include.modal-name }}">&times;</span>
-    <h2>Modal Header</h2>
-    <p>{{ include.modal-data }}</p>
-  </div>
+<div id="overlay" onclick="togglePopup()"></div>
+
+<div id="popup-content" style="display: none;">
+    <div class="lui-text">
+        <div>
+            <p>{{ include.description }}</p>
+        </div>
+    </div>
 </div>

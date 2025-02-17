@@ -1,16 +1,24 @@
-<div class="modal-body">
-    <a href="#sellModal" class="open-modal" data-modal="sellModal">
-        <div class="services-item">
-            <div class="lui-subtitle">
-                <span>Selling</span>
-            </div>
-            <div class="lui-text">
-                <div>
-                    <p>First, I will help you obtain a pre-approval document from a reliable, re....sive l...w ...click here</p>
-                </div>
-            </div>
-            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+<a onclick="togglePopup()">
+    <div class="services-item">
+        <div class="lui-subtitle">
+            <span>Selling</span>
         </div>
-    </a>
+<!--        <div class="lui-text">-->
+<!--            <div>-->
+<!--                <p>click here ...</p>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+
+    </div>
+</a>
+
+<div id="overlay" onclick="togglePopup()"></div>
+
+<div id="popup-content" style="display: none;">
+    <div class="lui-text">
+        <div>
+            <p>Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing.</p>
+        </div>
+    </div>
 </div>
-{% include modal.html modal-name='sellModal' modal-data='This is a simple modal popup example in Jekyll' %}
