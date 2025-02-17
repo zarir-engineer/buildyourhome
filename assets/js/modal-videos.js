@@ -9,7 +9,7 @@ function togglePopup() {
     } else {
         popup.style.display = "none";
         overlay.style.display = "none";
-        body.style.overflow = "auto"; 
+        body.style.overflow = "auto";
     }
 }
 
