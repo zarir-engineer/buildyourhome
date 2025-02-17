@@ -1,6 +1,7 @@
 function togglePopup() {
     let popup = document.getElementById("popup-content");
     let overlay = document.getElementById("overlay");
+    let body = document.body;
 
     if (popup.style.display === "none" || popup.style.display === "") {
         popup.style.display = "block";
