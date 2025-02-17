@@ -1,7 +1,21 @@
 function togglePopup() {
-var popup = document.getElementById("popup-content");
-popup.style.display = popup.style.display === "none" ? "block" : "none";
+    let popup = document.getElementById("popup-content");
+    let overlay = document.getElementById("overlay");
+
+    if (popup.style.display === "none" || popup.style.display === "") {
+        popup.style.display = "block";
+        overlay.style.display = "block";
+    } else {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    }
 }
+
+
+//function togglePopup() {
+//var popup = document.getElementById("popup-content");
+//popup.style.display = popup.style.display === "none" ? "block" : "none";
+//}
 
 // Open modal functionality
 document.querySelectorAll('.open-modal').forEach((button) => {

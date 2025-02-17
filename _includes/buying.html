@@ -21,15 +21,19 @@
 <!--  <p>This is the alternative to a modal pop-up.</p>-->
 <!--</div>-->
 
-
+<!-- Button that triggers the popup -->
 <button onclick="togglePopup()">
     <div class="services-item">
         <div class="lui-subtitle">
             <span> Buying </span>
         </div>
-        <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
+        <div class="image" style="background-image: url('assets/images/pat-2.png'); width: 100px; height: 100px; background-size: cover;"></div>
     </div>
 </button>
+
+<!-- Overlay -->
+<div id="overlay" onclick="togglePopup()"></div>
+
 <div id="popup-content" style="display: none;">
     <div class="lui-text">
         <div>
