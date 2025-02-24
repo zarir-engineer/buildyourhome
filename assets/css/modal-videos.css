@@ -3,7 +3,6 @@
 /* Popup Styling */
 #popup-content {
     display: none;
-    overflow: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,13 +11,15 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999 !important; /* Sit on top */
+    z-index: 9999 !important;
     width: 600px;
-    height: 90%;
-    /*width: 100vw;  /* Full viewport width */
-    /*height: 100vh; /* Full viewport height*/
+    max-width: 90vw;  /* Prevents overflow */
+    height: auto;
+    max-height: 90vh; /* Keeps it within viewport */
+    overflow-y: auto; /* Allows scrolling inside the modal */
     text-align: center;
 }
+
 
 /* Overlay (optional for dimming background) */
 #overlay {
@@ -59,6 +60,10 @@
 }
 
 .modal.no-scroll {
+    overflow: hidden;
+}
+
+body.modal-open {
     overflow: hidden;
 }
 
