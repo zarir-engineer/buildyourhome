@@ -3,7 +3,7 @@
 /* Popup Styling */
 #popup-content {
     display: none;
-    position: fixed;
+    position: absolute; /* Absolute positioning */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -11,7 +11,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999 !important;
+    z-index: 1000 !important;
     width: 100vw;
     height: 100vh;
     max-width: none;
@@ -25,7 +25,8 @@
 #overlay {
     display: none;
     overflow: hidden;
-    position: fixed;
+    position: relative;
+    margin: 15% auto; /* Centered horizontally and vertically */
     top: 0;
     left: 0;
     width: 100%;
