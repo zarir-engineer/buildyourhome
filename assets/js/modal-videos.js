@@ -24,24 +24,24 @@ document.querySelectorAll('.open-modal').forEach((button) => {
   });
 });
 
-//document.querySelectorAll(".open-modal").forEach(item => {
-//    item.addEventListener("click", function(event) {
-//        event.preventDefault();
-//        let modalId = this.getAttribute("data-modal");
-//        document.getElementById(modalId).style.display = "block";
-//    });
-//});
+document.querySelectorAll(".open-modal").forEach(item => {
+    item.addEventListener("click", function(event) {
+        event.preventDefault();
+        let modalId = this.getAttribute("data-modal");
+        document.getElementById(modalId).style.display = "block";
+    });
+});
 
-//// Close modal functionality
-//document.querySelectorAll('.close').forEach((button) => {
-//  button.addEventListener('click', () => {
-//    const modalId = button.getAttribute('data-modal');
-//    const modal = document.getElementById(modalId);
-//    modal.style.display = 'none';
-//    document.body.classList.remove('no-scroll');  // Enable scrolling
-//
-//  });
-//});
+// Close modal functionality
+document.querySelectorAll('.close').forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');  // Enable scrolling
+
+  });
+});
 
 //// Close modal when clicking outside of it
 //window.addEventListener('click', (event) => {
