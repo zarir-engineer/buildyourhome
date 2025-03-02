@@ -1,29 +1,29 @@
-function openPopup_testimony(element) {
-    document.getElementById("popup-title").innerText = element.getAttribute("data-keyword");
-    document.getElementById("popup-description").innerText = element.getAttribute("data-description");
-    document.getElementById("popup-image").src = element.getAttribute("data-image");
-
-    // Load YouTube Video
-    var videoUrl = element.getAttribute("data-video");
-    if (videoUrl) {
-        document.getElementById("popup-video").src = videoUrl;
-        document.getElementById("popup-video-container").style.display = "block";
-    } else {
-        document.getElementById("popup-video-container").style.display = "none";
-    }
-
-    document.getElementById("popup-content").style.display = "flex";
-    document.getElementById("overlay").style.display = "block";
-}
-
-function closePopup_testimony() {
-    document.getElementById("popup-content").style.display = "none";
-    document.getElementById("overlay").style.display = "none";
-
-    // Stop video when modal closes
-    document.getElementById("popup-video").src = "";
-}
-
+//function openPopup_testimony(element) {
+//    document.getElementById("popup-title").innerText = element.getAttribute("data-keyword");
+//    document.getElementById("popup-description").innerText = element.getAttribute("data-description");
+//    document.getElementById("popup-image").src = element.getAttribute("data-image");
+//
+//    // Load YouTube Video
+//    var videoUrl = element.getAttribute("data-video");
+//    if (videoUrl) {
+//        document.getElementById("popup-video").src = videoUrl;
+//        document.getElementById("popup-video-container").style.display = "block";
+//    } else {
+//        document.getElementById("popup-video-container").style.display = "none";
+//    }
+//
+//    document.getElementById("popup-content").style.display = "flex";
+//    document.getElementById("overlay").style.display = "block";
+//}
+//
+//function closePopup_testimony() {
+//    document.getElementById("popup-content").style.display = "none";
+//    document.getElementById("overlay").style.display = "none";
+//
+//    // Stop video when modal closes
+//    document.getElementById("popup-video").src = "";
+//}
+//
 
 function openPopup(element) {
     var keyword = element.getAttribute("data-keyword"); // Get the service name
