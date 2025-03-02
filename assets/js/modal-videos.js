@@ -1,18 +1,29 @@
-//function togglePopup() {
-//    let popup = document.getElementById("popup-content");
-//    let overlay = document.getElementById("overlay");
-//    let body = document.body;
-//
-//    if (popup.style.display === "none" || popup.style.display === "") {
-//        popup.style.display = "block";
-//        overlay.style.display = "block";
-//        body.style.overflow = "hidden";
-//    } else {
-//        popup.style.display = "none";
-//        overlay.style.display = "none";
-//        body.style.overflow = "auto";
-//    }
-//}
+function openPopup_testimony(element) {
+    document.getElementById("popup-title").innerText = element.getAttribute("data-keyword");
+    document.getElementById("popup-description").innerText = element.getAttribute("data-description");
+    document.getElementById("popup-image").src = element.getAttribute("data-image");
+
+    // Load YouTube Video
+    var videoUrl = element.getAttribute("data-video");
+    if (videoUrl) {
+        document.getElementById("popup-video").src = videoUrl;
+        document.getElementById("popup-video-container").style.display = "block";
+    } else {
+        document.getElementById("popup-video-container").style.display = "none";
+    }
+
+    document.getElementById("popup-content").style.display = "flex";
+    document.getElementById("overlay").style.display = "block";
+}
+
+function closePopup_testimony() {
+    document.getElementById("popup-content").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+
+    // Stop video when modal closes
+    document.getElementById("popup-video").src = "";
+}
+
 
 function openPopup(element) {
     var keyword = element.getAttribute("data-keyword"); // Get the service name
@@ -40,15 +51,15 @@ function closePopup() {
 
 
 // Open modal functionality
-document.querySelectorAll('.open-modal').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-    document.body.classList.add('no-scroll');  // Disable scrolling
-  });
-});
+//document.querySelectorAll('.open-modal').forEach((button) => {
+//  button.addEventListener('click', (event) => {
+//    event.preventDefault(); // Prevent default link behavior
+//    const modalId = button.getAttribute('data-modal');
+//    const modal = document.getElementById(modalId);
+//    modal.style.display = 'block';
+//    document.body.classList.add('no-scroll');  // Disable scrolling
+//  });
+//});
 
 //document.querySelectorAll(".open-modal").forEach(item => {
 //    item.addEventListener("click", function(event) {
