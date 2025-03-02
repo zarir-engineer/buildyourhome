@@ -1,18 +1,18 @@
-function togglePopup() {
-    let popup = document.getElementById("popup-content");
-    let overlay = document.getElementById("overlay");
-    let body = document.body;
-
-    if (popup.style.display === "none" || popup.style.display === "") {
-        popup.style.display = "block";
-        overlay.style.display = "block";
-        body.style.overflow = "hidden";
-    } else {
-        popup.style.display = "none";
-        overlay.style.display = "none";
-        body.style.overflow = "auto";
-    }
-}
+//function togglePopup() {
+//    let popup = document.getElementById("popup-content");
+//    let overlay = document.getElementById("overlay");
+//    let body = document.body;
+//
+//    if (popup.style.display === "none" || popup.style.display === "") {
+//        popup.style.display = "block";
+//        overlay.style.display = "block";
+//        body.style.overflow = "hidden";
+//    } else {
+//        popup.style.display = "none";
+//        overlay.style.display = "none";
+//        body.style.overflow = "auto";
+//    }
+//}
 
 function openPopup(element) {
     var keyword = element.getAttribute("data-keyword"); // Get the service name
