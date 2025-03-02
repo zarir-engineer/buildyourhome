@@ -13,16 +13,16 @@ document.getElementById('openModalBtn').addEventListener('click', showModal);
 document.getElementById('overlay').addEventListener('click', hideModal);
 
 
-//// Open modal functionality
-//document.querySelectorAll('.open-modal').forEach((button) => {
-//  button.addEventListener('click', (event) => {
-//    event.preventDefault(); // Prevent default link behavior
-//    const modalId = button.getAttribute('data-modal');
-//    const modal = document.getElementById(modalId);
-//    modal.style.display = 'block';
-//    document.body.classList.add('no-scroll');  // Disable scrolling
-//  });
-//});
+// Open modal functionality
+document.querySelectorAll('.open-modal').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+    document.body.classList.add('no-scroll');  // Disable scrolling
+  });
+});
 
 //document.querySelectorAll(".open-modal").forEach(item => {
 //    item.addEventListener("click", function(event) {
