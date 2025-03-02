@@ -1,18 +1,24 @@
-function togglePopup() {
-    let popup = document.getElementById("popup-content");
-    let overlay = document.getElementById("overlay");
-    let body = document.body;
+//function togglePopup() {
+//    let popup = document.getElementById("popup-content");
+//    let overlay = document.getElementById("overlay");
+//    let body = document.body;
+//
+//    if (popup.style.display === "none" || popup.style.display === "") {
+//        popup.style.display = "block";
+//        overlay.style.display = "block";
+//        body.style.overflow = "hidden";
+//    } else {
+//        popup.style.display = "none";
+//        overlay.style.display = "none";
+//        body.style.overflow = "auto";
+//    }
+//}
 
-    if (popup.style.display === "none" || popup.style.display === "") {
-        popup.style.display = "block";
-        overlay.style.display = "block";
-        body.style.overflow = "hidden";
-    } else {
-        popup.style.display = "none";
-        overlay.style.display = "none";
-        body.style.overflow = "auto";
-    }
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("popup-content").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+});
+
 
 function openPopup(element) {
     // Get the data from the clicked <a>
