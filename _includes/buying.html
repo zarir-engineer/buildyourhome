@@ -2,6 +2,7 @@
     data-keyword="Buying"
     data-description="We help you find the best properties to purchase."
     data-image="assets/images/buying.png">
+
     <div class="services-item">
         <div class="lui-subtitle">
             <span>Buying</span>
@@ -13,17 +14,19 @@
         </div>
         <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
     </div>
+
+    <!-- Modal inside the <a> tag -->
+    <div id="overlay"></div>
+
+    <div id="popup-content">
+        <img id="popup-image" src="" alt="Popup Image">
+        <div id="popup-body">
+            <h2 id="popup-title">Modal Title</h2>
+            <p id="popup-description">This is some modal content that is scrollable if it overflows.</p>
+        </div>
+        <div id="popup-footer">
+            <button onclick="closePopup(this)">Close</button>
+        </div>
+    </div>
+
 </a>
-
-<div id="overlay"></div>
-
-<div id="popup-content">
-    <img id="popup-image" src="" alt="Popup Image">
-    <div id="popup-body">
-        <h2 id="popup-title">Modal Title</h2>
-        <p id="popup-description">This is some modal content that is scrollable if it overflows.</p>
-    </div>
-    <div id="popup-footer">
-        <button id="closeModalBtn">Close</button>
-    </div>
-</div>
