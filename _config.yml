@@ -300,21 +300,18 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-## Pagination Settings
+
 pagination:
   enabled: true
+  collection: 'posts'
   per_page: 3
-  offset: 2
-  permalink: '/page/:num/'
-#  permalink: '/all-blogs/page/:num/'
-  title: ':title - page :num of :max'
-  limit: 0
+#  permalink: '/page/:num/'
+  permalink: '/all-blogs/page/:num/'
   sort_field: 'date'
   sort_reverse: true
+  title: ':title - page :num of :max'
+  limit: 0
 
-## Explicitly turn off the old code
-#paginate: 2
-#paginate_path: '/all-blogs/page/:num/'
 
 quiet:    false
 defaults: []
