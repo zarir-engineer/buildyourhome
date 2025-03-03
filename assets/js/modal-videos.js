@@ -94,5 +94,10 @@ function testimonyClosePopup() {
         enableHorizontalScroll();
     };
 
+    // ensure video is closed
+    let videoIframe = document.getElementById("testimony-popup-video");
+    videoIframe.src = "";  // Reset src to stop playing
+
+
 }
 
