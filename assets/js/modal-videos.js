@@ -28,15 +28,15 @@ function closePopup() {
 
 function testimonyOpenPopup(element) {
     // Get data attributes from clicked element
-    var imageSrc = element.getAttribute("data-image");
+//    var imageSrc = element.getAttribute("data-image");
     var videoSrc = element.getAttribute("data-video");
-    var title = element.getAttribute("data-keyword");
-    var description = element.getAttribute("data-description");
+//    var title = element.getAttribute("data-keyword");
+//    var description = element.getAttribute("data-description");
 
     // Set modal content
-    document.getElementById("testimony-popup-image").src = imageSrc;
-    document.getElementById("testimony-popup-title").textContent = title;
-    document.getElementById("testimony-popup-description").textContent = description;
+//    document.getElementById("testimony-popup-image").src = imageSrc;
+//    document.getElementById("testimony-popup-title").textContent = title;
+//    document.getElementById("testimony-popup-description").textContent = description;
     document.getElementById("testimony-popup-video").src = videoSrc;
 
     // Show modal

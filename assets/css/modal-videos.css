@@ -128,7 +128,7 @@ close:focus {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    z-index: 999999;
 }
 
 /* Modal Container */
@@ -143,7 +143,7 @@ close:focus {
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    z-index: 1001;
+    z-index: 999999;
     text-align: center;
 }
 
