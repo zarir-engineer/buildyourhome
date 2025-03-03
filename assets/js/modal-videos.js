@@ -1,3 +1,15 @@
+// horizontal scrolling
+function disableHorizontalScroll() {
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+}
+
+function enableHorizontalScroll() {
+    document.body.style.overflowX = "";
+    document.documentElement.style.overflowX = "";
+}
+
+
 // Services
 
 function openPopup(element) {
@@ -52,6 +64,15 @@ function testimonyOpenPopup(element) {
 
    // Disable scrolling
     document.body.classList.add("modal-open");
+
+    // Disable Horizontal scrolling
+    window.testimonyOpenPopup = function (element) {
+        document.getElementById("testimony-overlay").style.display = "block";
+        document.getElementById("testimony-popup").style.display = "block";
+
+        disableHorizontalScroll();
+    };
+
 }
 
 function testimonyClosePopup() {
@@ -62,6 +83,16 @@ function testimonyClosePopup() {
     // Stop video playback by resetting the iframe source
     document.getElementById("testimony-popup-video").src = "";
 
-    // Enable scrolling
+    // Enable vertical scrolling
     document.body.classList.remove("modal-open");
+
+    // Enable horizontal scrolling
+    window.testimonyClosePopup = function () {
+        document.getElementById("testimony-overlay").style.display = "none";
+        document.getElementById("testimony-popup").style.display = "none";
+
+        enableHorizontalScroll();
+    };
+
 }
+
