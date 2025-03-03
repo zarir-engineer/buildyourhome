@@ -143,7 +143,7 @@ close:focus {
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    z-index: 999999;
+    z-index: 1000000; /* one level above the overlay */
     text-align: center;
 }
 
