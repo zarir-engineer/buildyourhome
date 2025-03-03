@@ -17,11 +17,18 @@ function openPopup(element) {
     // Show modal
     document.getElementById("popup-content").style.display = "block";
     document.getElementById("overlay").style.display = "block";
+
+   // Disable scrolling
+    document.body.classList.add("modal-open");
+
 }
 
 function closePopup() {
     document.getElementById("popup-content").style.display = "none";
     document.getElementById("overlay").style.display = "none";
+
+    // Enable scrolling
+    document.body.classList.remove("modal-open");
 }
 
 // Testimonies
@@ -42,6 +49,9 @@ function testimonyOpenPopup(element) {
     // Show modal
     document.getElementById("testimony-overlay").style.display = "block";
     document.getElementById("testimony-popup").style.display = "block";
+
+   // Disable scrolling
+    document.body.classList.add("modal-open");
 }
 
 function testimonyClosePopup() {
@@ -51,4 +61,7 @@ function testimonyClosePopup() {
 
     // Stop video playback by resetting the iframe source
     document.getElementById("testimony-popup-video").src = "";
+
+    // Enable scrolling
+    document.body.classList.remove("modal-open");
 }
