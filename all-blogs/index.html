@@ -36,71 +36,79 @@ pagination:
               <!-- Blog Items -->
               <div class="articles-container">
 
-                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                  <div class="image">
-                    <a href="exploring_south_mumbai_real_estate.html">
-                      <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="Exploring South Mumbai Real Estate" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="desc">
-                    <div class="category lui-subtitle">
-                      <span>October 31, 2022</span>
-                    </div>
-                    <h5 class="lui-title">
-                      <a href="exploring_south_mumbai_real_estate.html">Exploring South Mumbai Real Estate</a>
-                    </h5>
-                    <div class="lui-text">
-                      <p> A World of Luxury, Heritage, and Opportunity </p>
-                      <div class="readmore">
-                        <a href="exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  {% for post in paginator.posts %}
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.excerpt }}</p>
+                  {% endfor %}
 
-                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                  <div class="image">
-                    <a href="impact_of_new_infrastructure.html">
-                      <img src="{{ 'assets/images/impact-of-infrastructure-on-mumbai.jpg' | relative_url }}" alt="The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="desc">
-                    <div class="category lui-subtitle">
-                      <span>October 31, 2022</span>
-                    </div>
-                    <h5 class="lui-title">
-                      <a href="impact_of_new_infrastructure.html">The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market</a>
-                    </h5>
-                    <div class="lui-text">
-                      <p>Mumbai, the financial capital of India </p>
-                      <div class="readmore">
-                        <a href="impact_of_new_infrastructure.html" class="lnk">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  {% include pagination.html %}
 
-                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                  <div class="image">
-                    <a href="repurposing_old_window_frames.html">
-                      <img src="{{ 'assets/images/repurposing-old-window-frames.jpg' | relative_url }}" alt="Repurposing Old Window Frames: A Creative DIY Project" loading="lazy">
-                    </a>
-                  </div>
-                  <div class="desc">
-                    <div class="category lui-subtitle">
-                      <span>November 28, 2021</span>
-                    </div>
-                    <h5 class="lui-title">
-                      <a href="repurposing_old_window_frames.html">Repurposing Old Window Frames: A Creative DIY Project</a>
-                    </h5>
-                    <div class="lui-text">
-                      <p>Old window frames are </p>
-                      <div class="readmore">
-                        <a href="repurposing_old_window_frames.html" class="lnk">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
+<!--                  <div class="image">-->
+<!--                    <a href="exploring_south_mumbai_real_estate.html">-->
+<!--                      <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="Exploring South Mumbai Real Estate" loading="lazy">-->
+<!--                    </a>-->
+<!--                  </div>-->
+<!--                  <div class="desc">-->
+<!--                    <div class="category lui-subtitle">-->
+<!--                      <span>October 31, 2022</span>-->
+<!--                    </div>-->
+<!--                    <h5 class="lui-title">-->
+<!--                      <a href="exploring_south_mumbai_real_estate.html">Exploring South Mumbai Real Estate</a>-->
+<!--                    </h5>-->
+<!--                    <div class="lui-text">-->
+<!--                      <p> A World of Luxury, Heritage, and Opportunity </p>-->
+<!--                      <div class="readmore">-->
+<!--                        <a href="exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
+<!--                  <div class="image">-->
+<!--                    <a href="impact_of_new_infrastructure.html">-->
+<!--                      <img src="{{ 'assets/images/impact-of-infrastructure-on-mumbai.jpg' | relative_url }}" alt="The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market" loading="lazy">-->
+<!--                    </a>-->
+<!--                  </div>-->
+<!--                  <div class="desc">-->
+<!--                    <div class="category lui-subtitle">-->
+<!--                      <span>October 31, 2022</span>-->
+<!--                    </div>-->
+<!--                    <h5 class="lui-title">-->
+<!--                      <a href="impact_of_new_infrastructure.html">The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market</a>-->
+<!--                    </h5>-->
+<!--                    <div class="lui-text">-->
+<!--                      <p>Mumbai, the financial capital of India </p>-->
+<!--                      <div class="readmore">-->
+<!--                        <a href="impact_of_new_infrastructure.html" class="lnk">Read more</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
+<!--                  <div class="image">-->
+<!--                    <a href="repurposing_old_window_frames.html">-->
+<!--                      <img src="{{ 'assets/images/repurposing-old-window-frames.jpg' | relative_url }}" alt="Repurposing Old Window Frames: A Creative DIY Project" loading="lazy">-->
+<!--                    </a>-->
+<!--                  </div>-->
+<!--                  <div class="desc">-->
+<!--                    <div class="category lui-subtitle">-->
+<!--                      <span>November 28, 2021</span>-->
+<!--                    </div>-->
+<!--                    <h5 class="lui-title">-->
+<!--                      <a href="repurposing_old_window_frames.html">Repurposing Old Window Frames: A Creative DIY Project</a>-->
+<!--                    </h5>-->
+<!--                    <div class="lui-text">-->
+<!--                      <p>Old window frames are </p>-->
+<!--                      <div class="readmore">-->
+<!--                        <a href="repurposing_old_window_frames.html" class="lnk">Read more</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
               </div>
 
 <!--              <div class="pager">-->
