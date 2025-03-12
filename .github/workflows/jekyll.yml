@@ -33,3 +33,4 @@ jobs:
         with:
           branch: gh-pages  # The branch where GitHub Pages is hosted
           folder: _site  # The Jekyll build output directory
+          token: ${{ secrets.GH_PAT }}  # Use your PAT instead of GITHUB_TOKEN
