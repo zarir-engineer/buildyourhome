@@ -1,6 +1,5 @@
 ---
 layout: inner
-position: left
 title: Exploring South Mumbai Real Estate
 date:   2016-11-20 19:16:49 +0100
 categories: Branding, Ui-design

@@ -291,26 +291,35 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - yarn.lock
 
 # _config.yml
 plugins:
-  - jekyll-paginate-v2
+#  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
   - jekyll-inline-svg
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
+paginate: 4
+paginate_path: "/page/:num"
 
-pagination:
-  enabled: true
-  collection: 'posts'
-  per_page: 3
-#  permalink: '/page/:num/'
-  permalink: '/all-blogs/page/:num/'
-  sort_field: 'date'
-  sort_reverse: true
-  title: ':title - page :num of :max'
-  limit: 0
+#pagination:
+#  enabled: true
+#  collection: 'posts'
+#  per_page: 3
+##  permalink: '/page/:num/'
+#  permalink: '/all-blogs/page/:num/'
+#  sort_field: 'date'
+#  sort_reverse: true
+#  title: ':title - page :num of :max'
+#  limit: 0
 
 
 quiet:    false

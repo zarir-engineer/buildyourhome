@@ -10,7 +10,7 @@ pagination:
 <div class="wrapper">
 
 <!-- Section Started Heading -->
-<section class="section section-inner started-heading">
+  <section class="section section-inner started-heading">
 <div class="container">
 
         <!-- Heading -->
@@ -31,84 +31,48 @@ pagination:
     <div class="container">
 
       <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
               <!-- Blog Items -->
               <div class="articles-container">
+                    {% for post in paginator.posts %}
+                      <article class="post">
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                          {% if post.img %}
+                            <div class="image">
+                              <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}">
+                                <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                              </a>
+                            </div>
+                          {% else %}
+                          {% endif %}
+                          <div class="desc">
+                            {% if post.date %}
+                              <div class="category lui-subtitle">
+                                <span>{{ post.date }}</span>
+                              </div>
+                            {% endif %}
+                            {% if post.title %}
+                              <h5 class="lui-title">
+                                <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}">{{ post.title }}</a>
+                              </h5>
+                            {% endif %}
+                            <div class="lui-text">
+                              {% if post.lead_text %}
+                                <p>{{ post.lead_text }}</p>
+                              {% endif %}
+                              <div class="readmore">
+                                <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}" class="lnk">Read more</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    {% endfor %}
 
-                  {% for post in paginator.posts %}
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.excerpt }}</p>
-                  {% endfor %}
-
-                  {% include pagination.html %}
+                    {% include pagination.html %}
 
 
-<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
-<!--                  <div class="image">-->
-<!--                    <a href="exploring_south_mumbai_real_estate.html">-->
-<!--                      <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="Exploring South Mumbai Real Estate" loading="lazy">-->
-<!--                    </a>-->
-<!--                  </div>-->
-<!--                  <div class="desc">-->
-<!--                    <div class="category lui-subtitle">-->
-<!--                      <span>October 31, 2022</span>-->
-<!--                    </div>-->
-<!--                    <h5 class="lui-title">-->
-<!--                      <a href="exploring_south_mumbai_real_estate.html">Exploring South Mumbai Real Estate</a>-->
-<!--                    </h5>-->
-<!--                    <div class="lui-text">-->
-<!--                      <p> A World of Luxury, Heritage, and Opportunity </p>-->
-<!--                      <div class="readmore">-->
-<!--                        <a href="exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
-<!--                  <div class="image">-->
-<!--                    <a href="impact_of_new_infrastructure.html">-->
-<!--                      <img src="{{ 'assets/images/impact-of-infrastructure-on-mumbai.jpg' | relative_url }}" alt="The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market" loading="lazy">-->
-<!--                    </a>-->
-<!--                  </div>-->
-<!--                  <div class="desc">-->
-<!--                    <div class="category lui-subtitle">-->
-<!--                      <span>October 31, 2022</span>-->
-<!--                    </div>-->
-<!--                    <h5 class="lui-title">-->
-<!--                      <a href="impact_of_new_infrastructure.html">The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market</a>-->
-<!--                    </h5>-->
-<!--                    <div class="lui-text">-->
-<!--                      <p>Mumbai, the financial capital of India </p>-->
-<!--                      <div class="readmore">-->
-<!--                        <a href="impact_of_new_infrastructure.html" class="lnk">Read more</a>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--                <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">-->
-<!--                  <div class="image">-->
-<!--                    <a href="repurposing_old_window_frames.html">-->
-<!--                      <img src="{{ 'assets/images/repurposing-old-window-frames.jpg' | relative_url }}" alt="Repurposing Old Window Frames: A Creative DIY Project" loading="lazy">-->
-<!--                    </a>-->
-<!--                  </div>-->
-<!--                  <div class="desc">-->
-<!--                    <div class="category lui-subtitle">-->
-<!--                      <span>November 28, 2021</span>-->
-<!--                    </div>-->
-<!--                    <h5 class="lui-title">-->
-<!--                      <a href="repurposing_old_window_frames.html">Repurposing Old Window Frames: A Creative DIY Project</a>-->
-<!--                    </h5>-->
-<!--                    <div class="lui-text">-->
-<!--                      <p>Old window frames are </p>-->
-<!--                      <div class="readmore">-->
-<!--                        <a href="repurposing_old_window_frames.html" class="lnk">Read more</a>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
               </div>
 
 <!--              <div class="pager">-->
@@ -118,7 +82,7 @@ pagination:
 <!--              </div>-->
 
             </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 
           <!-- sidebar -->
           <div class="col__sedebar scrolla-element-anim-1 scroll-animate" data-animate="active">
@@ -196,10 +160,10 @@ pagination:
           </div>
 
       </div>
+      </div>
+
+      <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
     </div>
-
-    <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-
-</div>
-</div>
+  </div>
 </div>
