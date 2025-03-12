@@ -321,7 +321,7 @@ paginate_path: "/page/:num"
 #  sort_reverse: true
 #  title: ':title - page :num of :max'
 #  limit: 0
-
+permalink: pretty
 
 quiet:    false
 defaults: []
