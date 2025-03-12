@@ -25,8 +25,9 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
-      - name: Build Jekyll Site
-        run: bundle exec jekyll build --trace --verbose
+      - name: Build Jekyll Site with Debugging
+        run: |
+          bundle exec jekyll build --trace --verbose
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
