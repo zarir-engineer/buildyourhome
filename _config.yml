@@ -308,7 +308,7 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-paginate: 4
+paginate: 2
 paginate_path: "/page/:num"
 
 #pagination:
