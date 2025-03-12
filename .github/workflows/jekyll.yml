@@ -16,19 +16,22 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'  # Use a version supported by GitHub Pages
+          ruby-version: '3.0'  # Ensure compatibility with GitHub Pages
           bundler-cache: true
 
-      - name: Install Dependencies
+      - name: Install System Dependencies
+        run: sudo apt-get update && sudo apt-get install -y imagemagick libmagickwand-dev
+
+      - name: Install Ruby Gems
         run: |
           bundle install
-          bundle exec gem install jekyll-paginate
+          bundle exec gem install jekyll-paginate  # Ensure pagination gem is installed
 
       - name: Build Jekyll Site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4  # Updated to latest version
         with:
           name: site
           path: _site
