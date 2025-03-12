@@ -35,6 +35,7 @@ pagination:
 
               <!-- Blog Items -->
               <div class="articles-container">
+                  {% if paginator.posts %}
                     {% for post in paginator.posts %}
                       <article class="post">
                         <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
@@ -44,7 +45,6 @@ pagination:
                                 <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="{{ post.title }}" loading="lazy">
                               </a>
                             </div>
-                          {% else %}
                           {% endif %}
                           <div class="desc">
                             {% if post.date %}
@@ -69,7 +69,9 @@ pagination:
                         </div>
                       </article>
                     {% endfor %}
-
+                  {% else %}
+                    <p>No posts found. Check pagination settings.</p>
+                  {% endif %}
                     {% include pagination.html %}
 
 
