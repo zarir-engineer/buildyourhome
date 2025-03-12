@@ -13,25 +13,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Install ImageMagick (Fix for rmagick)
+        run: sudo apt-get update && sudo apt-get install -y libmagickwand-dev imagemagick
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'  # Ensure compatibility with GitHub Pages
+          ruby-version: '3.0'  # Ensure this matches your GitHub Pages Ruby version
           bundler-cache: true
 
-      - name: Install System Dependencies
-        run: sudo apt-get update && sudo apt-get install -y imagemagick libmagickwand-dev
-
-      - name: Install Ruby Gems
-        run: |
-          bundle install
-          bundle exec gem install jekyll-paginate  # Ensure pagination gem is installed
+      - name: Install Dependencies
+        run: bundle install
 
       - name: Build Jekyll Site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
-        uses: actions/upload-artifact@v4  # Updated to latest version
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site
