@@ -1,5 +1,4 @@
 ---
-layout: base
 title: My First Jekyll Blog Post
 date:   2016-11-20 19:16:49 +0100
 categories: jekyll, tutorial
