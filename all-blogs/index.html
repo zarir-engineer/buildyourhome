@@ -32,15 +32,47 @@ pagination:
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
-            <h1>{{ page.title }}</h1>
-
-            {% for post in paginator.posts %}
-              <article>
-                <h2><a href="{{ post.lead_text }}">{{ post.lead_text }}</a></h2>
-                <p>{{ post.date | date: "%B %d, %Y" }}</p>
-                <p>{{ post.categories }}</p>
-              </article>
-            {% endfor %}
+              <!-- Blog Items -->
+              <div class="articles-container">
+                  {% if paginator.posts %}
+                    {% for post in paginator.posts %}
+                      <article>
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                          {% if post.img %}
+                            <div class="image">
+                              <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}">
+                                <img src="{{ 'assets/images/exploring-south-mumbai.jpg' | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                              </a>
+                            </div>
+                          {% endif %}
+                          <div class="desc">
+                            {% if post.date %}
+                              <div class="category lui-subtitle">
+                                <span>{{ post.date }}</span>
+                              </div>
+                            {% endif %}
+                            {% if post.title %}
+                              <h5 class="lui-title">
+                                <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}">{{ post.title }}</a>
+                              </h5>
+                            {% endif %}
+                            <div class="lui-text">
+                              {% if post.lead_text %}
+                                <p>{{ post.lead_text }}</p>
+                              {% endif %}
+                              <div class="readmore">
+                                <a href="{{ 'all-blogs/exploring_south_mumbai_real_estate.html' | relative_url }}" class="lnk">Read more</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    {% endfor %}
+                  {% else %}
+                    <p>No posts found. Check pagination settings.</p>
+                  {% endif %}
+                    {% include pagination.html %}
+              </div>
 
             <!-- Pagination Links -->
             <div class="pagination">
