@@ -299,9 +299,9 @@ exclude:
 
 # _config.yml
 plugins:
-#  - jekyll-paginate-v2
+  - jekyll-paginate-v2
   - jekyll-sitemap
-  - jekyll-paginate
+#  - jekyll-paginate
   - jemoji
   - jekyll-inline-svg
 
@@ -311,16 +311,18 @@ plugins:
 paginate: 2
 paginate_path: "/page/:num"
 
-#pagination:
-#  enabled: true
-#  collection: 'posts'
-#  per_page: 3
-##  permalink: '/page/:num/'
-#  permalink: '/all-blogs/page/:num/'
-#  sort_field: 'date'
-#  sort_reverse: true
-#  title: ':title - page :num of :max'
-#  limit: 0
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/all-blogs/page/:num/'
+  title: 'Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 1
+    after: 2
+indexpage: '/all-blogs/'  # Tell Jekyll where your index is
 permalink: pretty
 
 quiet:    false
@@ -328,3 +330,4 @@ defaults: []
 
 svg:
   optimize: true
+  
