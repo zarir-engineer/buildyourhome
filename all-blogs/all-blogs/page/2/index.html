@@ -18,7 +18,7 @@
   <meta name="author" content="Zarir Engineer Maha Rera Number A51900002346">
   
 
-  <meta name="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">
+  <meta name="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.featured_image %} {% endif %} {% if post.date %} {{ post.date | date: &quot;%B %d, %Y&quot; }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %}...">
 
   
 
@@ -111,9 +111,9 @@
   
   <meta property="og:site_name" content="Aawo Maari Saathe">
   <meta property="title" content="Page 2 | Aawo Maari Saathe">
-  <meta property="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">
+  <meta property="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.featured_image %} {% endif %} {% if post.date %} {{ post.date | date: &quot;%B %d, %Y&quot; }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %}...">
 <!--  <meta property="og:title" content="Page 2 | Aawo Maari Saathe">-->
-<!--  <meta property="og:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">-->
+<!--  <meta property="og:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.featured_image %} {% endif %} {% if post.date %} {{ post.date | date: &quot;%B %d, %Y&quot; }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %}...">-->
 
   
   <meta property="image" content="https://zarirengineer.github.io/buildyourhome/assets/images/avatar.png">
@@ -137,7 +137,7 @@
 <!--  <meta name="twitter:creator" content="@">-->
 
 <!--  <meta property="twitter:title" content="Page 2 | Aawo Maari Saathe">-->
-<!--  <meta property="twitter:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">-->
+<!--  <meta property="twitter:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.featured_image %} {% endif %} {% if post.date %} {{ post.date | date: &quot;%B %d, %Y&quot; }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %}...">-->
 
 <!--  -->
 <!--  <meta name="twitter:image" content="https://zarirengineer.github.io/buildyourhome/assets/images/avatar.png">-->
@@ -320,10 +320,16 @@
                       <article>
                         <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
                           
+                            <div class="image">
+                              <a href="/buildyourhome/branding,/ui-design/2016/11/20/exploring-south-mumbai-real-estate/">
+                                <img src="/buildyourhome/assets/images/posts/south-mumbai.jpg" alt="Exploring South Mumbai Real Estate" loading="lazy">
+                              </a>
+                            </div>
+                          
                           <div class="desc">
                             
                               <div class="category lui-subtitle">
-                                <span>2016-11-20 18:16:49 +0000</span>
+                                <span>November 20, 2016</span>
                               </div>
                             
                             
