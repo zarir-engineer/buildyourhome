@@ -38,7 +38,7 @@ pagination:
                     {% for post in paginator.posts %}
                       <article>
                         <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                          {% if post.img %}
+                          {% if post.featured_image %}
                             <div class="image">
                               <a href="{{ post.url | relative_url }}">
                                 <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" loading="lazy">
@@ -48,7 +48,7 @@ pagination:
                           <div class="desc">
                             {% if post.date %}
                               <div class="category lui-subtitle">
-                                <span>{{ post.date }}</span>
+                                <span>{{ post.date | date: "%B %d, %Y" }}</span>
                               </div>
                             {% endif %}
                             {% if post.title %}
