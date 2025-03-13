@@ -18,7 +18,7 @@
   <meta name="author" content="Zarir Engineer Maha Rera Number A51900002346">
   
 
-  <meta name="description" content="Our Blogs Recent Articles {{ page.title }} {% for post in paginator.posts %} {{ post.lead_text }} {{ post.date | date: &quot;%B %d, %Y&quot; }} {{ post.categories }} {% endfor %} {% if paginator.previous_page %} Previous {% endif %} Page {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %}...">
+  <meta name="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">
 
   
 
@@ -111,9 +111,9 @@
   
   <meta property="og:site_name" content="Aawo Maari Saathe">
   <meta property="title" content="All Blogs | Aawo Maari Saathe">
-  <meta property="description" content="Our Blogs Recent Articles {{ page.title }} {% for post in paginator.posts %} {{ post.lead_text }} {{ post.date | date: &quot;%B %d, %Y&quot; }} {{ post.categories }} {% endfor %} {% if paginator.previous_page %} Previous {% endif %} Page {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %}...">
+  <meta property="description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">
 <!--  <meta property="og:title" content="All Blogs | Aawo Maari Saathe">-->
-<!--  <meta property="og:description" content="Our Blogs Recent Articles {{ page.title }} {% for post in paginator.posts %} {{ post.lead_text }} {{ post.date | date: &quot;%B %d, %Y&quot; }} {{ post.categories }} {% endfor %} {% if paginator.previous_page %} Previous {% endif %} Page {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %}...">-->
+<!--  <meta property="og:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">-->
 
   
   <meta property="image" content="https://zarirengineer.github.io/buildyourhome/assets/images/avatar.png">
@@ -137,7 +137,7 @@
 <!--  <meta name="twitter:creator" content="@">-->
 
 <!--  <meta property="twitter:title" content="All Blogs | Aawo Maari Saathe">-->
-<!--  <meta property="twitter:description" content="Our Blogs Recent Articles {{ page.title }} {% for post in paginator.posts %} {{ post.lead_text }} {{ post.date | date: &quot;%B %d, %Y&quot; }} {{ post.categories }} {% endfor %} {% if paginator.previous_page %} Previous {% endif %} Page {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %}...">-->
+<!--  <meta property="twitter:description" content="Our Blogs Recent Articles {% if paginator.posts %} {% for post in paginator.posts %} {% if post.img %} {% endif %} {% if post.date %} {{ post.date }} {% endif %} {% if post.title %} {{ post.title }} {% endif %} {% if post.lead_text %} {{ post.lead_text }} {% endif...">-->
 
 <!--  -->
 <!--  <meta name="twitter:image" content="https://zarirengineer.github.io/buildyourhome/assets/images/avatar.png">-->
@@ -313,27 +313,106 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
-            <h1>All Blogs</h1>
+              <!-- Blog Items -->
+              <div class="articles-container">
+                  
+                    
+                      <article>
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                          
+                          <div class="desc">
+                            
+                              <div class="category lui-subtitle">
+                                <span>2025-03-12 18:16:49 +0000</span>
+                              </div>
+                            
+                            
+                              <h5 class="lui-title">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html">My Second Jekyll Blog Post</a>
+                              </h5>
+                            
+                            <div class="lui-text">
+                              
+                                <p>A World of Luxury, Heritage, and Opportunity.</p>
+                              
+                              <div class="readmore">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article>
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                          
+                          <div class="desc">
+                            
+                              <div class="category lui-subtitle">
+                                <span>2016-11-20 18:16:49 +0000</span>
+                              </div>
+                            
+                            
+                              <h5 class="lui-title">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html">My First Jekyll Blog Post</a>
+                              </h5>
+                            
+                            <div class="lui-text">
+                              
+                                <p>A World of Luxury, Heritage, and Opportunity.</p>
+                              
+                              <div class="readmore">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <article>
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                          
+                          <div class="desc">
+                            
+                              <div class="category lui-subtitle">
+                                <span>2016-11-20 18:16:49 +0000</span>
+                              </div>
+                            
+                            
+                              <h5 class="lui-title">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html">Impact of new Infrastructure Developments on Mumbais Real Estate Market</a>
+                              </h5>
+                            
+                            <div class="lui-text">
+                              
+                                <p>Key Infrastructure Developments in Mumbai</p>
+                              
+                              <div class="readmore">
+                                <a href="/buildyourhome/all-blogs/exploring_south_mumbai_real_estate.html" class="lnk">Read more</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    
+                  
+                    <div class="container">
+  <nav class="pagination" role="pagination">
+    <ul>
+      
 
-            
-              <article>
-                <h2><a href="A World of Luxury, Heritage, and Opportunity.">A World of Luxury, Heritage, and Opportunity.</a></h2>
-                <p>March 12, 2025</p>
-                <p>jekyll,tutorial</p>
-              </article>
-            
-              <article>
-                <h2><a href="A World of Luxury, Heritage, and Opportunity.">A World of Luxury, Heritage, and Opportunity.</a></h2>
-                <p>November 20, 2016</p>
-                <p>jekyll,tutorial</p>
-              </article>
-            
-              <article>
-                <h2><a href="Key Infrastructure Developments in Mumbai">Key Infrastructure Developments in Mumbai</a></h2>
-                <p>November 20, 2016</p>
-                <p>BrandingUi-design</p>
-              </article>
-            
+      
+      <p><span class="page-number">Page 1 of 2</span></p>
+      
+      
+      
+      <p><a class="older-posts" href="/buildyourhome/page/2/"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+      
+    </ul>
+  </nav>
+</div>
+
+              </div>
 
             <!-- Pagination Links -->
             <div class="pagination">
