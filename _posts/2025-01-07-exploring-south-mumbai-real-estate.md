@@ -5,6 +5,8 @@ categories: Branding, Ui-design
 tags: [south, mumbai, realty]
 featured_image: /assets/images/posts/1920-1080-exploring-south-mumbai.jpg
 lead_text: A World of Luxury, Heritage, and Opportunity.
+post_url: /all-blogs/exploring-south-mumbai-real-estate.html
+layout: post-base
 ---
 
 

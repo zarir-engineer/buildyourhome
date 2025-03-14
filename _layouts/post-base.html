@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<article class="blog-post">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
+
+    {% if page.featured_image %}
+        <div class="post-image">
+            <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
+        </div>
+    {% endif %}
+
+    <div class="post-content">
+        <p class="lead">{{ page.lead_text }}</p>
+        {{ content }}  <!-- This renders the actual Markdown content -->
+    </div>
+
+    <footer>
+        <p>Tags: {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    </footer>
+</article>
