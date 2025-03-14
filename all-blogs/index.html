@@ -73,19 +73,6 @@ pagination:
                   {% endif %}
                     {% include pagination.html %}
               </div>
-
-            <!-- Pagination Links -->
-            <div class="pagination">
-              {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
-              {% endif %}
-
-              Page {{ paginator.page }} of {{ paginator.total_pages }}
-
-              {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-              {% endif %}
-            </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 
