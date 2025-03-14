@@ -7,7 +7,7 @@ featured_image: /assets/images/posts/1920-1400-impact-of-infrastructure-on-mumba
 lead_text: "Key Infrastructure Developments in Mumbai"
 post_url: "/all-blogs/impact_of_new_infrastructure.html"
 layout: post-base
-next_article: "2025-02-12-repurposing-old-window-frames"
+#next_article: "2025-02-12-repurposing-old-window-frames"
 author: admin
 permalink: /all-blogs/impact_of_new_infrastructure.html
 ---

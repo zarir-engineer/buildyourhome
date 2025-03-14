@@ -47,14 +47,45 @@ layout: base
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 
           <div class="h-titles h-navs">
-            <a href="{{ page.next_article | relative_url }}">
-              <span class="nav-arrow splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
-                Next Article
-              </span>
-              <span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-                {{ page.lead_text }}
-              </span>
-            </a>
+            {% assign posts_sorted = site.posts | sort: "date" | reverse %}
+            {% for post in posts_sorted %}
+              {% if post.url == page.url %}
+                {% assign prev_index = forloop.index0 | minus: 1 %}
+                {% assign next_index = forloop.index0 | plus: 1 %}
+
+                {% if prev_index >= 0 %}
+                  {% assign prev_post = posts_sorted[prev_index] %}
+                {% endif %}
+
+                {% if next_index < posts_sorted.size %}
+                  {% assign next_post = posts_sorted[next_index] %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+            <div class="h-titles h-navs">
+              {% if prev_post %}
+                <a href="{{ prev_post.url }}">
+                  <span class="nav-arrow">Previous Article</span>
+                  <span class="h-title">{{ prev_post.title }}</span>
+                </a>
+              {% endif %}
+
+              {% if next_post %}
+                <a href="{{ next_post.url }}">
+                  <span class="nav-arrow">Next Article</span>
+                  <span class="h-title">{{ next_post.title }}</span>
+                </a>
+              {% endif %}
+            </div>
+<!--            <a href="{{ page.next_article | relative_url }}">-->
+<!--              <span class="nav-arrow splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">-->
+<!--                Next Article-->
+<!--              </span>-->
+<!--              <span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">-->
+<!--                {{ page.lead_text }}-->
+<!--              </span>-->
+<!--            </a>-->
           </div>
 
         </div>
