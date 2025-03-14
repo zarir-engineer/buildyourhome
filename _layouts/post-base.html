@@ -10,7 +10,7 @@ layout: base
       <!-- Heading -->
       <div class="m-titles align-center">
         <div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
-          <a href="{{ page.post_url | relative_url }}">{{ page.categories[0] }}</a>, <a href="blog.html">{{ page.categories[1] }}</a> / {{ page.date | date: "%B %d, %Y" }} / by {{ page.author }}
+          <a href="{{ page.post_url | relative_url }}">{{ page.categories[0] }}</a>, <a href="{{ page.post_url | relative_url }}">{{ page.categories[1] }}</a> / {{ page.date | date: "%B %d, %Y" }} / by {{ page.author }}
         </div>
         <h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
           {{ page.title }}
