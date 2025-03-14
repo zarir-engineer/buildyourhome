@@ -5,8 +5,10 @@ categories: [Branding, Ui-design]
 tags: [south, mumbai, realty]
 featured_image: /assets/images/posts/1920-1400-impact-of-infrastructure-on-mumbai.jpg
 lead_text: "Key Infrastructure Developments in Mumbai"
-post_url: /all-blogs/impact_of_new_infrastructure.html
+post_url: "/all-blogs/impact_of_new_infrastructure.html"
 layout: post-base
+next_article: "2025-02-12-repurposing-old-window-frames"
+author: admin
 ---
 
 The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market

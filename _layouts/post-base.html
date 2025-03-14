@@ -2,16 +2,33 @@
 layout: base
 ---
 <article class="blog-post">
-    <header>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date: "%B %d, %Y" }}</p>
-    </header>
 
-    {% if page.featured_image %}
-        <div class="post-image">
-            <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
+    <!-- Section Started Heading -->
+    <section class="section section-inner started-heading">
+    <div class="container">
+
+      <!-- Heading -->
+      <div class="m-titles align-center">
+        <div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+          <a href="{{ page.post_url | relative_url }}">{{ page.categories[0] }}</a>, <a href="blog.html">{{ page.categories[1] }}</a> / {{ page.date | date: "%B %d, %Y" }} / by {{ page.author }}
         </div>
-    {% endif %}
+        <h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+          {{ page.title }}
+        </h1>
+      </div>
+
+    </div>
+    </section>
+
+    <!-- Single Post Image -->
+    <div class="section section-inner m-image-large">
+    <div class="container">
+      <div class="v-line-right v-line-top"><div class="v-line-block"><span></span></div></div>
+    </div>
+    <div class="image">
+      <div class="img scrolla-element-anim-1 scroll-animate" data-animate="active" style="background-image: url('{{ page.featured_image | relative_url }}');"></div>
+    </div>
+    </div>
 
     <div class="post-content">
         <p class="lead">{{ page.lead_text }}</p>
@@ -21,4 +38,29 @@ layout: base
     <footer>
         <p>Tags: {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
     </footer>
+
+
+    <!-- Section Navigation -->
+    <div class="section section-inner m-page-navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+          <div class="h-titles h-navs">
+            <a href="{{ page.next_article | relative_url }}">
+              <span class="nav-arrow splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+                Next Article
+              </span>
+              <span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+                {{ page.lead_text }}
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
 </article>
+
