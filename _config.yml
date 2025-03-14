@@ -321,7 +321,7 @@ pagination:
     before: 1
     after: 2
 indexpage: '/all-blogs/'  # Tell Jekyll where your index is
-permalink: pretty
+permalink: /all-blogs/:title.html
 
 quiet:    false
 defaults: []

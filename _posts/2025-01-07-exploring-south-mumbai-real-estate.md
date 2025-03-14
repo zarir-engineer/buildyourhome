@@ -9,6 +9,7 @@ post_url: "/all-blogs/exploring-south-mumbai-real-estate.html"
 layout: post-base
 next_article: "2025-02-12-impact-of-new-infrastructure"
 author: admin
+permalink: /all-blogs/exploring-south-mumbai-real-estate.html
 ---
 
 
