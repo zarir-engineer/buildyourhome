@@ -29,18 +29,19 @@ function openPopup(element) {
     // Show modal
     document.getElementById("popup-content").style.display = "block";
     document.getElementById("overlay").style.display = "block";
-
+    document.body.classList.add("modal-open"); // Prevents background scrolling
    // Disable scrolling
     document.body.classList.add("modal-open");
-
+    document.querySelectorAll(".background-element").forEach(el => el.style.display = "none");
 }
 
 function closePopup() {
     document.getElementById("popup-content").style.display = "none";
     document.getElementById("overlay").style.display = "none";
-
+    document.body.classList.remove("modal-open"); // Re-enable scrolling
     // Enable scrolling
     document.body.classList.remove("modal-open");
+    document.querySelectorAll(".background-element").forEach(el => el.style.display = "block");
 }
 
 // Testimonies
@@ -79,6 +80,7 @@ function testimonyClosePopup() {
     // Hide modal
     document.getElementById("testimony-overlay").style.display = "none";
     document.getElementById("testimony-popup").style.display = "none";
+    document.body.classList.add("modal-open"); // Prevents background scrolling
 
     // Stop video playback by resetting the iframe source
     document.getElementById("testimony-popup-video").src = "";
@@ -90,14 +92,13 @@ function testimonyClosePopup() {
     window.testimonyClosePopup = function () {
         document.getElementById("testimony-overlay").style.display = "none";
         document.getElementById("testimony-popup").style.display = "none";
-
+        document.body.classList.remove("modal-open"); // Re-enable scrolling
         enableHorizontalScroll();
     };
 
     // ensure video is closed
     let videoIframe = document.getElementById("testimony-popup-video");
     videoIframe.src = "";  // Reset src to stop playing
-
 
 }
 
