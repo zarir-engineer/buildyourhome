@@ -47,17 +47,12 @@ function closePopup() {
 // Testimonies
 
 function testimonyOpenPopup(element) {
-    // Get data attributes from clicked element
-//    var imageSrc = element.getAttribute("data-image");
     var videoSrc = element.getAttribute("data-video");
-//    var title = element.getAttribute("data-keyword");
-//    var description = element.getAttribute("data-description");
-
-    // Set modal content
-//    document.getElementById("testimony-popup-image").src = imageSrc;
-//    document.getElementById("testimony-popup-title").textContent = title;
-//    document.getElementById("testimony-popup-description").textContent = description;
-    document.getElementById("testimony-popup-video").src = videoSrc;
+    let videoIframe = document.getElementById("testimony-popup-video");
+    videoIframe.src = ""; // Force reset first
+    setTimeout(() => {
+        videoIframe.src = videoSrc;
+    }, 100); // Small delay to ensure reset
 
     // Show modal
     document.getElementById("testimony-overlay").style.display = "block";
@@ -66,11 +61,10 @@ function testimonyOpenPopup(element) {
    // Disable scrolling
     document.body.classList.add("modal-open");
 
-    // Disable Horizontal scrolling
+//  Disable Horizontal scrolling
     window.testimonyOpenPopup = function (element) {
         document.getElementById("testimony-overlay").style.display = "block";
         document.getElementById("testimony-popup").style.display = "block";
-
         disableHorizontalScroll();
     };
 
