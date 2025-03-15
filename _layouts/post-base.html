@@ -65,15 +65,15 @@ layout: base
 
             <div class="h-titles h-navs">
               {% if prev_post %}
-                <a href="{{ prev_post.url }}">
-                  <span class="nav-arrow">Previous Article</span>
+                <a href="{{ prev_post.url | relative_url }}">
+                  <span class="nav-arrow scroll-animate">Previous Article</span>
                   <span class="h-title">{{ prev_post.title }}</span>
                 </a>
               {% endif %}
 
               {% if next_post %}
-                <a href="{{ next_post.url }}">
-                  <span class="nav-arrow">Next Article</span>
+                <a href="{{ next_post.url | relative_url }}">
+                  <span class="nav-arrow scroll-animate">Next Article</span>
                   <span class="h-title">{{ next_post.title }}</span>
                 </a>
               {% endif %}
@@ -87,7 +87,6 @@ layout: base
 <!--              </span>-->
 <!--            </a>-->
           </div>
-
         </div>
       </div>
     </div>
