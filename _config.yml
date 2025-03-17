@@ -332,4 +332,6 @@ defaults: []
 
 svg:
   optimize: true
-  
+
+staticman:
+  endpoint: "https://staticman.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments"

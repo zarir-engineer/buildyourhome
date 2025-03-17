@@ -10,6 +10,7 @@ layout: post-base
 #next_article: "2025-02-12-repurposing-old-window-frames"
 author: admin
 permalink: /all-blogs/impact_of_new_infrastructure.html
+slug: "2025-02-12-impact-of-new-infrastructure-slug"
 ---
 
 The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market

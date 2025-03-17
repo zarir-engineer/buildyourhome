@@ -10,6 +10,7 @@ layout: post-base
 #next_article: "2025-01-07-exploring-south-mumbai-real-estate"
 author: zarir
 permalink: /all-blogs/repurposing_old_window_frames.html
+slug: "2025-02-12-repurposing-old-window-frames-slug"
 ---
 
 Repurposing Old Window Frames!
