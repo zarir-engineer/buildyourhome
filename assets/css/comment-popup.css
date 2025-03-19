@@ -1,4 +1,4 @@
-.comment-popup {
+.commentPopup {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -16,8 +16,8 @@
     text-align: center;
 }
 
-.comment-popup input,
-.comment-popup textarea {
+.commentPopup input,
+.commentPopup textarea {
     width: 90%;  /* Keeps fields compact */
     max-width: 350px; /* Ensures a fixed width */
     padding: 8px;
@@ -27,7 +27,7 @@
     display: block; /* Keeps inputs stacked */
 }
 
-.comment-popup button {
+.commentPopup button {
     margin-top: 10px;
     padding: 5px 15px;
     background: #007BFF;
