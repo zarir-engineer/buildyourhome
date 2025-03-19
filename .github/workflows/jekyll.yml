@@ -23,8 +23,10 @@ jobs:
           bundler-cache: true
 
       - name: Install Dependencies
-        run: bundle install
-
+        run: |
+          bundle add jekyll-feed  # Ensures jekyll-feed is installed
+          bundle install
+          
       - name: Build Jekyll Site with Debugging
         env:
           JEKYLL_ENV: production
