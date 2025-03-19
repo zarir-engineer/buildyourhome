@@ -100,28 +100,28 @@ layout: base
         <div class="m-titles">
           <div class="m-title align-left">Leave a comment</div>
         </div>
-        <form method="POST" action="https://staticman-production.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments">
-          <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+          <form method="POST" action="https://staticman-production.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments">
+            <input type="hidden" name="options[slug]" value="{{ page.slug }}">
 
-          <div class="group-row">
-            <div class="group">
-              <textarea class="textarea" name="fields[comment]" rows="3" placeholder="Comment"></textarea>
+            <div class="group-row">
+              <div class="group">
+                <textarea class="textarea" name="fields[comment]" rows="3" placeholder="Comment" required></textarea>
+              </div>
             </div>
-          </div>
-          <div class="group-row">
-            <div class="group">
-              <input type="text" name="fields[name]" class="input" placeholder="Name" required>
+            <div class="group-row">
+              <div class="group">
+                <input type="text" name="fields[name]" class="input" placeholder="Name" required>
+              </div>
+              <div class="group">
+                <input type="email" name="fields[email]" class="input" placeholder="Email (not shown)" required>
+              </div>
             </div>
-            <div class="group">
-              <input type="email" name="fields[email]" class="input" placeholder="Email (not shown)" required>
+            <div class="group-row">
+              <div class="group">
+                <button type="submit" class="btn">Submit</button>
+              </div>
             </div>
-          </div>
-          <div class="group-row">
-            <div class="group">
-              <button type="submit" class="btn">Submit</button>
-            </div>
-          </div>
-        </form>
+          </form>
       </div>
     </div>
 
