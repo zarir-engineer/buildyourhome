@@ -337,11 +337,11 @@ staticman:
   endpoint: "https://staticman-production.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments"
   publicKey: |
     -----BEGIN PUBLIC KEY-----
-    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9NkM3WHyP32WnV/Ztgl
-    9As+QEvPRDkBc/WQzchjFz9h+cPFzRA6TXzLwlMGaWNx9yYoZR1Hcl2vvcnRc1+v
-    5xpIMBSNnrCbvWb6hWOuPhlGUZ6A5LcRiQpu9m1KJ30MjJ7X0E/A0JmMVlBFcEAI
-    PjIMh1D4JqKdLItLqV/PZE2fhXwE5wdwp4aceg7H2fPsvGSLqgLcZUqTrpKwN+gM
-    NUKw+88Se9fHut9qJz+OFVX6EPmaBNsVMYzWMDhbQ3fAtMHb0QwOZaPpw8GZG/wy
-    bzOlfjJR88vRfWqwAVDPfNe41FD8DbReDRQeOK7k757dGBys/23Aqn5Gcxw0VspF
-    xwIDAQAB
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2FGhW9BLLMKcvsMRDReB
+    GrpQ/P7i7dF0q5zs4r/uJQy19fNXLhFKieCDvht4NTL7MPLkHOAhUMwU/+jIqMVq
+    XOJbyq9ddYLwYSufFrnITRy3NUquNwz38gVHFzIS4Pd8NGlhuZUJcx6B2eSNZ/4j
+    kRim2X9eTUZuqP49NoceGmjppz75oWjY1NvtRptWHt8GxcvuO/IMsyLrhALFuzB4
+    ryc9Rj/QOclcm+Jd34uDOxvCf9QiotLt1wtM5C7iGa5q9ivHvpLN0jOhAFjyCHcu
+    z0JcoRuCXGgBrnR/z1O5jBfjK6U2nA8ej86Z7UdPeben9Wzq9A+eBOnHpQWKGHmb
+    wwIDAQAB
     -----END PUBLIC KEY-----
