@@ -1,8 +1,8 @@
 comments:
-  allowedFields: ["name", "email", "comment"]
-  requiredFields: ["name", "email", "comment"]
+  allowedFields: ["name", "email", "comment", "date"]
+  requiredFields: ["name", "email", "comment", "date"]
   branch: "main"
   format: "yaml"
   moderation: true
   path: "_data/comments/{options.slug}"
-  filename: "entry{@timestamp}"
+  filename: "{options.slug}.yml"
