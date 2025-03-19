@@ -1,8 +1,8 @@
-allowedOrigins: ["*"]
-branch: "main"  # Change to "master" if your repo uses 'master'
-moderation: false
-name: "Staticman"
-repository: "zarirengineer/buildyourhome"
-requiredFields: ["name", "email", "comment"]
-format: "yaml"
-path: "_data/comments"
+comments:
+  allowedFields: ["name", "email", "comment"]
+  requiredFields: ["name", "email", "comment"]
+  branch: "main"
+  format: "yaml"
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  filename: "entry{@timestamp}"
