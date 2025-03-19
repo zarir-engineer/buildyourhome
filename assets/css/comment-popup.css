@@ -9,10 +9,24 @@
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    width: 90%;  /* Ensures responsiveness */
+    max-width: 400px; /* Prevents stretching */
 }
 .popup-content {
     text-align: center;
 }
+
+.comment-popup input,
+.comment-popup textarea {
+    width: 90%;  /* Keeps fields compact */
+    max-width: 350px; /* Ensures a fixed width */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Keeps inputs stacked */
+}
+
 .comment-popup button {
     margin-top: 10px;
     padding: 5px 15px;
