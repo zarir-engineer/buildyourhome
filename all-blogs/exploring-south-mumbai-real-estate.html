@@ -406,7 +406,7 @@
         </div>
           <form method="POST" action="https://staticman-production.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments">
             <input type="hidden" name="options[slug]" value="2025-01-07-exploring-south-mumbai-real-estate-slug">
-
+            <input type="hidden" name="fields[date]" value="2025-03-19">
             <div class="group-row">
               <div class="group">
                 <textarea class="textarea" name="fields[comment]" rows="3" placeholder="Comment" required></textarea>
@@ -462,6 +462,17 @@
     </div>
     </div>
 </article>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    let formData = new FormData(this);
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+    this.submit(); // Uncomment after debugging
+  });
+</script>
+
 
         <!-- Footer -->
 <div class="footer">
