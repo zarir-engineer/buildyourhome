@@ -15,10 +15,15 @@ author: Zarir Engineer Maha Rera Number A51900002346
 title: Aawo Maari Saathe
 url: "https://zarirengineer.github.io"
 baseurl: "/buildyourhome"
+
+
+# Set the build destination to _site (default, but ensure it's correct)
+destination: ./_site
+
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
-
 navbar-links:
   About Me: "aboutme"
   Resources:
@@ -281,6 +286,8 @@ highlighter: rouge
 #    values:
 #      layout: "page"
 
+# Exclude files that should not be in the built output
+
 # Exclude these files from production site
 exclude:
   - vendor
@@ -296,12 +303,15 @@ exclude:
   - gulpfile.js
   - package.json
   - yarn.lock
+  - _temp.delete.after.using.txt
+  - staticman.yml
 
 # _config.yml
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
-#  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
   - jekyll-inline-svg
 
