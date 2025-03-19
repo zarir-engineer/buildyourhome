@@ -334,4 +334,14 @@ svg:
   optimize: true
 
 staticman:
-  endpoint: "https://staticman.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments"
+  endpoint: "https://staticman-production.up.railway.app/v3/entry/github/zarirengineer/buildyourhome/main/comments"
+  publicKey: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9NkM3WHyP32WnV/Ztgl
+    9As+QEvPRDkBc/WQzchjFz9h+cPFzRA6TXzLwlMGaWNx9yYoZR1Hcl2vvcnRc1+v
+    5xpIMBSNnrCbvWb6hWOuPhlGUZ6A5LcRiQpu9m1KJ30MjJ7X0E/A0JmMVlBFcEAI
+    PjIMh1D4JqKdLItLqV/PZE2fhXwE5wdwp4aceg7H2fPsvGSLqgLcZUqTrpKwN+gM
+    NUKw+88Se9fHut9qJz+OFVX6EPmaBNsVMYzWMDhbQ3fAtMHb0QwOZaPpw8GZG/wy
+    bzOlfjJR88vRfWqwAVDPfNe41FD8DbReDRQeOK7k757dGBys/23Aqn5Gcxw0VspF
+    xwIDAQAB
+    -----END PUBLIC KEY-----
