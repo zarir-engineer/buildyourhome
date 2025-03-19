@@ -1,0 +1,8 @@
+allowedOrigins: ["*"]
+branch: "main"  # Change to "master" if your repo uses 'master'
+moderation: false
+name: "Staticman"
+repository: "zarirengineer/buildyourhome"
+requiredFields: ["name", "email", "comment"]
+format: "yaml"
+path: "_data/comments"
