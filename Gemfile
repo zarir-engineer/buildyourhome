@@ -10,4 +10,6 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-gallery-generator"
   gem "kramdown-parser-gfm"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
 end
