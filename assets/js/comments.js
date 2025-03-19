@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("commentForm").addEventListener("submit", async function (e) {
-        e.preventDefault();
+    const form = document.getElementById("commentForm");
+    const messageBox = document.getElementById("commentMessage");
+    const popup = document.getElementById("commentPopup");
 
-        const formData = new FormData(this);
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
         const commentData = {
             slug: formData.get("options[slug]"),
             name: formData.get("fields[name]"),
@@ -11,15 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
             date: new Date().toISOString()
         };
 
-        const response = await fetch("https://jekyll-comments-backend-production.up.railway.app/comments", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(commentData)
-        });
+        try {
+            const response = await fetch("https://jekyll-comments-backend-production.up.railway.app/comments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(commentData)
+            });
 
-        const result = await response.json();
-        document.getElementById("commentMessage").innerText = result.success
-            ? "Comment submitted successfully!"
-            : "Error submitting comment.";
+            const result = await response.json();
+            messageBox.innerText = result.success
+                ? "Comment submitted successfully!"
+                : "Error submitting comment.";
+
+            // Show the popup
+            popup.style.display = "block";
+
+        } catch (error) {
+            messageBox.innerText = "An error occurred. Please try again.";
+            popup.style.display = "block";
+        }
     });
 });
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById("commentPopup").style.display = "none";
+}
