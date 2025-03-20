@@ -498,6 +498,15 @@
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/buildyourhome/assets/js/jquery.scrolla.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
       <script src="/buildyourhome/assets/js/swiper.js"></script>
     
   
@@ -524,15 +533,6 @@
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
       <script src="/buildyourhome/assets/js/isotope.pkgd.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-      <script>
-        if (typeof jQuery == 'undefined') {
-          document.write('<script src="/buildyourhome/assets/js/jquery.scrolla.js"></scr' + 'ipt>');
-        }
-      </script>
     
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
