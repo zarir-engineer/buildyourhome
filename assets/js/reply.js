@@ -20,6 +20,7 @@ function submitReply(event, commentId) {
     comment: formData.get("reply_comment").trim(),
     name: formData.get("reply_name").trim(),
     email: formData.get("reply_email").trim(),
+    post_id: window.location.pathname, // Unique post ID (use slug or URL)
   };
 
   if (!replyData.comment || !replyData.name || !replyData.email) {
@@ -27,8 +28,7 @@ function submitReply(event, commentId) {
     return;
   }
 
-  // Send data to the backend
-  fetch("/api/comments", {
+  fetch("https://jekyll-comments-backend-production.up.railway.app/api/comments", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -43,13 +43,13 @@ function submitReply(event, commentId) {
         // Hide the form
         replyForm.style.display = "none";
 
-        // Dynamically add the reply to the comment thread
+        // Add reply dynamically
         const parentComment = document.querySelector(`[data-comment-id="${commentId}"]`);
         const newReply = document.createElement("li");
         newReply.classList.add("comment", "comment-item", "reply");
         newReply.innerHTML = `
           <div class="comment-box">
-            <img src="assets/images/avatar.png" class="avatar" alt="">
+            <img src="/assets/images/avatar.png" class="avatar" alt="">
             <div class="comment-box__body">
               <h5 class="comment-box__details">${replyData.name} <span>Just now</span></h5>
               <p>${replyData.comment}</p>
@@ -57,7 +57,6 @@ function submitReply(event, commentId) {
           </div>
         `;
 
-        // Append reply to the parent comment
         let replyList = parentComment.querySelector(".replies");
         if (!replyList) {
           replyList = document.createElement("ul");
@@ -66,7 +65,7 @@ function submitReply(event, commentId) {
         }
         replyList.appendChild(newReply);
       } else {
-        alert("Error submitting reply. Please try again.");
+        alert("Error submitting reply.");
       }
     })
     .catch(error => {

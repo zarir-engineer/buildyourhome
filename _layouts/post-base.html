@@ -68,7 +68,7 @@ layout: base
                       {% for comment in site.data.comments[page.slug] %}
                       <li class="comment comment-item" data-comment-id="{{ comment.id }}">
                         <div class="comment-box">
-                          <img src="assets/images/avatar.png" class="avatar" alt="">
+                          <img src="/assets/images/avatar.png" class="avatar" alt="">
                           <div class="comment-box__body">
                             <h5 class="comment-box__details">{{ comment.name }} <span>{{ comment.date }}</span></h5>
                             <p>{{ comment.comment }}</p>
@@ -83,7 +83,7 @@ layout: base
                             {% for reply in comment.replies %}
                               <li class="comment comment-item reply">
                                 <div class="comment-box">
-                                  <img src="assets/images/avatar.png" class="avatar" alt="">
+                                  <img src="/assets/images/avatar.png" class="avatar" alt="">
                                   <div class="comment-box__body">
                                     <h5 class="comment-box__details">{{ reply.name }} <span>{{ reply.date }}</span></h5>
                                     <p>{{ reply.comment }}</p>
@@ -122,50 +122,6 @@ layout: base
                       {% endfor %}
                     </ul>
 
-                  <!-- Comment List -->
-<!--                  <ul class="comments" id="commentList">-->
-<!--                    {% for comment in site.data.comments[page.slug] %}-->
-<!--                      <li class="comment comment-item">-->
-<!--                        <div class="comment comment-box">-->
-<!--                          <img src="assets/images/avatar.png" class="avatar" alt="">-->
-<!--                          <div class="comment-box__body">-->
-<!--                            <div class="content-caption post-content description">-->
-<!--                              <h5 class="comment-box__details">{{ comment.name }} <span>{{ comment.date }}</span></h5>-->
-<!--                              <p>{{ comment.comment }}</p>-->
-<!--                            </div>-->
-<!--                          </div>-->
-<!--                          <div class="comment-footer">-->
-<!--                            <a class="comment-reply-link" href="#" onclick="showReplyForm('{{ comment.id }}')">Reply</a>-->
-<!--                          </div>-->
-<!--                        </div>-->
-
-<!--                        &lt;!&ndash; Reply Form (Hidden by Default) &ndash;&gt;-->
-<!--                        <div id="reply-form-{{ comment.id }}" class="reply-form" style="display:none;">-->
-<!--                          <form onsubmit="submitReply(event, '{{ comment.id }}')">-->
-<!--                            <input type="hidden" name="parent_id" value="{{ comment.id }}">-->
-<!--                            <div class="group-row">-->
-<!--                              <div class="group">-->
-<!--                                <textarea class="textarea" name="reply_comment" rows="2" placeholder="Reply"></textarea>-->
-<!--                              </div>-->
-<!--                            </div>-->
-<!--                            <div class="group-row">-->
-<!--                              <div class="group">-->
-<!--                                <input type="text" name="reply_name" class="input" placeholder="Name" required>-->
-<!--                              </div>-->
-<!--                              <div class="group">-->
-<!--                                <input type="email" name="reply_email" class="input" placeholder="Email (not shown)" required>-->
-<!--                              </div>-->
-<!--                            </div>-->
-<!--                            <div class="group-row">-->
-<!--                              <div class="group">-->
-<!--                                <button type="submit" name="submit" class="btn">Submit</button>-->
-<!--                              </div>-->
-<!--                            </div>-->
-<!--                          </form>-->
-<!--                        </div>-->
-<!--                      </li>-->
-<!--                    {% endfor %}-->
-<!--                  </ul>-->
                   <!-- Comment Form -->
                   <div class="form-comment">
                     <div class="comment-respond">
@@ -261,5 +217,5 @@ layout: base
 
 {% if page.comments %}
     <script src="{{ '/assets/js/comments.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/reply.js' | relative_url }}" defer></script>
 {% endif %}
-<script src="{{ '/assets/js/reply.js' | relative_url }}" defer></script>
