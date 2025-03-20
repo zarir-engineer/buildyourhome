@@ -3,7 +3,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main  # Triggers workflow when pushing to main
+      - main  # Runs when changes are pushed to main
 
 jobs:
   build:
@@ -39,13 +39,16 @@ jobs:
           git checkout gh-pages
           git pull origin gh-pages
 
-      - name: Copy _data/comments from main to gh-pages
+      - name: Copy required folders from main to gh-pages
         run: |
-          git checkout main -- _data/comments
-          mkdir -p _data/comments  # Ensure the directory exists
+          git checkout main -- _data/comments _includes _layouts _posts
+          mkdir -p _data/comments _includes _layouts _posts  # Ensure directories exist
           rsync -av --progress _data/comments/ _data/comments/
-          git add -f _data/comments
-          git commit -m "Sync _data/comments from main" || echo "No changes to commit"
+          rsync -av --progress _includes/ _includes/
+          rsync -av --progress _layouts/ _layouts/
+          rsync -av --progress _posts/ _posts/
+          git add -f _data/comments _includes _layouts _posts
+          git commit -m "Sync site data from main" || echo "No changes to commit"
 
       - name: Push changes to gh-pages
         run: |
