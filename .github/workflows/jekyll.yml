@@ -44,21 +44,27 @@ jobs:
           echo "Before copying - Listing existing files:"
           ls -R _data _includes _layouts _posts || echo "No existing files"
 
-          git checkout main -- _data/comments _includes _layouts _posts
-          mkdir -p _data/comments _includes _layouts _posts  # Ensure directories exist
+          # Checkout specific folders from the main branch
+          git fetch origin main
+          git checkout origin/main -- _data _includes _layouts _posts
+
+          # Ensure directories exist before copying
+          mkdir -p _data/comments _includes _layouts _posts
 
           echo "After ensuring directories exist:"
-          ls -R _data _includes _layouts _posts || echo "No files"
+          ls -R _data _includes _layouts _posts || echo "No files found"
 
-          rsync -av --progress _data/comments/ _data/comments/
-          rsync -av --progress _includes/ _includes/
-          rsync -av --progress _layouts/ _layouts/
-          rsync -av --progress _posts/ _posts/
+          # Use rsync to copy files safely
+          rsync -av _data/ _data/
+          rsync -av _includes/ _includes/
+          rsync -av _layouts/ _layouts/
+          rsync -av _posts/ _posts/
 
           echo "After copying - Listing files:"
           ls -R _data _includes _layouts _posts || echo "No files copied"
 
-          git add -f _data/comments _includes _layouts _posts
+          # Ensure Git recognizes the changes
+          git add -f _data _includes _layouts _posts
           git commit -m "Sync site data from main" || echo "No changes to commit"
 
       - name: Push changes to gh-pages
