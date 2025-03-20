@@ -126,7 +126,13 @@ layout: base
             </div>
           </form>
 
-          <div id="commentMessage"></div>
+          <!-- Popup for Comment Message -->
+          <div id="commentPopup" class="modal">
+            <div class="modal-content">
+                <p id="commentMessage"></p>
+                <button onclick="closePopup()">OK</button>
+            </div>
+          </div>
       </div>
     </div>
 
