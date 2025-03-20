@@ -348,7 +348,7 @@ Pellentesque lectus sapien, maximus id gravida sit amet, tristique non eros.</p>
                     <div class="m-title align-left">
                       
                       
-                        2 Comments
+                        3 Comments
                       
                     </div>
                   </div>
@@ -400,6 +400,46 @@ Pellentesque lectus sapien, maximus id gravida sit amet, tristique non eros.</p>
                           <div class="comment-box__body">
                             <h5 class="comment-box__details">Navjot Singh Sidhu <span>2024-03-12</span></h5>
                             <p>Thoko taali. Kamaal hai guru!</p>
+                          </div>
+                          <div class="comment-footer">
+                            <a class="comment-reply-link" href="#" onclick="showReplyForm('')">Reply</a>
+                          </div>
+                        </div>
+
+                        
+
+                        <!-- Reply Form -->
+                        <div id="reply-form-" class="reply-form" style="display:none;">
+                          <form onsubmit="submitReply(event, '')">
+                            <input type="hidden" name="parent_id" value="">
+                            <div class="group-row">
+                              <div class="group">
+                                <textarea class="textarea" name="reply_comment" rows="2" placeholder="Reply"></textarea>
+                              </div>
+                            </div>
+                            <div class="group-row">
+                              <div class="group">
+                                <input type="text" name="reply_name" class="input" placeholder="Name" required>
+                              </div>
+                              <div class="group">
+                                <input type="email" name="reply_email" class="input" placeholder="Email (not shown)" required>
+                              </div>
+                            </div>
+                            <div class="group-row">
+                              <div class="group">
+                                <button type="submit" class="btn">Submit</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      
+                      <li class="comment comment-item" data-comment-id="">
+                        <div class="comment-box">
+                          <img src="/assets/images/avatar.png" class="avatar" alt="">
+                          <div class="comment-box__body">
+                            <h5 class="comment-box__details">Kapil Sharma <span>2024-03-12</span></h5>
+                            <p>mujhe tum bilkul pasand nahin hon!</p>
                           </div>
                           <div class="comment-footer">
                             <a class="comment-reply-link" href="#" onclick="showReplyForm('')">Reply</a>
