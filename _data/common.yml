@@ -13,7 +13,7 @@ common-css:
 
 common-ext-css:
   - href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    sri: "sha384-NIYazKyo3B9W8+BLhD4OdUZFOcvhFy+oEtxuMWI4MByXkqM/rBLHPCd54io6u9We"
+    sri: "9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
   - href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   - href: "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900|Caveat:400,500,600,700&display=swap"
   - href: "https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=auto"
@@ -21,15 +21,11 @@ common-ext-css:
 common-ext-js:
   - href: "https://code.jquery.com/jquery-3.6.0.min.js"
     sri: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  - href: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
-    sri: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   - href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    sri: "geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 
 common-js:
-  - "/assets/js/jquery.min.js"
   - "/assets/js/jquery.validate.min.js"
-  - "/assets/js/bootstrap.js"
   - "/assets/js/swiper.js"
   - "/assets/js/splitting.js"
   - "/assets/js/jarallax.min.js"
@@ -42,3 +38,28 @@ common-js:
   - "/assets/js/typed.js"
   - "/assets/js/common.js"
   - "/assets/js/modal-videos.js"
+
+#common-ext-js:
+#  - href: "https://code.jquery.com/jquery-3.6.0.min.js"
+#    sri: "vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+#  - href: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+#    sri: "Oz7lgvFTBmF2tgUbWhi+UbVpO6A2ZHxrXxggo99/YCCTr3eeRtYstVqatDifOd5I"
+#  - href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+#    sri: "geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+#
+#common-js:
+##  - "/assets/js/jquery.min.js"
+#  - "/assets/js/jquery.validate.min.js"
+#  - "/assets/js/bootstrap.js"
+#  - "/assets/js/swiper.js"
+#  - "/assets/js/splitting.js"
+#  - "/assets/js/jarallax.min.js"
+#  - "/assets/js/magnific-popup.js"
+#  - "/assets/js/imagesloaded.pkgd.js"
+#  - "/assets/js/isotope.pkgd.js"
+#  - "/assets/js/jquery.scrolla.js"
+#  - "/assets/js/skrollr.js"
+#  - "/assets/js/jquery.cookie.js"
+#  - "/assets/js/typed.js"
+#  - "/assets/js/common.js"
+#  - "/assets/js/modal-videos.js"
