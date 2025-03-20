@@ -41,12 +41,23 @@ jobs:
 
       - name: Copy required folders from main to gh-pages
         run: |
+          echo "Before copying - Listing existing files:"
+          ls -R _data _includes _layouts _posts || echo "No existing files"
+
           git checkout main -- _data/comments _includes _layouts _posts
           mkdir -p _data/comments _includes _layouts _posts  # Ensure directories exist
+
+          echo "After ensuring directories exist:"
+          ls -R _data _includes _layouts _posts || echo "No files"
+
           rsync -av --progress _data/comments/ _data/comments/
           rsync -av --progress _includes/ _includes/
           rsync -av --progress _layouts/ _layouts/
           rsync -av --progress _posts/ _posts/
+
+          echo "After copying - Listing files:"
+          ls -R _data _includes _layouts _posts || echo "No files copied"
+
           git add -f _data/comments _includes _layouts _posts
           git commit -m "Sync site data from main" || echo "No changes to commit"
 
