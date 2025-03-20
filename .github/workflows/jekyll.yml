@@ -37,11 +37,14 @@ jobs:
         run: |
           git fetch origin gh-pages
           git checkout gh-pages
+          git pull origin gh-pages
 
       - name: Copy _data/comments from main to gh-pages
         run: |
-          git checkout main -- _data/comments  # Copy only _data/comments
-          git add _data/comments
+          git checkout main -- _data/comments
+          mkdir -p _data/comments  # Ensure the directory exists
+          rsync -av --progress _data/comments/ _data/comments/
+          git add -f _data/comments
           git commit -m "Sync _data/comments from main" || echo "No changes to commit"
 
       - name: Push changes to gh-pages
