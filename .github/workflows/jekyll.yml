@@ -33,43 +33,23 @@ jobs:
         run: |
           bundle exec jekyll build --trace --verbose
 
-      - name: Checkout gh-pages branch
+      - name: Set Git Identity  # ✅ ADD THIS STEP BEFORE COPYING FILES
         run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          git pull origin gh-pages
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
 
-      - name: Copy required folders from main to gh-pages
+      - name: Copy Required Folders from main to gh-pages
         run: |
-          echo "Before copying - Listing existing files:"
-          ls -R _data _includes _layouts _posts || echo "No existing files"
+          git checkout main -- _data _includes _layouts _posts
 
-          # Checkout specific folders from the main branch
-          git fetch origin main
-          git checkout origin/main -- _data _includes _layouts _posts
+          mkdir -p _data/comments _includes _layouts _posts  # Ensure directories exist
+          rsync -av --progress _data/ _site/_data/
+          rsync -av --progress _includes/ _site/_includes/
+          rsync -av --progress _layouts/ _site/_layouts/
+          rsync -av --progress _posts/ _site/_posts/
 
-          # Ensure directories exist before copying
-          mkdir -p _data/comments _includes _layouts _posts
-
-          echo "After ensuring directories exist:"
-          ls -R _data _includes _layouts _posts || echo "No files found"
-
-          # Use rsync to copy files safely
-          rsync -av _data/ _data/
-          rsync -av _includes/ _includes/
-          rsync -av _layouts/ _layouts/
-          rsync -av _posts/ _posts/
-
-          echo "After copying - Listing files:"
-          ls -R _data _includes _layouts _posts || echo "No files copied"
-
-          # Ensure Git recognizes the changes
           git add -f _data _includes _layouts _posts
           git commit -m "Sync site data from main" || echo "No changes to commit"
-
-      - name: Push changes to gh-pages
-        run: |
-          git push origin gh-pages
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
