@@ -3,7 +3,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Triggers workflow when pushing to main
 
 jobs:
   build:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Needed for switching branches
 
       - name: Install ImageMagick (Fix for rmagick)
         run: sudo apt-get update && sudo apt-get install -y libmagickwand-dev imagemagick
@@ -19,7 +21,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'  # Ensure this matches your GitHub Pages Ruby version
+          ruby-version: '3.0'
           bundler-cache: true
 
       - name: Install Dependencies
@@ -31,9 +33,24 @@ jobs:
         run: |
           bundle exec jekyll build --trace --verbose
 
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+
+      - name: Copy _data/comments from main to gh-pages
+        run: |
+          git checkout main -- _data/comments  # Copy only _data/comments
+          git add _data/comments
+          git commit -m "Sync _data/comments from main" || echo "No changes to commit"
+
+      - name: Push changes to gh-pages
+        run: |
+          git push origin gh-pages
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # The branch where GitHub Pages is hosted
-          folder: _site  # The Jekyll build output directory
-          token: ${{ secrets.GH_PAT }}  # Use your PAT instead of GITHUB_TOKEN
+          branch: gh-pages  # Deploy to gh-pages
+          folder: _site  # Deploy built Jekyll site
+          token: ${{ secrets.GH_PAT }}  # Use your Personal Access Token
