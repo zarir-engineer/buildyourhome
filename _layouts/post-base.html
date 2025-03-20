@@ -81,12 +81,15 @@ layout: base
           {% for comment in site.data.comments[page.slug] %}
           <li class="comment comment-item">
             <div class="comment comment-box">
-              <img src="assets/images/avatar.png" class="avatar" alt="" >
+              <img src="assets/images/avatar.png" class="avatar" alt="">
               <div class="comment-box__body">
                 <div class="content-caption post-content description">
                   <h5 class="comment-box__details">{{ comment.name }} <span>{{ comment.date }}</span></h5>
                   <p>{{ comment.comment }}</p>
                 </div>
+              </div>
+              <div class="comment-footer">
+                <a class="comment-reply-link" href="#">Reply</a>
               </div>
             </div>
           </li>
