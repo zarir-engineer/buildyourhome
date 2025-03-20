@@ -23,6 +23,28 @@
 <!--<script src="{{ 'assets/js/modal-videos.js' | relative_url }}"></script>-->
 <!--<script src="{{ 'assets/js/comments.js' | relative_url }}"></script>-->
 
+<!--{% if site.data.common.common-ext-js %}-->
+<!--    {% for js in site.data.common.common-ext-js %}-->
+<!--        <script src="{{ js.href }}" {% if js.sri %}integrity="{{ js.sri }}" crossorigin="anonymous"{% endif %}></script>-->
+<!--    {% endfor %}-->
+<!--{% endif %}-->
+
+<!--{% if site.data.common.common-js %}-->
+<!--  {% for js in site.data.common.common-js %}-->
+<!--    &lt;!&ndash; doing something a bit funky here because I want to be careful not to include JQuery twice! &ndash;&gt;-->
+<!--    {% if js contains 'jquery' %}-->
+<!--      <script>-->
+<!--        if (typeof jQuery == 'undefined') {-->
+<!--          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');-->
+<!--        }-->
+<!--      </script>-->
+<!--    {% else %}-->
+<!--      <script src="{{ js | relative_url }}"></script>-->
+<!--    {% endif %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
+
+
 {% if site.data.common.common-ext-js %}
     {% for js in site.data.common.common-ext-js %}
         <script src="{{ js.href }}" {% if js.sri %}integrity="{{ js.sri }}" crossorigin="anonymous"{% endif %}></script>
@@ -30,16 +52,7 @@
 {% endif %}
 
 {% if site.data.common.common-js %}
-  {% for js in site.data.common.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    {% if js contains 'jquery' %}
-      <script>
-        if (typeof jQuery == 'undefined') {
-          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
-        }
-      </script>
-    {% else %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endif %}
-  {% endfor %}
+    {% for js in site.data.common.common-js %}
+        <script src="{{ js | relative_url }}"></script>
+    {% endfor %}
 {% endif %}
