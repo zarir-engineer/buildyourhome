@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const response = await fetch("https://jekyll-comments-backend-production.up.railway.app/comments", {
+            const response = await fetch("https://jekyll-comments-backend.onrender.com/comments", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(commentData)
@@ -54,11 +54,20 @@ function closePopup() {
 
 // (Optional) Function to reload comments without refreshing
 async function loadComments(slug) {
+    console.log("Loading comments for slug:", slug); // Debugging log
+
     try {
-        const response = await fetch(`https://jekyll-comments-backend-production.up.railway.app/comments/${slug}`);
+        const response = await fetch(`https://jekyll-comments-backend.onrender.com/comments/${slug}?t=${Date.now()}`);
         const comments = await response.json();
 
+        console.log("Fetched comments:", comments); // Debugging log
+
         const commentsContainer = document.querySelector(".comments");
+        if (!commentsContainer) {
+            console.error("Comments container not found!");
+            return;
+        }
+
         commentsContainer.innerHTML = ""; // Clear old comments
 
         comments.forEach(comment => {
@@ -74,6 +83,8 @@ async function loadComments(slug) {
                 </li>
             `;
         });
+
+        console.log("Comments updated successfully"); // Debugging log
 
     } catch (error) {
         console.error("Error loading comments:", error);
