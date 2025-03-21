@@ -77,6 +77,7 @@ layout: base
                             <a class="comment-reply-link" href="#" onclick="showReplyForm('{{ comment.id }}')">Reply</a>
                           </div>
                         </div>
+                        <p>page.comments is: {{ page.comments }}</p>
 
                         {% if comment.replies %}
                           <ul class="replies">
