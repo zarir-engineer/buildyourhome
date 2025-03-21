@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("+++ JavaScript Loaded!"); // Debugging check
+    console.log("🚀 JavaScript Loaded!");
 
-    const button = document.querySelector("#commentForm button[type='submit']");
-
-    if (!button) {
-        console.error("Submit button not found!");
+    const form = document.getElementById("commentForm");
+    if (!form) {
+        console.error("❌ Form not found!");
         return;
     }
 
-    console.log("Submit button found, adding click event...");
+    console.log("✅ Form found!");
 
-    button.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent page reload
-        alert("Button clicked! Event prevented.");
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // STOP page reload
+        console.log("🛑 Form submission prevented!");
+
+        alert("Form submitted! But page won't reload.");
     });
 });
 
