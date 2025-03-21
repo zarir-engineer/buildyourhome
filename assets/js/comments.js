@@ -1,3 +1,5 @@
+console.log("comments.js loaded!");
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("commentForm");
     const messageBox = document.getElementById("commentMessage");
