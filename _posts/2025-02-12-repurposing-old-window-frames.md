@@ -11,8 +11,8 @@ permalink: /all-blogs/repurposing_old_window_frames.html
 slug: "2025-02-12-repurposing-old-window-frames-slug"
 featured_image: /assets/images/posts/1920-1400-repurposing-old-window-frames.jpg
 gallery:
-  - "/assets/images/blog8.jpg"
-  - "/assets/images/blog6.jpg"
+  - "/buildyourhome/assets/images/blog8.jpg"
+  - "/buildyourhome/assets/images/blog6.jpg"
 ---
 
 
