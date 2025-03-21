@@ -216,6 +216,9 @@ layout: base
 </div>
 
 {% if page.comments %}
+  <script>
+    alert("Loading comments.js!");
+  </script>
   <script src="{{ '/assets/js/comments.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/reply.js' | relative_url }}" defer></script>
 {% endif %}
