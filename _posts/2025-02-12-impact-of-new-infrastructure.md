@@ -11,6 +11,7 @@ layout: post-base
 author: admin
 permalink: /all-blogs/impact_of_new_infrastructure.html
 slug: "2025-02-12-impact-of-new-infrastructure-slug"
+comments: true
 ---
 
 The Impact of New Infrastructure Developments on Mumbai’s Real Estate Market
