@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // STOP page reload
         console.log("🛑 Form submission prevented!");
-
         alert("Form submitted! But page won't reload.");
+        return false; // Extra safety
     });
 });
 
