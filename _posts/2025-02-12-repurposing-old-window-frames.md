@@ -5,7 +5,7 @@ date:   2024-11-20 19:16:49 +0100
 title: Repurposing Old Window Frames
 categories: [jekyll, tutorial]
 tags: [jekyll, markdown, blog]
-lead_text: "A World of Luxury, Heritage, and Opportunity."
+lead_text: "A World of Luxury, Heritage, and Opportunity....."
 post_url: "/all-blogs/repurposing_old_window_frames.html"
 permalink: /all-blogs/repurposing_old_window_frames.html
 slug: "2025-02-12-repurposing-old-window-frames-slug"
