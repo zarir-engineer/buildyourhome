@@ -56,11 +56,17 @@ function closePopup() {
 async function loadComments(slug) {
     console.log("Loading comments for slug:", slug); // Debugging log
 
+    if (!slug) {
+        console.error("Slug is missing!");
+        return;
+    }
+
     try {
-        const response = await fetch(`https://jekyll-comments-backend.onrender.com/comments/${slug}?t=${Date.now()}`);
+        const response = await fetch(`https://jekyll-comments-backend-production-8c02.up.railway.app/comments/${slug}?t=${Date.now()}`);
+        if (!response.ok) throw new Error("Failed to fetch comments");
         const comments = await response.json();
 
-        console.log("Fetched comments:", comments); // Debugging log
+        console.log("+++ Fetched comments:", comments); // Debugging log
 
         const commentsContainer = document.querySelector(".comments");
         if (!commentsContainer) {
@@ -71,20 +77,21 @@ async function loadComments(slug) {
         commentsContainer.innerHTML = ""; // Clear old comments
 
         comments.forEach(comment => {
-            commentsContainer.innerHTML += `
-                <li class="comment comment-item">
-                    <div class="comment-box">
-                        <img src="/assets/images/avatar.png" class="avatar" alt="">
-                        <div class="comment-box__body">
-                            <h5 class="comment-box__details">${comment.name} <span>${comment.date}</span></h5>
-                            <p>${comment.comment}</p>
-                        </div>
+            const commentItem = document.createElement("li");
+            commentItem.classList.add("comment", "comment-item");
+            commentItem.innerHTML = `
+                <div class="comment-box">
+                    <img src="/assets/images/avatar.png" class="avatar" alt="">
+                    <div class="comment-box__body">
+                        <h5 class="comment-box__details">${comment.name} <span>${new Date(comment.date).toLocaleDateString()}</span></h5>
+                        <p>${comment.comment}</p>
                     </div>
-                </li>
+                </div>
             `;
+            commentsContainer.appendChild(commentItem);
         });
 
-        console.log("Comments updated successfully"); // Debugging log
+        console.log("Comments updated successfully");
 
     } catch (error) {
         console.error("Error loading comments:", error);

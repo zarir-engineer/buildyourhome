@@ -20,7 +20,7 @@ function submitReply(event, commentId) {
     comment: formData.get("reply_comment").trim(),
     name: formData.get("reply_name").trim(),
     email: formData.get("reply_email").trim(),
-    post_id: window.location.pathname, // Unique post ID (use slug or URL)
+    post_id: window.location.pathname.split("/").filter(Boolean).pop(),
   };
 
   if (!replyData.comment || !replyData.name || !replyData.email) {
@@ -28,7 +28,7 @@ function submitReply(event, commentId) {
     return;
   }
 
-  fetch("https://jekyll-comments-backend.onrender.com/comments", {
+  fetch("https://jekyll-comments-backend-production-8c02.up.railway.app/comments", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
