@@ -145,4 +145,3 @@ window.addEventListener('click', (event) => {
   });
 });
 ```
-
