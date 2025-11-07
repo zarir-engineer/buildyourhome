@@ -28,7 +28,7 @@ function submitReply(event, commentId) {
     return;
   }
 
-  fetch("https://jekyll-comments-backend-production.up.railway.app/api/comments", {
+  fetch("https://your-app-name.onrender.com/api/comments", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

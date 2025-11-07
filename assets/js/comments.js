@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const response = await fetch("https://jekyll-comments-backend-production.up.railway.app/comments", {
+            const response = await fetch("https://your-app-name.onrender.com/comments", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(commentData)
@@ -55,7 +55,7 @@ function closePopup() {
 // (Optional) Function to reload comments without refreshing
 async function loadComments(slug) {
     try {
-        const response = await fetch(`https://jekyll-comments-backend-production.up.railway.app/comments/${slug}`);
+        const response = await fetch(`https://your-app-name.onrender.com/comments/${slug}`);
         const comments = await response.json();
 
         const commentsContainer = document.querySelector(".comments");
