@@ -1,10 +1,11 @@
-/* styles.css - small branding & spacing tweaks */
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f8f9fb;
+  background:#f5f7fb;
 }
-header { background: linear-gradient(90deg, rgba(250,250,250,1), rgba(245,247,250,1)); }
-.card img { height: 200px; object-fit: cover; }
-.navbar-brand img { max-height: 40px; }
-section { padding-top: 48px; padding-bottom: 48px; }
-footer { font-size: 0.9rem; }
+header.hero {
+  padding:60px 0;
+  background:linear-gradient(90deg,#ffffff,#f8f9fb);
+}
+.card img {height:220px;object-fit:cover;}
+section {padding:48px 0;}
+footer {font-size:0.9rem;}
