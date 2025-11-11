@@ -32,7 +32,7 @@ e&&(i=a,c=(u="--"+e)+"-index",v(o=r,function(n,t){Array.isArray(n)?v(n,function(
 return v(r,function(n){var t=Math.round(n[e]);(i[t]||(i[t]=[])).push(n)}),Object.keys(i).map(Number).sort(x).map(c(i))}function x(n,t){return n-t}b.html=function(n){var t=(n=n||{}).target=p()
 return t.innerHTML=n.content,b(n),t.outerHTML},b.add=t
 var T=n("lines",[i],"line",function(n,t,e){return N(n,{matching:e[i]},"offsetTop")}),L=n("items",s,"item",function(n,t){return m(t.matching||n.children,n)}),k=n("rows",s,"row",function(n,t){return N(n,t,"offsetTop")}),A=n("cols",s,"col",function(n,t){return N(n,t,"offsetLeft")}),C=n("grid",["rows","cols"]),M="layout",S=n(M,s,s,function(n,t){var e=t.rows=+(t.rows||h(n,"rows")||1),r=t.columns=+(t.columns||h(n,"columns")||1)
-if(t.image=t.image||h(n,"image")||n.currentSrc||n.src,t.image){var i=m("img",n)[0]
+if(t.image=t.image||h(n,"image")||n.currentSrc||n.src,t.image){var i=m("images",n)[0]
 t.image=i&&(i.currentSrc||i.src)}t.image&&d(n,"background-image","url("+t.image+")")
 for(var o=e*r,u=[],c=p(s,"cell-grid");o--;){var a=p(c,"cell")
 p(a,"cell-inner"),u.push(a)}return f(n,c),u}),H=n("cellRows",[M],"row",function(n,t,e){var r=t.rows,i=u(r)

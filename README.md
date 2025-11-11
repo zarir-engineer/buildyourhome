@@ -29,7 +29,7 @@ $${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverf
 | google_analytics          |                                     |
 |                           |                                     |
 
-### ffmpeg -i "C:\Users\Asus\Downloads\IMG_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
+### ffmpeg -i "C:\Users\Asus\Downloads\images_0006.MOV" -vf "select=eq(n\,34)" -vframes 1 "C:\Users\Asus\Downloads\alka.png"
 
 ### ffmpeg -i "C:\Users\Asus\Downloads\alka.png" -vf scale=660:380 "C:\Users\Asus\Downloads\output_660x380.png"
 

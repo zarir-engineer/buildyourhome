@@ -3091,7 +3091,7 @@ class PHPMailer
     {
         preg_match_all('/(src|background)=["\'](.*)["\']/Ui', $message, $images);
         if (isset($images[2])) {
-            foreach ($images[2] as $imgindex => $url) {
+            foreach ($images[2] as $imagesindex => $url) {
                 // Convert data URIs into embedded images
                 if (preg_match('#^data:(image[^;,]*)(;base64)?,#', $url, $match)) {
                     $data = substr($url, strpos($url, ','));
@@ -3103,8 +3103,8 @@ class PHPMailer
                     $cid = md5($url) . '@phpmailer.0'; // RFC2392 S 2
                     if ($this->addStringEmbeddedImage($data, $cid, '', 'base64', $match[1])) {
                         $message = str_replace(
-                            $images[0][$imgindex],
-                            $images[1][$imgindex] . '="cid:' . $cid . '"',
+                            $images[0][$imagesindex],
+                            $images[1][$imagesindex] . '="cid:' . $cid . '"',
                             $message
                         );
                     }
@@ -3131,8 +3131,8 @@ class PHPMailer
                     )
                     ) {
                         $message = preg_replace(
-                            '/' . $images[1][$imgindex] . '=["\']' . preg_quote($url, '/') . '["\']/Ui',
-                            $images[1][$imgindex] . '="cid:' . $cid . '"',
+                            '/' . $images[1][$imagesindex] . '=["\']' . preg_quote($url, '/') . '["\']/Ui',
+                            $images[1][$imagesindex] . '="cid:' . $cid . '"',
                             $message
                         );
                     }

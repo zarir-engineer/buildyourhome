@@ -49,7 +49,7 @@ function submitReply(event, commentId) {
         newReply.classList.add("comment", "comment-item", "reply");
         newReply.innerHTML = `
           <div class="comment-box">
-            <img src="/assets/images/avatar.png" class="avatar" alt="">
+            <images src="/assets/images/avatar.png" class="avatar" alt="">
             <div class="comment-box__body">
               <h5 class="comment-box__details">${replyData.name} <span>Just now</span></h5>
               <p>${replyData.comment}</p>

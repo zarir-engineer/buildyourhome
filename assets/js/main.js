@@ -1,5 +1,7 @@
+function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'); }
+
 (async function(){
-  const dataUrl = 'properties.json';
+  const dataUrl = 'assets/data/properties.json';
   let properties = [];
   try {
     const res = await fetch(dataUrl);
@@ -8,22 +10,50 @@
 
   const grid = document.getElementById('propertiesGrid');
 
+  function openPropertyModal(id){
+    const p = properties.find(x=>x.id===id);
+    if(!p) return;
+    const inner = document.getElementById('modalCarouselInner');
+    inner.innerHTML = (p.gallery || [p.image]).map((images,i)=>`
+      <div class="carousel-item ${i===0?'active':''}">
+        <images src="${images}" class="d-block w-100" style="height:420px; object-fit:cover;">
+      </div>`).join('');
+    document.getElementById('modalTitle').textContent = p.title;
+    document.getElementById('modalLocation').textContent = p.location;
+    document.getElementById('modalPrice').textContent = p.price;
+    document.getElementById('modalDetails').textContent = p.details || '';
+    document.getElementById('modalDesc').textContent = p.description || '';
+    document.getElementById('modalEnquireBtn').setAttribute('onclick', `prefillEnquiry('${p.id}')`);
+    const modal = new bootstrap.Modal(document.getElementById('propertyModal'));
+    modal.show();
+  }
+
+
   function card(p){
     return `
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="${p.image}" class="card-img-top" alt="${p.title}">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">${p.title}</h5>
-            <p class="text-muted mb-1">${p.location} • ${p.details}</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div class="fw-bold">${p.price}</div>
-              <a class="btn btn-sm btn-primary" href="#contact" onclick="prefillEnquiry('${p.id}')">Enquire</a>
-            </div>
+    <div class="col-md-4">
+      <article class="card h-100">
+        <div style="position:relative">
+          <images src="${p.image}" class="card-images-top" alt="${escapeHtml(p.title)}" loading="lazy">
+          <div style="position:absolute;left:12px;top:12px;">
+            <span class="badge-type">${escapeHtml(p.type)}</span>
+          </div>
+          <div style="position:absolute;right:12px;top:12px;">
+            <span class="badge bg-white text-dark small shadow-sm"> ${escapeHtml(p.beds)} BHK </span>
           </div>
         </div>
-      </div>`;
+        <div class="card-body d-flex flex-column">
+          <h5 class="mb-1">${escapeHtml(p.title)}</h5>
+          <div class="muted mb-2">${escapeHtml(p.location)}</div>
+          <div class="mt-auto d-flex justify-content-between align-items-center">
+            <div class="prop-price">${escapeHtml(p.price)}</div>
+            <div><button class="btn btn-sm btn-outline-primary" data-id="${p.id}" onclick="openPropertyModal('${p.id}')">View</button></div>
+          </div>
+        </div>
+      </article>
+    </div>`;
   }
+
 
   function render(list){
     grid.innerHTML = list.length
@@ -65,3 +95,4 @@
     }
   };
 })();
+

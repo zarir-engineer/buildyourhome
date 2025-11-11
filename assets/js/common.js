@@ -337,7 +337,7 @@ $(function() {
 	$('.has-popup-image').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
-		mainClass: 'mfp-img-mobile',
+		mainClass: 'mfp-images-mobile',
 		image: {
 			verticalFit: true
 		}
@@ -413,7 +413,7 @@ $(function() {
 	/**
 		Video
 	**/
-	$('.m-video-large .video').on('click', '.play, .img', function(){
+	$('.m-video-large .video').on('click', '.play, .images', function(){
 		$(this).closest('.video').addClass('active');
 		var iframe = $(this).closest('.video').find('.js-video-iframe');
 		largeVideoPlay(iframe);

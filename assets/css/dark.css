@@ -267,8 +267,8 @@ body.dark-skin {
 	color: #eaeaea;
 }
 
-.dark-skin .header__builder .logo img,
-.dark-skin .preloader .spinner-logo img {
+.dark-skin .header__builder .logo images,
+.dark-skin .preloader .spinner-logo images {
   filter: brightness(0) invert(1);
 }
 
@@ -358,17 +358,17 @@ body.dark-skin {
 * Section Hero Started
 **/
 
-.dark-skin .section.hero-started .slide .circle.img-1 {
+.dark-skin .section.hero-started .slide .circle.images-1 {
   opacity: 0.6;
   filter: invert(1);
 }
 
-.dark-skin .section.hero-started .slide .circle.img-2 {
+.dark-skin .section.hero-started .slide .circle.images-2 {
   opacity: 0.6;
   filter: invert(1);
 }
 
-.dark-skin .section.hero-started .slide .circle.img-3 {
+.dark-skin .section.hero-started .slide .circle.images-3 {
   opacity: 0.6;
   filter: invert(1);
 }
@@ -452,9 +452,9 @@ body.dark-skin {
 }
 
 .dark-skin .services-item .image,
-.dark-skin .works-item .bg-img,
-.dark-skin .testimonials-item .bg-img,
-.dark-skin .pricing-item .bg-img {
+.dark-skin .works-item .bg-images,
+.dark-skin .testimonials-item .bg-images,
+.dark-skin .pricing-item .bg-images {
 	opacity: 0.6;
   filter: invert(1);
 }
@@ -476,8 +476,8 @@ body.dark-skin {
 	background: #222831;
 }
 
-.dark-skin .works-item .image .img:before,
-.dark-skin .works-item .image .img:after {
+.dark-skin .works-item .image .images:before,
+.dark-skin .works-item .image .images:after {
 	background: #222831;
 }
 
@@ -574,7 +574,7 @@ body.dark-skin {
 	color: #fff;
 }
 
-.dark-skin .contacts-form .bg-img {
+.dark-skin .contacts-form .bg-images {
 	filter: invert(1);
   opacity: 0.6;
 }

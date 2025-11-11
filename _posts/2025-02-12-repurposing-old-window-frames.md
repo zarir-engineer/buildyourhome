@@ -35,7 +35,7 @@ Vivamus interdum suscipit lacus. Nunc ultrices accumsan mattis. Aliquam vel sem 
   {% for image in page.gallery %}
   <li class="gallery-item">
     <figure>
-      <img src="{{ image }}" alt="Gallery Image {{ forloop.index }}">
+      <images src="{{ image }}" alt="Gallery Image {{ forloop.index }}">
     </figure>
   </li>
   {% endfor %}

@@ -389,7 +389,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   text-align: center;
 }
-.swiper-zoom-container > img,
+.swiper-zoom-container > images,
 .swiper-zoom-container > svg,
 .swiper-zoom-container > canvas {
   max-width: 100%;

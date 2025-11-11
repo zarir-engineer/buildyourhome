@@ -81,7 +81,7 @@ async function loadComments(slug) {
             commentItem.classList.add("comment", "comment-item");
             commentItem.innerHTML = `
                 <div class="comment-box">
-                    <img src="/assets/images/avatar.png" class="avatar" alt="">
+                    <images src="/assets/images/avatar.png" class="avatar" alt="">
                     <div class="comment-box__body">
                         <h5 class="comment-box__details">${comment.name} <span>${new Date(comment.date).toLocaleDateString()}</span></h5>
                         <p>${comment.comment}</p>
