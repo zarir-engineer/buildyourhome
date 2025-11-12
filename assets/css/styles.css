@@ -257,3 +257,12 @@ a.cta:hover::after{width:100%}
   }
   .hero-img img { height: 100%; }
 }
+
+.team-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1.5rem auto 0;
+}
+
