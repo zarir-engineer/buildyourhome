@@ -2,11 +2,19 @@ function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll(
 
 (async function(){
   const dataUrl = 'assets/data/properties.json';
-  let properties = [];
+  window.properties = [];
   try {
     const res = await fetch(dataUrl);
-    properties = await res.json();
-  } catch(e){ console.error('Could not load properties.json', e); }
+    const data = await res.json();
+    // Support either array or { properties: [...] } structure
+    window.properties = Array.isArray(data)
+      ? data
+      : (Array.isArray(data.properties) ? data.properties : []);
+  } catch (e) {
+    console.error('Could not load properties.json', e);
+    window.properties = [];
+  }
+  const properties = window.properties; // local alias if you still use `properties` below
 
   const grid = document.getElementById('propertiesGrid');
 
@@ -16,7 +24,7 @@ function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll(
     const inner = document.getElementById('modalCarouselInner');
     inner.innerHTML = (p.gallery || [p.image]).map((images,i)=>`
       <div class="carousel-item ${i===0?'active':''}">
-        <images src="${images}" class="d-block w-100" style="height:420px; object-fit:cover;">
+        <img src="${images}" class="d-block w-100" style="height:420px; object-fit:cover;">
       </div>`).join('');
     document.getElementById('modalTitle').textContent = p.title;
     document.getElementById('modalLocation').textContent = p.location;
@@ -34,7 +42,7 @@ function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll(
     <div class="col-md-4">
       <article class="card h-100">
         <div style="position:relative">
-          <images src="${p.image}" class="card-images-top" alt="${escapeHtml(p.title)}" loading="lazy">
+          <img src="${p.image}" class="card-images-top" alt="${escapeHtml(p.title)}" loading="lazy">
           <div style="position:absolute;left:12px;top:12px;">
             <span class="badge-type">${escapeHtml(p.type)}</span>
           </div>
@@ -94,5 +102,53 @@ function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll(
       location.hash='#contact'; t.focus();
     }
   };
+
+  // advanced search handler
+  (function(){
+    const form = document.getElementById('advancedSearchForm');
+    if(!form) return;
+
+    function parseRange(val){
+      if(!val) return [0, Infinity];
+      const parts = val.split('-').map(Number);
+      return [parts[0] || 0, parts[1] || Infinity];
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const q = (document.getElementById('locInput').value || '').toLowerCase().trim();
+      const type = (document.getElementById('typeSelect').value || '').toLowerCase();
+      const beds = (document.getElementById('bedsSelect').value || '');
+      const baths = (document.getElementById('bathsSelect').value || '');
+      const priceRange = parseRange(document.getElementById('priceSelect').value || '');
+
+      // filter properties (assumes `properties` array is in scope)
+      const filtered = (window.properties || []).filter(p=>{
+        const text = (p.title + ' ' + p.location + ' ' + (p.details||'')).toLowerCase();
+        const matchText = q === '' || text.includes(q);
+        const matchType = type === '' || (p.type||'').toLowerCase() === type;
+        const matchBeds = beds === '' || (p.beds >= parseInt(beds));
+        const matchBaths = baths === '' || ((p.baths||0) >= parseInt(baths)); // ensure your data has baths if needed
+        const priceNum = Number(p.priceNum || 0);
+        const matchPrice = priceNum >= priceRange[0] && priceNum <= priceRange[1];
+
+        return matchText && matchType && matchBeds && matchBaths && matchPrice;
+      });
+
+      // call existing render function
+      if(typeof render === 'function') render(filtered);
+      else {
+        // fallback: log results
+        console.log('Filtered results', filtered);
+      }
+    });
+
+    // optional: map Enter in location to submit the form
+    document.getElementById('locInput').addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); form.dispatchEvent(new Event('submit')); }
+    });
+
+  })();
+
 })();
 
