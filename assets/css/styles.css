@@ -221,3 +221,39 @@ a.cta:hover::after{width:100%}
 /* micro details to match demo */
 .search-card .form-select { appearance: none; -webkit-appearance: none; -moz-appearance: none; background-image: none; }
 .search-card .form-control { background: #fff; }
+
+/* hero */
+
+/* --- hero section --- */
+.hero {
+  background: var(--bg);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-img {
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .4s ease;
+}
+
+.hero-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .hero-img {
+    margin-top: 2rem;
+    height: 300px;
+  }
+  .hero-img img { height: 100%; }
+}
