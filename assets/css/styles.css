@@ -266,3 +266,26 @@ a.cta:hover::after{width:100%}
   margin: 1.5rem auto 0;
 }
 
+/* ===== MOBILE NAV FIX ===== */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+
+  .navbar {
+    overflow: visible !important;
+  }
+
+  .header {
+    position: fixed !important;  /* stick it instead of absolute */
+    overflow: visible;
+  }
+
+  /* Give content breathing room so header doesn't overlap it */
+  .wrapper,
+  .section.hero-started,
+  .lui-section-hero {
+    padding-top: 80px !important;
+  }
+}
