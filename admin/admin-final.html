@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cornerstone Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161e;
+      --surface2: #191c26;
+      --border: #252836;
+      --border2: #2e3245;
+      --text: #e2ddd6;
+      --muted: #7a7f96;
+      --gold: #c9a96e;
+      --gold-light: #e8c88a;
+      --gold-bg: #1e1a0f;
+      --green: #5fcf7a;
+      --green-bg: #0f1f14;
+      --red: #e05c5c;
+      --red-bg: #1f0f0f;
+      --blue: #6b9cf5;
+      --radius: 10px;
+      --radius-sm: 6px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; color: #0d0f14;
+    }
+    .logo-text { font-weight: 700; font-size: 15px; letter-spacing: 0.02em; }
+    .logo-badge {
+      font-size: 11px; color: var(--muted);
+      background: var(--surface2);
+      padding: 2px 9px; border-radius: 20px;
+    }
+    .header-nav { display: flex; gap: 8px; }
+    .btn-nav {
+      background: transparent; color: var(--muted); border: none;
+      padding: 7px 15px; border-radius: var(--radius-sm);
+      cursor: pointer; font-size: 13px; font-weight: 600;
+      font-family: inherit; transition: all 0.15s;
+    }
+    .btn-nav:hover { color: var(--text); background: var(--surface2); }
+    .btn-nav.active { background: var(--gold); color: #0d0f14; }
+
+    /* ── Main ── */
+    .main { max-width: 1060px; margin: 0 auto; padding: 32px 24px; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      margin-bottom: 20px;
+    }
+    .card-title { font-size: 16px; font-weight: 700; margin-bottom: 18px; }
+
+    /* ── Form elements ── */
+    label.field-label {
+      display: block; font-size: 11px; font-weight: 700;
+      color: var(--muted); text-transform: uppercase;
+      letter-spacing: 0.06em; margin-bottom: 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 13px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+    textarea { min-height: 78px; resize: vertical; }
+    select option { background: var(--surface2); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .field { margin-bottom: 16px; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 22px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 700; font-family: inherit;
+      cursor: pointer; border: none; transition: opacity 0.15s;
+    }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #0d0f14; }
+    .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .btn-danger { background: var(--red-bg); color: var(--red); border: 1px solid #3a1a1a; }
+    .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 7px 13px; font-size: 12px; }
+    .btn-row { display: flex; gap: 10px; margin-top: 8px; }
+
+    /* ── Status bar ── */
+    .status-bar {
+      border-radius: var(--radius-sm);
+      padding: 11px 16px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .status-success { background: var(--green-bg); color: var(--green); border: 1px solid #1e4a2a; }
+    .status-error   { background: var(--red-bg);   color: var(--red);   border: 1px solid #3a1a1a; }
+    .status-loading { background: var(--gold-bg);  color: var(--gold);  border: 1px solid #3a2a10; }
+    .status-info    { background: var(--surface2);  color: var(--muted); border: 1px solid var(--border); }
+
+    /* ── LOGIN SCREEN ── */
+    .login-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+    }
+    .login-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+    .login-logo-mark {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 24px; color: #0d0f14;
+      margin: 0 auto 16px;
+    }
+    .login-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .login-sub   { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+    .login-field { text-align: left; margin-bottom: 16px; }
+    .login-error {
+      background: var(--red-bg); color: var(--red);
+      border: 1px solid #3a1a1a;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px; font-size: 13px;
+      margin-bottom: 16px; display: none;
+    }
+    .login-btn {
+      width: 100%; padding: 12px; font-size: 15px; font-weight: 700;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #0d0f14; border: none; border-radius: var(--radius-sm);
+      cursor: pointer; font-family: inherit; transition: opacity 0.15s;
+    }
+    .login-btn:hover { opacity: 0.9; }
+    .login-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── Property grid ── */
+    .prop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+    .prop-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden; transition: border-color 0.2s;
+    }
+    .prop-card:hover { border-color: var(--border2); }
+    .prop-img { width: 100%; height: 155px; object-fit: cover; display: block; background: var(--surface2); }
+    .prop-img-placeholder {
+      width: 100%; height: 155px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--surface2); font-size: 28px; color: var(--border2);
+    }
+    .prop-body { padding: 14px 16px; }
+    .prop-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .prop-meta  { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .prop-price { font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 10px; }
+    .prop-actions { display: flex; gap: 7px; flex-wrap: wrap; }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      padding: 2px 8px; border-radius: 20px; margin-right: 3px; margin-bottom: 3px;
+    }
+    .badge-gold    { background: var(--gold-bg);  color: var(--gold); }
+    .badge-green   { background: var(--green-bg); color: var(--green); }
+    .badge-default { background: var(--surface2); color: var(--muted); }
+
+    /* ── Toggle ── */
+    .toggle-wrap { display: flex; align-items: center; gap: 10px; }
+    .toggle {
+      position: relative; width: 40px; height: 23px;
+      background: var(--border2); border-radius: 12px;
+      cursor: pointer; transition: background 0.2s;
+      border: none; outline: none; flex-shrink: 0;
+    }
+    .toggle.on { background: var(--gold); }
+    .toggle::after {
+      content: ''; position: absolute; top: 3px;
+      width: 17px; height: 17px; background: #fff; border-radius: 50%; transition: left 0.2s;
+    }
+    .toggle.on::after { left: 20px; }
+    .toggle::after { left: 3px; }
+    .toggle-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .toggle.on + .toggle-label { color: var(--gold); }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+      display: flex; align-items: center; justify-content: center; z-index: 999;
+    }
+    .modal-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; max-width: 360px; width: 90%; text-align: center;
+    }
+    .modal-title { font-size: 16px; font-weight: 700; color: var(--red); margin-bottom: 8px; }
+    .modal-sub   { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+    .section-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .section-sub   { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+
+    .empty-state { text-align: center; padding: 60px 20px; }
+    .empty-icon  { font-size: 40px; margin-bottom: 12px; }
+    .empty-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .empty-sub   { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+    .gallery-item { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
+    .gallery-item input { flex: 1; }
+    .gallery-item button {
+      background: var(--red-bg); color: var(--red); border: 1px solid #3a1a1a;
+      border-radius: var(--radius-sm); width: 32px; height: 36px; cursor: pointer; font-size: 16px; flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .prop-grid { grid-template-columns: 1fr; }
+      .header { padding: 12px 16px; }
+      .main { padding: 20px 14px; }
+      .login-box { padding: 30px 20px; margin: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ LOGIN ══════════════ -->
+<div id="viewLogin" class="login-wrap">
+  <div class="login-box">
+    <div class="login-logo-mark">C</div>
+    <div class="login-title">Cornerstone Admin</div>
+    <div class="login-sub">Enter your admin password to continue</div>
+    <div class="login-error" id="loginError">Incorrect password. Please try again.</div>
+    <div class="login-field">
+      <label class="field-label">Admin Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter password"
+        onkeydown="if(event.key==='Enter') Auth.login()">
+    </div>
+    <button class="login-btn" id="loginBtn" onclick="Auth.login()">Login →</button>
+  </div>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<div class="header" id="header" style="display:none">
+  <div class="logo">
+    <div class="logo-mark">C</div>
+    <span class="logo-text">Cornerstone Admin</span>
+    <span class="logo-badge" id="propCount">—</span>
+  </div>
+  <div class="header-nav">
+    <button class="btn-nav" onclick="App.refresh()">↻ Refresh</button>
+    <button class="btn-nav active" onclick="App.openForm()">+ Add Property</button>
+  </div>
+</div>
+
+<!-- ══════════════ VIEWS ══════════════ -->
+<div class="main" id="mainContent" style="display:none">
+
+  <!-- LIST VIEW -->
+  <div id="viewList" style="display:none">
+    <div id="listStatus"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+      <div id="listBadges"></div>
+      <button class="btn btn-primary" onclick="App.openForm()">+ Add Property</button>
+    </div>
+    <div id="propGrid" class="prop-grid"></div>
+  </div>
+
+  <!-- FORM VIEW -->
+  <div id="viewForm" style="display:none">
+    <div id="formStatus"></div>
+    <div class="section-title" id="formTitle">Add Property</div>
+    <div class="section-sub">Save pushes directly to GitHub → site updates in ~30s</div>
+
+    <div class="card">
+      <div class="card-title">Basic Info</div>
+      <div class="grid-2">
+        <div class="field"><label class="field-label">Title *</label><input id="fTitle" placeholder="e.g. 3 BHK Sea View Apartment"></div>
+        <div class="field"><label class="field-label">Type</label>
+          <select id="fType"><option>Apartment</option><option>Villa</option><option>Office</option><option>Shop</option><option>Plot</option><option>Penthouse</option><option>Studio</option><option>Row House</option></select>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="field-label">Location / Area *</label><input id="fLocation" placeholder="e.g. Worli, Panvel, BKC"></div>
+        <div class="field"><label class="field-label">Status</label>
+          <select id="fStatus"><option>Available</option><option>Sold</option><option>Under Negotiation</option></select>
+        </div>
+      </div>
+      <div class="field"><label class="field-label">Description</label><textarea id="fDesc" placeholder="Short description shown in the property modal..."></textarea></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Pricing</div>
+      <div class="grid-2">
+        <div class="field"><label class="field-label">Price (display label) *</label><input id="fPrice" placeholder="e.g. ₹1.5 Cr  or  ₹85,000/mo"></div>
+        <div class="field"><label class="field-label">Price Number (for sorting)</label><input id="fPriceNum" type="number" placeholder="e.g. 15000000"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Property Details</div>
+      <div class="grid-4">
+        <div class="field"><label class="field-label">Beds (BHK)</label><input id="fBeds" type="number" placeholder="3"></div>
+        <div class="field"><label class="field-label">Baths</label><input id="fBaths" type="number" placeholder="2"></div>
+        <div class="field"><label class="field-label">Area</label><input id="fArea" placeholder="1200"></div>
+        <div class="field"><label class="field-label">Unit</label><select id="fAreaUnit"><option>sq ft</option><option>sq m</option><option>sq yd</option></select></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="field-label">Details line</label><input id="fDetails" placeholder="e.g. 1200 sq.ft • Possession 2026 • Clubhouse"></div>
+        <div class="field"><label class="field-label">RERA Number</label><input id="fRera" placeholder="P51900..."></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Images</div>
+      <div class="field">
+        <label class="field-label">Main Image URL</label>
+        <input id="fImage" placeholder="assets/images/property-1.jpg  or  https://i.imgur.com/...">
+        <div id="imgPreview" style="margin-top:10px"></div>
+      </div>
+      <div class="field">
+        <label class="field-label">Gallery Images</label>
+        <div id="galleryList"></div>
+        <button class="btn btn-ghost" style="margin-top:6px" onclick="App.addGalleryItem()">+ Add image URL</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Agent & Visibility</div>
+      <div class="grid-3">
+        <div class="field"><label class="field-label">Agent Name</label><input id="fAgentName" value="Zarir"></div>
+        <div class="field"><label class="field-label">Agent Phone</label><input id="fAgentPhone" placeholder="+91-7400015550"></div>
+        <div class="field"><label class="field-label">Agent Image</label><input id="fAgentImg" value="assets/images/zarir-e.png"></div>
+      </div>
+      <div class="toggle-wrap" style="margin-top:8px">
+        <button class="toggle" id="featuredToggle" onclick="App.toggleFeatured()"></button>
+        <span class="toggle-label" id="featuredLabel">Not featured</span>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" id="saveBtn" onclick="App.saveForm()">💾 Save & Publish to GitHub</button>
+      <button class="btn btn-secondary" onclick="App.goList()">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Delete modal -->
+<div class="modal-overlay" id="deleteModal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">Delete this property?</div>
+    <div class="modal-sub">This removes it from GitHub immediately. Cannot be undone.</div>
+    <div class="btn-row" style="justify-content:center">
+      <button class="btn btn-danger" onclick="App.confirmDelete()">Yes, Delete</button>
+      <button class="btn btn-secondary" onclick="App.closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+// CONFIG — paste your Render URL here after deploying
+// ══════════════════════════════════════════
+const RENDER_API = 'https://buildyourhome-98yy.onrender.com';
+
+// ══════════════════════════════════════════
+// AUTH
+// ══════════════════════════════════════════
+const Auth = (() => {
+  let sessionToken = null;
+
+  async function login() {
+    const pw = document.getElementById('loginPassword').value;
+    const errEl = document.getElementById('loginError');
+    const btn = document.getElementById('loginBtn');
+    errEl.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Checking...';
+
+    try {
+      const res = await fetch(`${RENDER_API}/api/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+
+      if (!res.ok) {
+        errEl.style.display = 'block';
+        document.getElementById('loginPassword').value = '';
+        return;
+      }
+
+      // Store password hash as session token (Render verifies it)
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+      sessionToken = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+
+      // Show app
+      document.getElementById('viewLogin').style.display = 'none';
+      document.getElementById('header').style.display = 'flex';
+      document.getElementById('mainContent').style.display = 'block';
+      App.init(sessionToken);
+
+    } catch(e) {
+      errEl.textContent = 'Cannot reach server. Check your connection.';
+      errEl.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Login →';
+    }
+  }
+
+  return { login };
+})();
+
+// ══════════════════════════════════════════
+// APP
+// ══════════════════════════════════════════
+const App = (() => {
+  let authToken = null;
+  let properties = [];
+  let currentSha = null;
+  let editingId = null;
+  let deletingId = null;
+  let featured = false;
+
+  function show(id) {
+    ['viewList','viewForm'].forEach(v => {
+      document.getElementById(v).style.display = v === id ? 'block' : 'none';
+    });
+  }
+
+  // ── API CALLS (all go to Render) ──
+  async function apiGet() {
+    const res = await fetch(`${RENDER_API}/api/properties`, {
+      headers: { Authorization: `Bearer ${authToken}` }
+    });
+    if (!res.ok) throw new Error(`API error ${res.status}`);
+    return res.json();
+  }
+
+  async function apiPut(properties, sha) {
+    const res = await fetch(`${RENDER_API}/api/properties`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+      },
+      body: JSON.stringify({ properties, sha })
+    });
+    if (!res.ok) {
+      const e = await res.json();
+      throw new Error(e.error || 'Save failed');
+    }
+    return res.json();
+  }
+
+  // ── FETCH ──
+  async function fetchProperties() {
+    setStatus('listStatus', 'loading', 'Fetching properties...');
+    try {
+      const data = await apiGet();
+      properties = data.properties || [];
+      currentSha = data.sha;
+      setStatus('listStatus', 'success', `Loaded ${properties.length} propert${properties.length===1?'y':'ies'}.`);
+      setTimeout(() => setStatus('listStatus', null), 3000);
+      renderList();
+    } catch(e) {
+      setStatus('listStatus', 'error', '❌ ' + e.message);
+    }
+  }
+
+  // ── PUSH ──
+  async function pushProperties(newProps) {
+    setStatus('formStatus', 'loading', 'Saving to GitHub...');
+    disableBtn(true);
+    try {
+      const result = await apiPut(newProps, currentSha);
+      currentSha = result.sha;
+      properties = newProps;
+      renderList();
+      setStatus('listStatus', 'success', '✅ Saved! Site will update in ~30 seconds.');
+      setTimeout(() => setStatus('listStatus', null), 5000);
+      goList();
+    } catch(e) {
+      setStatus('formStatus', 'error', '❌ ' + e.message);
+    } finally {
+      disableBtn(false);
+    }
+  }
+
+  // ── LIST ──
+  function goList() { show('viewList'); updatePropCount(); }
+
+  function updatePropCount() {
+    document.getElementById('propCount').textContent =
+      `${properties.length} propert${properties.length===1?'y':'ies'}`;
+  }
+
+  function renderList() {
+    updatePropCount();
+    const grid = document.getElementById('propGrid');
+    const badges = document.getElementById('listBadges');
+    const feat  = properties.filter(p => p.featured).length;
+    const avail = properties.filter(p => !p.status || p.status === 'Available').length;
+    badges.innerHTML = `
+      <span class="badge badge-gold">★ ${feat} featured</span>
+      <span class="badge badge-green">✓ ${avail} available</span>
+      <span class="badge badge-default">${properties.length} total</span>`;
+
+    if (!properties.length) {
+      grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon">🏠</div>
+        <div class="empty-title">No properties yet</div>
+        <div class="empty-sub">Add your first listing and it'll go live on the site.</div>
+        <button class="btn btn-primary" onclick="App.openForm()">+ Add First Property</button>
+      </div>`;
+      return;
+    }
+
+    grid.innerHTML = properties.map(p => `
+      <div class="prop-card">
+        ${p.image
+          ? `<img class="prop-img" src="${esc(p.image)}" alt="${esc(p.title)}" onerror="this.style.display='none'">`
+          : `<div class="prop-img-placeholder">🏠</div>`}
+        <div class="prop-body">
+          <div class="prop-title">${esc(p.title)}</div>
+          <div class="prop-meta">${esc(p.location||'')} · ${esc(p.type||'')}</div>
+          <div class="prop-price">${esc(p.price||'')}</div>
+          <div style="margin-bottom:10px">
+            ${p.beds ? `<span class="badge badge-default">${p.beds} BHK</span>` : ''}
+            ${p.details ? `<span class="badge badge-default">${esc(p.details)}</span>` : ''}
+            <span class="badge ${!p.status||p.status==='Available'?'badge-green':'badge-default'}">${esc(p.status||'Available')}</span>
+            ${p.featured ? `<span class="badge badge-gold">★ Featured</span>` : ''}
+          </div>
+          <div class="prop-actions">
+            <button class="btn btn-ghost" onclick="App.editProp('${p.id}')">Edit</button>
+            <button class="btn btn-ghost" style="color:${p.featured?'var(--gold)':'var(--muted)'}"
+              onclick="App.togglePropFeatured('${p.id}')">${p.featured?'Unfeature':'Feature'}</button>
+            <button class="btn btn-danger" style="padding:7px 12px;font-size:12px"
+              onclick="App.deleteProp('${p.id}')">Delete</button>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+
+  // ── FORM ──
+  function openForm(id) {
+    editingId = id || null;
+    document.getElementById('formTitle').textContent = id ? 'Edit Property' : 'Add New Property';
+    setStatus('formStatus', null);
+    const p = id ? properties.find(x => x.id === id) : {};
+    document.getElementById('fTitle').value     = p.title || '';
+    document.getElementById('fType').value      = p.type || 'Apartment';
+    document.getElementById('fLocation').value  = p.location || '';
+    document.getElementById('fStatus').value    = p.status || 'Available';
+    document.getElementById('fDesc').value      = p.description || '';
+    document.getElementById('fPrice').value     = p.price || '';
+    document.getElementById('fPriceNum').value  = p.priceNum || '';
+    document.getElementById('fBeds').value      = p.beds || '';
+    document.getElementById('fBaths').value     = p.baths || '';
+    document.getElementById('fDetails').value   = p.details || '';
+    document.getElementById('fRera').value      = p.rera || '';
+    document.getElementById('fImage').value     = p.image || '';
+    document.getElementById('fAgentName').value  = (p.agent&&p.agent.name)  || 'Zarir';
+    document.getElementById('fAgentPhone').value = (p.agent&&p.agent.phone) || '';
+    document.getElementById('fAgentImg').value   = (p.agent&&p.agent.image) || 'assets/images/zarir-e.png';
+    featured = !!p.featured;
+    setFeaturedToggle(featured);
+    const gl = document.getElementById('galleryList');
+    gl.innerHTML = '';
+    (p.gallery||[]).filter(g=>g!=='...').forEach(url => addGalleryItem(url));
+    updateImgPreview();
+    document.getElementById('fImage').oninput = updateImgPreview;
+    show('viewForm');
+  }
+
+  function updateImgPreview() {
+    const url = document.getElementById('fImage').value;
+    document.getElementById('imgPreview').innerHTML = url
+      ? `<img src="${esc(url)}" style="max-height:130px;border-radius:6px;border:1px solid var(--border)" onerror="this.style.display='none'">`
+      : '';
+  }
+
+  function addGalleryItem(val='') {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `<input placeholder="https://... or assets/images/..." value="${esc(val)}">
+      <button onclick="this.parentElement.remove()">×</button>`;
+    document.getElementById('galleryList').appendChild(div);
+  }
+
+  function toggleFeatured() { featured = !featured; setFeaturedToggle(featured); }
+
+  function setFeaturedToggle(on) {
+    document.getElementById('featuredToggle').className = 'toggle' + (on?' on':'');
+    document.getElementById('featuredLabel').textContent = on ? 'Featured on homepage' : 'Not featured';
+  }
+
+  async function saveForm() {
+    const title    = document.getElementById('fTitle').value.trim();
+    const location = document.getElementById('fLocation').value.trim();
+    const price    = document.getElementById('fPrice').value.trim();
+    if (!title || !price || !location) {
+      setStatus('formStatus', 'error', 'Title, Location and Price are required.');
+      return;
+    }
+    const galleryInputs = [...document.querySelectorAll('#galleryList .gallery-item input')]
+      .map(i=>i.value.trim()).filter(Boolean);
+    const prop = {
+      id: editingId || 'p'+Date.now().toString(36),
+      title, location, price,
+      type:        document.getElementById('fType').value,
+      status:      document.getElementById('fStatus').value,
+      description: document.getElementById('fDesc').value.trim(),
+      priceNum:    parseInt(document.getElementById('fPriceNum').value)||0,
+      beds:        parseInt(document.getElementById('fBeds').value)||0,
+      baths:       parseInt(document.getElementById('fBaths').value)||0,
+      details:     document.getElementById('fDetails').value.trim(),
+      rera:        document.getElementById('fRera').value.trim(),
+      image:       document.getElementById('fImage').value.trim(),
+      gallery:     galleryInputs.length ? galleryInputs : undefined,
+      featured,
+      featuredOrder: featured ? 1 : undefined,
+      agent: {
+        name:  document.getElementById('fAgentName').value.trim(),
+        phone: document.getElementById('fAgentPhone').value.trim(),
+        image: document.getElementById('fAgentImg').value.trim()
+      }
+    };
+    Object.keys(prop).forEach(k => { if(prop[k]===undefined) delete prop[k]; });
+    const newProps = editingId
+      ? properties.map(p => p.id===editingId ? prop : p)
+      : [...properties, prop];
+    await pushProperties(newProps);
+  }
+
+  function editProp(id) { openForm(id); }
+
+  async function togglePropFeatured(id) {
+    await pushProperties(properties.map(p => p.id===id ? {...p, featured:!p.featured} : p));
+  }
+
+  function deleteProp(id) {
+    deletingId = id;
+    document.getElementById('deleteModal').style.display = 'flex';
+  }
+
+  async function confirmDelete() {
+    closeModal();
+    await pushProperties(properties.filter(p => p.id!==deletingId));
+    deletingId = null;
+  }
+
+  function closeModal() { document.getElementById('deleteModal').style.display = 'none'; }
+
+  function setStatus(elId, type, msg) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    el.innerHTML = type ? `<div class="status-bar status-${type}">${msg}</div>` : '';
+  }
+
+  function disableBtn(v) {
+    const b = document.getElementById('saveBtn');
+    b.disabled = v;
+    b.textContent = v ? 'Saving...' : '💾 Save & Publish to GitHub';
+  }
+
+  function esc(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  async function refresh() { goList(); await fetchProperties(); }
+
+  function init(token) {
+    authToken = token;
+    goList();
+    fetchProperties();
+  }
+
+  return { init, goList, openForm, saveForm, refresh,
+           editProp, togglePropFeatured, deleteProp,
+           confirmDelete, closeModal, toggleFeatured, addGalleryItem };
+})();
+</script>
+</body>
+</html>
